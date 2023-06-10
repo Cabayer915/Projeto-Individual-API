@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Pokémon</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="../../img/icon.png">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a class="logotipo" href="../telacliente.html"><img src="../../img/Logotipo.png" alt="" width="170px"></a>
+            <ul class="nav-lista">
+                <li>
+                    <a href="https://discord.gg/Epf5BEchVs"> Discord </a>
+                </li>
+                <li>
+                    <a href="../../Pokedex do Site/Pokedex.html"> Pokédex </a>
+                </li>
+                <li>
+                    <a href="../../index.html"> Sair </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="app">
+        <h1>Teste de Conhecimento Pokémon</h1>
+        <div class="quiz">
+            <h2 id="questao"></h2>
+            <div id="botoespergunta">
+                <button class="botaoo"></button>
+                <button class="botaoo"></button>
+                <button class="botaoo"></button>
+                <button class="botaoo"></button>
+            </div>
+            <button id="proximo"></button>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    const questao = [
+        {
+            questao: "Qual o Pokémon Deus Supremo do Sol?",
+            respostas: [
+                { text: "Solarigator", correto: false },
+                { text: "Borbosia", correto: false },
+                { text: "Solaris", correto: true },
+                { text: "Zephy", correto: false }
+            ]
+        },
+        {
+            questao: "Qual o Pokémon conhecido por jogar volei?",
+            respostas: [
+                { text: "Caspoeira", correto: false },
+                { text: "Electrobola", correto: false },
+                { text: "Pedrini", correto: false },
+                { text: "Hitmanchete", correto: true }
+            ]
+        },
+        {
+            questao: "Qual o primeiro Pokémon virtualizado?",
+            respostas: [
+                { text: "CompuGPTech", correto: true },
+                { text: "Metalord", correto: false },
+                { text: "Metallica", correto: false },
+                { text: "Panthelord", correto: false }
+            ]
+        },
+        {
+            questao: "Qual o Pokémon que mais costuma pedir?",
+            respostas: [
+                { text: "Furton", correto: false },
+                { text: "Gaille", correto: false },
+                { text: "Lobuspidon", correto: true },
+                { text: "Golemita", correto: false }
+            ]
+        },
+        {
+            questao: "Qual o Pokémon criador dos mares?",
+            respostas: [
+                { text: "Azumar", correto: false },
+                { text: "Geoshark", correto: false },
+                { text: "Aquaraptor", correto: false },
+                { text: "Mantialos", correto: true }
+            ]
+        },
+        {
+            questao: "Qual o Pokémon que costumam associar aos navegadores?",
+            respostas: [
+                { text: "Bulbal", correto: false },
+                { text: "Firefox", correto: false },
+                { text: "Mozilla", correto: true },
+                { text: "Quatizap", correto: false }
+            ]
+        },
+        {
+            questao: "Qual o Pokémon mais independente ou solitário?",
+            respostas: [
+                { text: "Sigma", correto: true },
+                { text: "Draconight", correto: false },
+                { text: "Espiritauls", correto: false },
+                { text: "Brocomonstro", correto: false }
+            ]
+        },
+        {
+            questao: "Qual o Pokémon mais icônico da geração?",
+            respostas: [
+                { text: "Voltobola", correto: false },
+                { text: "Colotinho", correto: false },
+                { text: "Pikazul", correto: false },
+                { text: "Kapi", correto: true }
+            ]
+        },
+        {
+            questao: "Qual Pokémon é conhecido como 'Macaco rei'?",
+            respostas: [
+                { text: "Mamico", correto: false },
+                { text: "Mamaco", correto: true },
+                { text: "Mimaco", correto: false },
+                { text: "Monferno", correto: false }
+            ]
+        },
+        {
+            questao: "Qual a evolução de Lacrocos?",
+            respostas: [
+                { text: "Lacroste", correto: false },
+                { text: "Lacron", correto: false },
+                { text: "Lacritose", correto: false },
+                { text: "Croconite", correto: true }
+            ]
+        },
+        {
+            questao: "Quando um Benjamor se encontra com outros, ele se transforma em um?",
+            respostas: [
+                { text: "Benjatron", correto: false },
+                { text: "Benjavarios", correto: true },
+                { text: "Benjarei", correto: false },
+                { text: "Benjaconjunto", correto: false }
+            ]
+        },
+        {
+            questao: "Qual a principal equipe perigosa da região de São Paulo?",
+            respostas: [
+                { text: "CVRL", correto: false },
+                { text: "Equipe Rocket", correto: false },
+                { text: "Equipe Furt", correto: false },
+                { text: "PCC", correto: true }
+            ]
+        },
+        {
+            questao: "Qual o número de evoluções do Pantheon?",
+            respostas: [
+                { text: "2", correto: true },
+                { text: "3", correto: false },
+                { text: "1", correto: false },
+                { text: "0", correto: false }
+            ]
+        },
+        {
+            questao: "Qual Pokémon amante de festas carnavalescas?",
+            respostas: [
+                { text: "Borbosia", correto: true },
+                { text: "Arraiatico", correto: false },
+                { text: "Bandeirogo", correto: false },
+                { text: "Guaramite", correto: false }
+            ]
+        },
+        {
+            questao: "O novo Nyx é conhecido como?",
+            respostas: [
+                { text: "Nyxus", correto: false },
+                { text: "Nyxtwo", correto: true },
+                { text: "Nyxdois", correto: false },
+                { text: "Novo Nyx", correto: false }
+            ]
+        },
+        {
+            questao: "Qual dos seguintes Pokémons é um cão do destino do tipo Sombrio?",
+            respostas: [
+                { text: "Espiritauls", correto: false },
+                { text: "Zoroark", correto: false },
+                { text: "Necrofox", correto: true },
+                { text: "Niquelost", correto: false }
+            ]
+        },
+        {
+            questao: "Qual o maior Pokémon do planeta terra?",
+            respostas: [
+                { text: "Solaris", correto: false },
+                { text: "Leviatan", correto: false },
+                { text: "Godzalla", correto: true },
+                { text: "Dragondoso", correto: false }
+            ]
+        },
+        {
+            questao: "Qual o nome do inicial do tipo fogo?",
+            respostas: [
+                { text: "Cinccilava", correto: false },
+                { text: "Mandralava", correto: false },
+                { text: "Lofogo", correto: false },
+                { text: "Erukilava", correto: true }
+            ]
+        },
+        {
+            questao: "Qual Pokémon é conhecido como a 'Assombração Caveira'?",
+            respostas: [
+                { text: "Ossorror", correto: true },
+                { text: "Phantasma", correto: false },
+                { text: "Phantasmal", correto: false },
+                { text: "Loirinea", correto: false }
+            ]
+        },
+        {
+            questao: "Qual é o Pokémon dentre os não lendários, é considerado como o mais inteligente?",
+            respostas: [
+                { text: "CompuGPTech", correto: false },
+                { text: "Polimacho", correto: false },
+                { text: "Mimico", correto: true },
+                { text: "Mestre Yudi", correto: false }
+            ]
+        }
+    ];
+
+    const questaoElemento = document.getElementById("questao");
+    const botoesPergunta = document.getElementById("botoespergunta");
+    const proximo = document.getElementById("proximo");
+
+    let questaoAtualIndex = 0;
+    let pontuacao = 0;
+
+    function comecarQuiz() {
+        questaoAtualIndex = 0;
+        pontuacao = 0;
+        proximo.innerHTML = "Próxima";
+        mostrarQuestao();
+    }
+
+    function mostrarQuestao() {
+        resetarEstado();
+        let questaoAtual = questao[questaoAtualIndex];
+        let questaoNum = questaoAtualIndex + 1;
+        questaoElemento.innerHTML = questaoNum + ". " + questaoAtual.
+        questao;
+
+        questaoAtual.respostas.forEach(respostas => {
+            const botao = document.createElement("button");
+            botao.innerHTML = respostas.text;
+            botao.classList.add("botaoo");
+            botoesPergunta.appendChild(botao);
+
+            if (respostas.correto) {
+                botao.dataset.correto = respostas.correto;
+            }
+            botao.addEventListener("click", selecionarPergunta);
+        });
+    }
+
+    function resetarEstado() {
+        proximo.style.display = "none";
+        while (botoesPergunta.firstChild) {
+            botoesPergunta.removeChild(botoesPergunta.firstChild);
+        }
+    }
+
+    function selecionarPergunta(e) {
+        const selecionadoBotao = e.target;
+        const seCorreto = selecionadoBotao.dataset.correto == "true";
+        if (seCorreto) {
+            selecionadoBotao.classList.add("correto");
+            pontuacao++;
+        } else {
+            selecionadoBotao.classList.add("incorreto");
+        }
+        Array.from(botoesPergunta.children).forEach(botaoo => {
+            if (botaoo.dataset.correto == "true") {
+                botaoo.classList.add("correto");
+            }
+            botaoo.disabled = true;
+        });
+        proximo.style.display = "block";
+    }
+
+    function mostrarPontuacao() {
+        resetarEstado();
+        questaoElemento.innerHTML = `Você pontuou ${pontuacao} de ${questao.length}!`;
+        proximo.innerHTML = "Jogue novamente";
+        proximo.style.display = "block";
+    }
+
+    function seguirProximo() {
+        questaoAtualIndex++;
+        if (questaoAtualIndex < questao.length) {
+            mostrarQuestao();
+        } else {
+            mostrarPontuacao();
+        }
+    }
+
+    proximo.addEventListener("click", () => {
+        if (questaoAtualIndex < questao.length) {
+            seguirProximo();
+        } else {
+            comecarQuiz();
+        };
+    });
+
+    comecarQuiz();
+</script>

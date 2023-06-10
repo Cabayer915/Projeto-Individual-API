@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="../img/icon.png">
+  <title>Login</title>
+</head>
+<body background="./background.png">
+  <header>
+    <nav>
+        <a class="logotipo" href="../index.html"><img src="Logotipo.png" alt="" width="170px"></a>
+        <ul class="nav-lista">
+            <li>
+                <a href="https://discord.gg/Epf5BEchVs"> Discord </a>
+            </li>
+            <li>
+                <a href="#" onclick="aviso()"> Pokédex </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+  <div class="container">
+    <h1>Login</h1>
+      <p>Email:</p>
+      <input type="text" id="email_input" name="email" placeholder="Digite seu email" required>
+      
+      <p>Senha:</p>
+      <input type="password" id="senha_input" name="password" placeholder="Digite sua senha" required>
+      
+      <button onclick="entrar()">Entrar</button>
+    
+    <div class="signup-link">
+      Não tem uma conta? <a href="./cadastro.html" style="color: cyan;">Crie um cadastro</a>
+    </div>
+  </div>
+</body>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</html>
+<script>
+    function aviso(){
+    swal("Você precisa de uma conta para acesso a Pokédex!", "Faça login em sua conta para desfrutar livremente da Pokédex desta incrível nova região!", "error");
+    }
+
+function entrar() {
+
+    var emailVar = email_input.value;
+    var senhaVar = senha_input.value;
+
+    if (emailVar == "" || senhaVar == "") {
+        swal("ERRO!", "Insira o email ou senha válidos!", "error");
+        return false;
+    }
+
+    fetch("/usuarios/autenticar", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            emailServer: emailVar,
+            senhaServer: senhaVar
+        })
+    }).then(function (resposta) {
+
+            if (resposta.ok) {
+                console.log(resposta)
+
+                resposta.json().then(json => {
+                    console.log(json)
+                    console.log(JSON.stringify(json));
+
+                    sessionStorage.EMAIL_USUARIO = json.email;
+                    sessionStorage.NOME_USUARIO = json.nome;
+                    sessionStorage.ID_USUARIO = json.id;
+
+                    setTimeout(function () {
+                        window.location.href = "../index.html";
+                    }, 1000);
+            });
+        }
+
+    })
+}
+
+</script>

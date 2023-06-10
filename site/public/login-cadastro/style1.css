@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap%27');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* NAVBAR */
+a {
+    color: whitesmoke;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+.logotipo {
+    display: flex;
+    margin-right: 300px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Poppins';
+    background-color: #121212;
+    height: 12vh;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.nav-lista {
+    list-style: none;
+    display: flex;
+}
+
+.nav-lista li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+}
+
+/*CADASTRO*/
+
+body {
+    font-family: 'Poppins';
+    background-color: #f2f2f2;
+  }
+  
+  .container {
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 4px solid gold;
+    background-color: #121212;
+    color: whitesmoke;
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  input[type="text"],
+  input[type="password"],
+  input[type="date"],
+  select {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  input[type="submit"] {
+    width: 90%;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: gold;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 28px;
+  }
+  
+  .login-link {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .container a{
+    text-decoration: underline;
+    color: cyan;
+  }
+
+  /* ===== Scrollbar CSS ===== */
+
+*::-webkit-scrollbar {
+	width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+	background: #f1e9e9;
+}
+
+*::-webkit-scrollbar-thumb {
+	background-color: #121212;
+	border-radius: 10px;
+	border: 3px solid #ffffff;
+}

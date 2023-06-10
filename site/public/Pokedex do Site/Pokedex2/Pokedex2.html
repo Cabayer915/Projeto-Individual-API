@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <link rel="icon" type="image/png" href="../../img/icon.png">
+    <title>Pokédex</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a class="logotipo" href="../../Tela Cliente/telacliente.html"><img src="../../img/Logotipo.png" alt="" width="170px" id="logotipo"></a>
+            <ul class="nav-lista">
+                <li>
+                    <a href=""> Favoritos </a>
+                </li>
+                <li>
+                    <a href="../Pokedex do Site/Pokedex1/Pokedex.html"> Pokédex </a>
+                </li>
+                <li>
+                    <a href="../../index.html"> Sair </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <ul class="pokedex">
+            <li class="cartao">
+                <div class="informacoes">
+                    <a href=""><span>Quatino</span>
+                        <span>#051</span></a>
+                </div>
+                <img src="./imgdex/51 - Quatino (normal).png" onclick="pkm1('audio1')" alt="">
+                <ul class="tipos">
+                    <li class="tipo normal">Normal</li>
+                </ul>
+                <p class="descricao">Quatino é um Pokémon quati do tipo Normal inspirado. Ele é ágil, curioso e possui
+                    uma cauda longa e flexível. Sua máscara ao redor dos olhos ajuda a camuflar-se. Quatino é sociável,
+                    vive em grupos familiares e é benéfico para os ecossistemas. Ele pode aprender uma
+                    variedade de movimentos e é um companheiro divertido. Sua agilidade e personalidade encantadora o
+                    tornam uma adição valiosa a qualquer equipe Pokémon.</p>
+            </li>
+            <li class="cartao">
+                <div class="informacoes">
+                    <a href=""><span>Quatizap</span>
+                        <span>#052</span></a>
+                </div>
+                <img src="./imgdex/52 - Quatizap (normal).png" alt="" onclick="pkm2('audio2')">
+                <ul class="tipos">
+                    <li class="tipo normal">Normal</li>
+                </ul>
+                <p class="descricao">Quatizap é a evolução de Quatino, um Pokémon do tipo Normal. Ele possui uma
+                    aparência mais forte e imponente, mantendo sua agilidade e habilidades de escalada. Quatizap é
+                    protetor e leal aos membros de seu grupo familiar.
+                    Ele é habilidoso em ataques físicos poderosos e técnicas baseadas em status. Sua evolução representa
+                    crescimento e maturidade, tornando-o um Pokémon confiável.</p>
+            </li>
+            <li class="cartao">
+                <div class="informacoes">
+                    <a href=""><span>Arirania</span>
+                        <span>#053</span></a>
+                </div>
+                <img src="./imgdex/53 - Arirania (água).png" alt="" onclick="pkm3('audio3')">
+                <ul class="tipos">
+                    <li class="tipo agua">Água</li>
+                </ul>
+                <p class="descricao">Ele possui uma aparência ágil e graciosa, com uma pelagem densa e impermeável.
+                    Arirania é conhecido por sua habilidade de mergulho e destreza na água. Ele é sociável, vive em
+                    grupos familiares e é leal aos membros de seu grupo. No campo de batalha, Arirania utiliza sua
+                    agilidade e
+                    movimentos aquáticos para superar seus oponentes. Sua natureza brincalhona e curiosa o torna um
+                    companheiro divertido para os treinadores.</p>
+            </li>
+            <li class="cartao">
+                <div class="informacoes">
+                    <a href=""><span>Ararenea</span>
+                        <span>#054</span></a>
+                </div>
+                <img src="./imgdex/54 - Ararenea (água).png" alt="" onclick="pkm4('audio4')">
+                <ul class="tipos">
+                    <li class="tipo agua">Água</li>
+                </ul>
+                <p class="descricao">Ararenea é a evolução de Arirania, um Pokémon do tipo Água. Ele possui uma
+                    aparência poderosa e imponente, mantendo sua sociabilidade e coragem. Ararenea enfrenta qualquer
+                    tipo de ameaça sem medo, mostrando-se ultraterritorialista. Sua pelagem densa e impermeável o
+                    protege durante suas aventuras
+                    aquáticas, e sua agilidade é aprimorada. Ele é leal aos membros de seu grupo e utiliza movimentos
+                    aquáticos poderosos em batalhas. </p>
+            </li>
+            <li class="cartao">
+                <div class="informacoes">
+                    <a href=""><span>Bongotroll</span>
+                        <span>#055</span></a>
+                </div>
+                <img src="./imgdex/55 - Bongo Bongo (metal, veneno).png" alt="" onclick="pkm5('audio5')">
+                <ul class="tipos">
+                    <li class="tipo veneno">Veneno</li>
+                    <li class="tipo metal">Metal</li>
+                </ul>
+                <p class="descricao">Bongotroll é um Pokémon do tipo Veneno e Metal, inspirado em um bong. Ele tem uma
+                    personalidade travessa e adora pregar peças nos outros. Com a habilidade de liberar uma fumaça
+                    tóxica, Bongotroll causa confusão e desconforto em seus oponentes. Apesar de seu tamanho pequeno,
+                    ele não tem limitações quando se trata de tirar os outros do sério. Sua combinação de tipos
+                    Veneno e Metal confere a ele resistência e habilidades únicas. Bongotroll é uma escolha intrigante
+                    para treinadores que buscam um Pokémon divertido e imprevisível em suas equipes.</p>
+            </li>
+            <li class="cartao">
+                <div class="informacoes">
+                    <a href=""><span>Girestrike</span>
+                        <span>#056</span></a>
+                </div>
+                <img src="./imgdex/56 - Girestrike (eletrico).png" alt="" onclick="pkm6('audio6')">
+                <ul class="tipos">
+                    <li class="tipo eletrico">Elétrico</li>
+                </ul>
+                <p class="descricao">Com sua estrutura de antenas que emitem eletricidade, ele pode gerar poderosos
+                    raios elétricos. Girestrike é ágil e gracioso, movendo-se suavemente pelo campo de batalha. Sua
+                    pelagem protege contra
+                    descargas elétricas e suas antenas direcionam a eletricidade com precisão. Em batalhas, Girestrike
+                    utiliza movimentos elétricos para causar danos aos oponentes e pode criar uma barreira elétrica
+                    defensiva.</p>
+            </li>
+            <li class="cartao">
+                <div class="informacoes">
+                    <a href=""><span>Gireletrico</span>
+                        <span>#057</span></a>
+                </div>
+                <img src="./imgdex/57 - Gireletrico (eletrico).png" alt="" onclick="pkm7('audio7')">
+                <ul class="tipos">
+                    <li class="tipo eletrico">Elétrico</li>
+                </ul>
+                <p class="descricao">Com sua evolução, Gireletrico se torna ainda mais imponente e poderoso. Suas
+                    antenas elétricas se expandem, emitindo raios elétricos intensos, e sua pelagem brilha com
+                    eletricidade estática. Gireletrico é conhecido por sua habilidade de gerar e controlar eletricidade
+                    em níveis elevados. Ele pode lançar ataques elétricos devastadores contra seus oponentes e criar
+                    campos elétricos para se proteger. Sua agilidade e graça continuam a ser características marcantes,
+                    permitindo que ele se mova com destreza no campo de batalha. Além de suas habilidades
+                    ofensivas, Gireletrico também pode utilizar a eletricidade para amplificar seus sentidos e reflexos,
+                    tornando-se mais ágil e perceptivo. Essa evolução representa um salto significativo em poder e
+                    capacidades elétricas, tornando Gireletrico uma ameaça formidável em batalhas.</p>
+            </li>
+            <li class="cartao">
+                <div class="informacoes">
+                    <a href=""><span>Casosaur</span>
+                        <span>#058</span></a>
+                </div>
+                <img src="./imgdex/58 - Casosaur (voador, lutador).png" alt="" onclick="pkm8('audio8')">
+                <ul class="tipos">
+                    <li class="tipo voador">Voador</li>
+                    <li class="tipo lutador">Lutador</li>
+                </ul>
+                <p class="descricao">Conhecido por sua beleza e letalidade. Suas garras afiadas são capazes de perfurar
+                    qualquer tipo de tecido, representando uma séria ameaça para aqueles que entram em seu habitat. Além
+                    disso, seu grito é ensurdecedor, causando impacto tanto físico quanto psicológico. Como um Pokémon
+                    do tipo Voador e Lutador, Casosaur possui uma combinação única de habilidades. Sua agilidade no ar e
+                    sua destreza nas batalhas corpo a corpo o tornam um adversário formidável. Ele é capaz de realizar
+                    ataques rápidos e precisos, causando danos significativos aos seus oponentes. No entanto, é
+                    importante ter cautela ao lidar com Casosaur,
+                    pois sua natureza territorial e agressiva faz com que ele defenda ferozmente seu habitat.
+                    Treinadores que desejam capturar ou enfrentar esse Pokémon devem estar preparados para lidar com sua
+                    força e ferocidade.</p>
+            </li>
+            <li class="cartao">
+                <div class="informacoes">
+                    <a href=""><span>Casosaurus</span>
+                        <span>#059</span></a>
+                </div>
+                <img src="./imgdex/59 - Casosaurus (voador, lutador).png" alt="" onclick="pkm9('audio9')">
+                <ul class="tipos">
+                    <li class="tipo voador">Voador</li>
+                    <li class="tipo lutador">Lutador</li>
+                </ul>
+                <p class="descricao">Com asas aprimoradas, ele possui um voo perfeito e se torna ainda mais voraz e
+                    indomável. Sendo do tipo Voador e Lutador, Casosaurus é extremamente agressivo e desafiador de ser
+                    controlado. Apenas treinadores experientes conseguem dominar esse
+                    Pokémon. Com suas habilidades de voo superiores e instintos predatórios, ele se destaca nas
+                    batalhas. Casosaurus exige uma forte conexão e laço com o treinador para mostrar seu poder e
+                    lealdade. É uma escolha ideal para aqueles que buscam desafios e desejam ter um Pokémon feroz e
+                    poderoso em sua equipe.</p>
+            </li>
+            <li class="cartao">
+                <div class="informacoes">
+                    <a href=""><span>Pikazul</span>
+                        <span>#060</span></a>
+                </div>
+                <img src="./imgdex/60 - Pikazul (eletrico).png" alt="" onclick="pkm10('audio10')">
+                <ul class="tipos">
+                    <li class="tipo eletrico">Elétrico</li>
+                </ul>
+                <p class="descricao">Pikazul é uma espécie de Pikachu típica do Brasil, com uma aparência semelhante a
+                    um Pikachu tradicional, mas com detalhes azuis. Ele é do tipo Elétrico e possui habilidades
+                    elétricas poderosas. Pikazul é curioso, brincalhão e leal ao seu treinador. Sua presença
+                    animada e suas habilidades elétricas o tornam um Pokémon interessante para se ter em uma equipe de
+                    batalha ou como companheiro de aventuras.</p>
+            </li>
+            <li class="cartao">
+                <div class="informacoes">
+                    <a href=""><span>Caipix</span>
+                        <span>#061</span></a>
+                </div>
+                <img src="./imgdex/61 - Caipix (fogo).png" alt="" onclick="pkm11('audio11')">
+                <ul class="tipos">
+                    <li class="tipo fogo">Fogo</li>
+                </ul>
+                <p class="descricao">Um Pokémon Caipora, conhecida por sua graça e habilidade de realizar danças com
+                    chamas. Ela é tímida e reservada, mas possui uma personalidade divertida e é perfeita para
+                    treinadores iniciantes. Caipix é do tipo Fogo, o que significa que ela possui habilidades e ataques
+                    baseados em fogo. Ela pode criar e controlar chamas com maestria, utilizando-as em suas danças e em
+                    combate. Sua presença animada e suas habilidades de fogo a tornam um Pokémon cativante e encantador.
+                    Embora seja reservada, Caipix se apega rapidamente ao seu treinador e se esforça para garantir sua
+                    felicidade e diversão. Ela é uma companheira leal e está sempre pronta para participar de aventuras
+                    emocionantes. Caipix é uma escolha popular entre
+                    treinadores iniciantes devido à sua natureza dócil e à facilidade de treinamento. Ela pode se tornar
+                    uma parceira valiosa e confiável, ajudando seus treinadores a superarem desafios e alcançarem a
+                    vitória.</p>
+            </li>
+            <li class="cartao">
+                <div class="informacoes">
+                    <a href=""><span>Campori</span>
+                        <span>#062</span></a>
+                </div>
+                <img src="./imgdex/62 - Campori (fogo).png" alt="" onclick="pkm12('audio12')">
+                <ul class="tipos">
+                    <li class="tipo fogo">Fogo</li>
+                </ul>
+                <p class="descricao">Campori é a evolução de Caipix e representa uma forma extremamente madura e
+                    poderosa desse Pokémon. Ao evoluir, ela perde sua timidez inicial e se torna uma figura sociável,
+                    especialmente em relação à natureza. Campori é conhecida por defender fervorosamente as florestas e
+                    confrontar aqueles que desmatam ou prejudicam os Pokémon que nelas habitam. Com sua determinação e
+                    coragem, Campori desafia de frente qualquer ameaça à natureza. Ela é rancorosa e não esquece
+                    facilmente aqueles que causaram mal ao meio ambiente. Seu tipo continua sendo Fogo, o que a torna
+                    uma força ardente e implacável contra seus adversários. Além de sua postura protetora em relação à
+                    natureza, Campori mantém suas habilidades de manipulação do fogo, que são ainda mais aprimoradas
+                    nessa forma evoluída. Ela pode criar chamas intensas e utilizá-las em seus ataques com grande
+                    destreza. Campori é uma parceira leal e poderosa para qualquer treinador que valorize a
+                    proteção do meio ambiente. Sua determinação e dedicação em preservar a natureza a tornam uma aliada
+                    inestimável em batalhas e uma guardiã das florestas.</p>
+            </li>
+            <li class="cartao">
+                <div class="informacoes">
+                    <a href=""><span>Beta</span>
+                        <span>#063</span></a>
+                </div>
+                <img src="./imgdex/63 - Beta (água).png" alt="" onclick="pkm13('audio13')">
+                <ul class="tipos">
+                    <li class="tipo agua">Água</li>
+                </ul>
+                <p class="descricao">Ele é conhecido por sua natureza medrosa e ataques considerados inúteis pelos
+                    treinadores. Beta é frequentemente pescado devido à sua abundância. Embora possa não ser
+                    impressionante em batalhas, Beta pode evoluir e adquirir novas habilidades ao longo do tempo. Sua
+                    aparência colorida e comportamento tranquilo o tornam um Pokémon de estimação agradável. Embora não
+                    seja notável em termos de habilidades de batalha, Beta desempenha um papel importante nos
+                    ecossistemas aquáticos. A experiência de treiná-lo pode envolver paciência e a descoberta de seu
+                    verdadeiro potencial.</p>
+            </li>
+            <li class="cartao">
+                <div class="informacoes">
+                    <a href=""><span>Sigma</span>
+                        <span>#064</span></a>
+                </div>
+                <img src="./imgdex/64 - Sigma (água).png" alt="" onclick="pkm14('audio14')">
+                <ul class="tipos">
+                    <li class="tipo agua">Água</li>
+                </ul>
+                <p class="descricao">Sigma é a evolução de Beta, o Pokémon peixe beta. Com seu instinto de sobrevivência
+                    aprimorado, Sigma se torna incrivelmente rápido na água, sendo capaz de executar ataques velozes e
+                    ferozes. Sua velocidade é comparável a um rasante, tornando-o um oponente formidável. Diferente de
+                    Beta, Sigma possui um temperamento calmo e aparenta não se importar com o que acontece ao seu redor.
+                    Ele vive apenas por si mesmo e é difícil estabelecer vínculos com outros Pokémon ou treinadores. Sua
+                    natureza solitária e independente o torna um desafio para ser domesticado ou controlado. No campo de
+                    batalha, Sigma é conhecido por sua agilidade e capacidade de atacar rapidamente seus oponentes. Seus
+                    movimentos são precisos e poderosos, permitindo que ele assuma o controle da batalha com facilidade.
+                    Embora seja um Pokémon formidável em termos de habilidades de combate,
+                    Sigma pode ser difícil de se relacionar devido à sua falta de interesse em formar laços afetivos.
+                    Treinadores que optam por capturar e treinar um Sigma devem estar preparados para lidar com sua
+                    personalidade distante e focada em sua própria sobrevivência.No geral, Sigma representa a evolução
+                    do instinto de sobrevivência dos Pokémon beta, tornando-se um predador ágil e poderoso na água. Sua
+                    natureza solitária e independente o diferencia dos demais Pokémon, tornando-o um desafio
+                    emocionalmente distante, mas uma força a ser reconhecida no campo de batalha aquático.</p>
+            </li>
+            <li class="cartao">
+                <div class="informacoes">
+                    <a href=""><span>Pedri</span>
+                        <span>#065</span></a>
+                </div>
+                <img src="./imgdex/65 - Pedri (pedra).png" alt="" onclick="pkm15('audio15')">
+                <ul class="tipos">
+                    <li class="tipo pedra">Pedra</li>
+                </ul>
+                <p class="descricao">Pedri é um Pokémon com aparência de pedra, muitas vezes passando despercebido até
+                    que alguém pise em cima dele. Nesse momento, ele se
+                    levanta e revela um rosto com olhos achatados que estava submerso na terra. Pedri pode manifestar
+                    uma tremenda raiva e emanar pequenos terremotos durante esse encontro. Apesar de ser pequeno, é do
+                    tipo pedra.</p>
+            </li>
+            <li class="cartao">
+                <div class="informacoes">
+                    <a href=""><span>Pedrini</span>
+                        <span>#066</span></a>
+                </div>
+                <img src="./imgdex/66 - Pedrini (pedra, lutador).png" alt="" onclick="pkm16('audio16')">
+                <ul class="tipos">
+                    <li class="tipo pedra">Pedra</li>
+                    <li class="tipo lutador">Lutador</li>
+                </ul>
+                <p class="descricao">Pedrini é a evolução de Pedri, um Pokémon do tipo Lutador e Pedra. Com uma forma
+                    humanóide e imponente, Pedrini é conhecido por seus ataques poderosos e a habilidade de lançar
+                    terremotos intensos. Sua aparência e força inspiram respeito, tornando-o um adversário temido por
+                    outros Pokémon. Sua combinação de habilidades ofensivas e
+                    defensivas o torna uma escolha estratégica em batalhas. Pedrini representa o crescimento e
+                    fortalecimento de Pedri, oferecendo aos treinadores uma opção formidável para enfrentar desafios.
+                </p>
+            </li>
+            <li class="cartao">
+                <div class="informacoes">
+                    <a href=""><span>Pedronco</span>
+                        <span>#067</span></a>
+                </div>
+                <img src="./imgdex/67 - Pedronco (pedra, lutador).png" alt="" onclick="pkm17('audio17')">
+                <ul class="tipos">
+                    <li class="tipo pedra">Pedra</li>
+                    <li class="tipo lutador">Lutador</li>
+                </ul>
+                <p class="descricao">Pedronco é a evolução de Pedrini, exibindo uma forma ainda mais robusta e uma
+                    aparência extremamente intimidadora. Sua força é canalizada de maneira extraordinária, permitindo
+                    que seus terremotos possam derrubar montanhas inteiras. Com ataques sísmicos devastadores, Pedronco
+                    se torna uma verdadeira força da natureza. Pertencente aos tipos Pedra e Lutador, ele possui uma
+                    combinação letal de poder e resistência. Pedronco é o auge
+                    da evolução de Pedrini, sendo capaz de enfrentar desafios extremos e se destacar nas batalhas como
+                    um Pokémon imponente e implacável.
+                </p>
+            </li>
+            <li class="cartao">
+                <div class="informacoes">
+                    <a href=""><span>Antalus</span>
+                        <span>#068</span></a>
+                </div>
+                <img src="./imgdex/68 - Antalus (normal).png" alt="" onclick="pkm18('audio18')">
+                <ul class="tipos">
+                    <li class="tipo normal">Normal</li>
+                </ul>
+                <p class="descricao">Ele é conhecido por sua calma e tranquilidade, movendo-se de maneira lenta e
+                    graciosa. Antalus é um Pokémon dócil e amigável, geralmente encontrado em ambientes florestais.
+                    Apesar de sua aparência imponente, ele é pacífico e não costuma entrar em confrontos. Sua
+                    presença traz uma sensação de serenidade e harmonia. Antalus é um companheiro confiável e um Pokémon
+                    popular entre os treinadores que buscam um parceiro tranquilo e afetuoso.</p>
+            </li>
+            <li class="cartao">
+                <div class="informacoes">
+                    <a href=""><span>Tapyro</span>
+                        <span>#069</span></a>
+                </div>
+                <img src="./imgdex/69 - Tapyro (fogo).png" alt="" onclick="pkm19('audio19')">
+                <ul class="tipos">
+                    <li class="tipo fogo">Fogo</li>
+                </ul>
+                <p class="descricao">Tapyro é a evolução de Antalus. Agora maior e mais forte, ele adquire o tipo Fogo,
+                    adicionando uma nova camada de poder às suas habilidades. Tapyro mantém a sua calma e serenidade,
+                    mas agora possui uma chama ardente em seu interior. Suas habilidades de combate são aprimoradas,
+                    permitindo que ele lance ataques de fogo com grande intensidade.
+                    Tapyro é conhecido por sua determinação e resistência, enfrentando desafios com coragem e
+                    perseverança. Sua presença imponente e sua capacidade de controlar o fogo o tornam uma figura
+                    respeitada e temida.</p>
+            </li>
+            <li class="cartao">
+                <div class="informacoes">
+                    <a href=""><span>Ossorror</span>
+                        <span>#070</span></a>
+                </div>
+                <img src="./imgdex/70 - Ossorror (fantasma).png" alt="" onclick="pkm20('audio20')">
+                <ul class="tipos">
+                    <li class="tipo fantasma">Fantasma</li>
+                </ul>
+                <p class="descricao">Ossorror é um Pokémon com uma aparência assustadora, assemelhando-se a uma caveira.
+                    Ele é frequentemente associado a lendas, cultos e lugares amaldiçoados. A presença de Ossorror causa
+                    medo e desconforto terrível em quem o encontra, sendo capaz de afugentar até mesmo os mais
+                    corajosos.
+                    Como um Pokémon do tipo Fantasma, ele possui habilidades sobrenaturais e pode se mover de maneira
+                    misteriosa e invisível. Ossorror é uma figura enigmática e envolta em mistério, despertando fascínio
+                    e temor por onde passa.</p>
+            </li>
+            <li class="cartao">
+                <div class="informacoes">
+                    <a href=""><span>Aquatinny</span>
+                        <span>#071</span></a>
+                </div>
+                <img src="./imgdex/71 - Aquatinny (água).png" alt="" onclick="pkm21('audio21')">
+                <ul class="tipos">
+                    <li class="tipo agua">Água</li>
+                </ul>
+                <p class="descricao">Ele tem uma aparência robusta e casco resistente, adaptado para viver tanto na água
+                    quanto em terra firme. Aquatinny é conhecido por sua natureza tranquila e pacífica, nadando
+                    graciosamente em lagos, rios e oceanos. Ele possui habilidades aquáticas impressionantes, como a
+                    capacidade de nadar rapidamente e mergulhar a grandes profundidades. Além disso, Aquatinny pode usar
+                    sua concha para se proteger de ataques e desafios adversos.
+                    Sua presença calma e serena o torna um companheiro confiável para os treinadores que buscam um
+                    Pokémon equilibrado e resiliente.</p>
+            </li>
+            <li class="cartao">
+                <div class="informacoes">
+                    <a href=""><span>Aquatinna</span>
+                        <span>#072</span></a>
+                </div>
+                <img src="./imgdex/72 - Aquatinna (água).png" alt="" onclick="pkm22('audio22')">
+                <ul class="tipos">
+                    <li class="tipo agua">Água</li>
+                </ul>
+                <p class="descricao">Aquatinna é a evolução robusta de Aquatinny. Com um casco de queratina praticamente
+                    inquebrável, ela se torna ainda mais resistente e poderosa. Aquatinna é conhecida por suas
+                    investidas pesadas, capazes de causar danos significativos aos oponentes. Sua força e determinação
+                    são impressionantes, tornando-a uma oponente formidável nas batalhas. Além disso, Aquatinna mantém
+                    sua natureza aquática,
+                    deslizando suavemente pela água e mostrando grande agilidade subaquática. Seu casco resistente a
+                    protege contra ataques adversos e garante sua durabilidade em combate.</p>
+            </li>
+            <li class="cartao">
+                <div class="informacoes">
+                    <a href=""><span>Aquatindra</span>
+                        <span>#073</span></a>
+                </div>
+                <img src="./imgdex/73 - Aquatindra (água).png" alt="" onclick="pkm23('audio23')">
+                <ul class="tipos">
+                    <li class="tipo agua">Água</li>
+                </ul>
+                <p class="descricao">Aquatindra é a evolução final de Aquatinna, essa imponente criatura perde seu casco
+                    e adquire uma aparência semelhante à de um dinossauro aquático. Com um tamanho gigantesco e pegadas
+                    que chegam a medir 3 metros de diâmetro, Aquatindra inspira temor por onde passa. Apesar de sua
+                    aparência intimidadora, esse Pokémon costuma ser dócil e prefere passar a maior parte do tempo
+                    submerso na água. Sua força e agilidade são impressionantes, e ela possui
+                    habilidades para controlar e manipular a água ao seu redor alterando cursos de água. Aquatindra é
+                    uma aliada poderosa em batalhas, especialmente quando se trata de confrontos aquáticos. Treinadores
+                    habilidosos podem contar com ela como uma valiosa parceira.</p>
+            </li>
+            <li class="cartao">
+                <div class="informacoes">
+                    <a href=""><span>Baconius</span>
+                        <span>#074</span></a>
+                </div>
+                <img src="./imgdex/74 - Baconius (normal).png" alt="" onclick="pkm24('audio24')">
+                <ul class="tipos">
+                    <li class="tipo normal">Normal</li>
+                </ul>
+                <p class="descricao">Ele é um adorável porco com um apetite voraz. Baconius adora comer e está sempre em
+                    busca de comida deliciosa. Apesar de sua aparência fofa, ele pode ser surpreendentemente ágil e
+                    resistente. Sua personalidade amigável e brincalhona o torna
+                    um companheiro divertido para os treinadores. Embora não possua habilidades especiais, Baconius
+                    compensa com sua determinação e disposição para enfrentar desafios. Com treinamento adequado, ele
+                    pode se tornar um parceiro leal e confiável.</p>
+            </li>
+            <li class="cartao">
+                <div class="informacoes">
+                    <a href=""><span>Porkchomp</span>
+                        <span>#075</span></a>
+                </div>
+                <img src="./imgdex/75 - Porkchomp (normal).png" alt="" onclick="pkm25('audio25')">
+                <ul class="tipos">
+                    <li class="tipo normal">Normal</li>
+                </ul>
+                <p class="descricao">Porkchomp é a evolução de Baconius. Ele se torna muito mais forte e robusto, mas
+                    sua aparência amigável permanece a mesma. Porkchomp tem uma postura mais confiante e pode adotar uma
+                    atitude defensiva diante de ameaças. No entanto, ele geralmente prefere resolver conflitos
+                    pacificamente. Sua força
+                    física aumenta consideravelmente, permitindo-lhe executar poderosos ataques do tipo Normal.
+                    Porkchomp continua sendo um companheiro leal e amigável, pronto para apoiar seu treinador em todas
+                    as situações.</p>
+            </li>
+            <li class="cartao">
+                <div class="informacoes">
+                    <a href=""><span>Skunkbloom</span>
+                        <span>#076</span></a>
+                </div>
+                <img src="./imgdex/76 - Skunkbloom (sombrio, planta).png" alt="" onclick="pkm26('audio26')">
+                <ul class="tipos">
+                    <li class="tipo sombrio">Sombrio</li>
+                    <li class="tipo planta">Planta</li>
+                </ul>
+                <p class="descricao">Com hábitos noturnos, ele possui uma aparência elegante e intrigante. Skunkbloom
+                    tem uma habilidade especial para liberar um odor desagradável como uma forma de defesa, deixando
+                    seus oponentes desorientados. Além disso, ele possui movimentos sombrios e poderosos relacionados ao
+                    seu elemento. Embora possa parecer intimidador à primeira vista, Skunkbloom é na verdade bastante
+                    pacífico e prefere evitar conflitos
+                    sempre que possível. Sua natureza noturna o torna um ótimo companheiro para treinadores que também
+                    preferem a tranquilidade das horas mais escuras.
+                </p>
+            </li>
+            <li class="cartao">
+                <div class="informacoes">
+                    <a href=""><span>Bulbix</span>
+                        <span>#077</span></a>
+                </div>
+                <img src="./imgdex/77 - Bulbix (planta).png" alt="" onclick="pkm27('audio27')">
+                <ul class="tipos">
+                    <li class="tipo planta">Planta</li>
+                </ul>
+                <p class="descricao">Ele possui uma pelagem densa e espinhos. Sua coloração é predominantemente verde,
+                    com detalhes em tons mais claros. Bulbix é conhecido por suas habilidades naturais e conexão com a
+                    natureza. Ele é capaz de absorver a energia solar e utilizá-la em seus ataques do tipo Planta.
+                    Seu temperamento é calmo e amigável, tornando-o um ótimo companheiro para treinadores que apreciam a
+                    tranquilidade da natureza.</p>
+            </li>
+            <li class="cartao">
+                <div class="informacoes">
+                    <a href=""><span>Bulbal</span>
+                        <span>#078</span></a>
+                </div>
+                <img src="./imgdex/78 - Bulbal (planta).png" alt="" onclick="pkm28('audio28')">
+                <ul class="tipos">
+                    <li class="tipo planta">Planta</li>
+                </ul>
+                <p class="descricao">Bulbal é a evolução feroz de Bulbix, um Pokémon do tipo Planta. Sua aparência
+                    tornou-se mais imponente, com espinhos afiados que cobrem seu corpo. A cor de sua pele é mais
+                    escura, transmitindo uma sensação de mistério e poder. Diferente de sua forma anterior, Bulbal é
+                    conhecido por ser independente e desafiador, não seguindo facilmente as ordens dos treinadores. Ele
+                    possui uma natureza agressiva e está sempre pronto para enfrentar desafios. Com suas
+                    habilidades do tipo Planta, Bulbal é capaz de utilizar ataques poderosos e causar danos
+                    significativos aos seus oponentes. Seu temperamento selvagem o torna um Pokémon formidável, mas
+                    também exige habilidades de treinamento avançadas para controlar sua ferocidade.</p>
+            </li>
+            <li class="cartao">
+                <div class="informacoes">
+                    <a href=""><span>Bulbassalto</span>
+                        <span>#079</span></a>
+                </div>
+                <img src="./imgdex/79 - Bulbassalto (planta).png" alt="" onclick="pkm29('audio29')">
+                <ul class="tipos">
+                    <li class="tipo planta">Planta</li>
+                </ul>
+                <p class="descricao">Bulbassalto é a evolução imponente de Bulbal, um Pokémon do tipo Planta. Sua
+                    aparência cresceu significativamente, alcançando um tamanho impressionante e exibindo folhagens
+                    exuberantes saindo de suas costas. Bulbassalto é conhecido por sua natureza independente e não segue
+                    ordens de nenhum treinador. Ao contrário de seus
+                    estágios anteriores, este Pokémon é frequentemente associado a facções e realiza trabalhos obscuros
+                    por pura maldade. Sua personalidade malévola e sedenta por poder o torna um adversário temível. Com
+                    suas habilidades do tipo Planta, Bulbassalto é capaz de utilizar ataques devastadores, aproveitando
+                    o poder da natureza para subjugar seus oponentes. Sua natureza incontrolável e propensa à violência
+                    torna difícil estabelecer qualquer tipo de vínculo com este Pokémon, exigindo um treinador
+                    extremamente habilidoso e corajoso para controlar sua ferocidade.</p>
+            </li>
+            <li class="cartao">
+                <div class="informacoes">
+                    <a href=""><span>Glaciala</span>
+                        <span>#080</span></a>
+                </div>
+                <img src="./imgdex/80 - Glaciala (gelo).png" alt="" onclick="pkm30('audio30')">
+                <ul class="tipos">
+                    <li class="tipo gelo">Gelo</li>
+                </ul>
+                <p class="descricao">Glaciala é um Pokémon encantador e amigável, com uma aparência semelhante a um
+                    homem das neves. Sua natureza autêntica e calorosa atrai a atenção de todos ao seu redor. Glaciala é
+                    conhecido por sua generosidade e empatia, frequentemente ajudando viajantes perdidos em meio a
+                    nevascas e oferecendo abrigo e orientação. Sua afinidade com o tipo Gelo permite que ele manipule e
+                    controle habilmente o gelo e o frio, usando-os tanto para
+                    proteção quanto para ataque. Apesar de sua aparência imponente, Glaciala é gentil e amigável,
+                    criando vínculos fortes com aqueles que demonstram respeito e bondade. Sua presença traz uma
+                    sensação reconfortante em ambientes gelados, trazendo esperança e segurança para aqueles que o
+                    encontram.</p>
+            </li>
+            <li class="cartao">
+                <div class="informacoes">
+                    <a href=""><span>Cachogo</span>
+                        <span>#081</span></a>
+                </div>
+                <img src="./imgdex/81 - Cachogo (fogo).png" alt="" onclick="pkm31('audio31')">
+                <ul class="tipos">
+                    <li class="tipo fogo">Fogo</li>
+                </ul>
+                <p class="descricao">Cachogo é um Pokémon de aparência adorável, semelhante a um cachorro com uma
+                    pelagem preta e vermelha vibrante. Sua natureza curiosa e brincalhona o leva a explorar
+                    constantemente seu ambiente, mas sua cauda de fogo pode causar acidentes, mesmo que ele não queira.
+                    O fogo que emana de sua cauda é uma característica única desse Pokémon, e ele precisa tomar cuidado
+                    para controlá-lo. Cachogo é do tipo Fogo, o que lhe confere habilidades relacionadas ao fogo, como
+                    ataques ardentes e uma alta resistência a ataques desse elemento. Apesar de sua natureza animada e
+                    brincalhona, Cachogo é leal e afetuoso com seu treinador, tornando-se um companheiro leal e
+                    protetor. Ele está sempre disposto a se divertir e trazer alegria, mas é importante estar atento aos
+                    possíveis incidentes causados por sua cauda de fogo.</p>
+            </li>
+            <li class="cartao">
+                <div class="informacoes">
+                    <a href=""><span>Lofogo</span>
+                        <span>#082</span></a>
+                </div>
+                <img src="./imgdex/82 - Lofogo (fogo).png" alt="" onclick="pkm32('audio32')">
+                <ul class="tipos">
+                    <li class="tipo fogo">Fogo</li>
+                </ul>
+                <p class="descricao">Lofogo é a evolução poderosa de Cachogo, assumindo a forma de um majestoso lobo com
+                    um corpo imponente e pelagem flamejante. Seu fogo não se limita mais apenas à cauda, mas exala por
+                    várias partes do seu corpo, emanando um brilho intenso. Lofogo possui uma personalidade orgulhosa e
+                    vaidosa, exibindo sua beleza e poder com confiança. Como um Pokémon do tipo Fogo, Lofogo
+                    possui habilidades ardentes e uma afinidade natural com o elemento fogo. Seus ataques são poderosos
+                    e capazes de incendiar tudo ao seu redor. Apesar de sua personalidade vaidosa, Lofogo é leal ao seu
+                    treinador e se esforça para proteger aqueles que considera parte de sua matilha.</p>
+            </li>
+            <li class="cartao">
+                <div class="informacoes">
+                    <a href=""><span>Lolava</span>
+                        <span>#083</span></a>
+                </div>
+                <img src="./imgdex/83 - Lolava (fogo).png" alt="" onclick="pkm33('audio33')">
+                <ul class="tipos">
+                    <li class="tipo fogo">Fogo</li>
+                </ul>
+                <p class="descricao">Lolava é a evolução avassaladora de Lofogo, transformando-se em uma criatura
+                    imponente e imbuída de chamas intensas. Seu corpo inteiro está envolto em um fogo ardente, cuja
+                    temperatura pode alcançar até 800°C. Essa temperatura extrema torna sua presença avassaladora e
+                    perigosa, capaz de incendiar tudo ao seu redor. Como um Pokémon do tipo Fogo, Lolava possui
+                    habilidades pirotécnicas e uma força destrutiva impressionante. Seus ataques são extremamente
+                    poderosos, causando grandes estragos e
+                    espalhando o caos em batalhas. Sua personalidade é feroz e dominante, refletindo sua natureza
+                    incendiária. Lolava exala uma aura intimidadora, fazendo com que seus oponentes pensem duas vezes
+                    antes de desafiá-lo. Aqueles que desejam dominar esse Pokémon devem estar preparados para lidar com
+                    seu poder avassalador e controlar seu fogo desenfreado.</p>
+            </li>
+            <li class="cartao">
+                <div class="informacoes">
+                    <a href=""><span>Gaspar</span>
+                        <span>#084</span></a>
+                </div>
+                <img src="./imgdex/84 - Gaspar (fantasma).png" alt="" onclick="pkm34('audio34')">
+                <ul class="tipos">
+                    <li class="tipo fantasma">Fantasma</li>
+                </ul>
+                <p class="descricao">Gaspar é um Pokémon do tipo Fantasma com uma aparência peculiar, assemelhando-se a
+                    uma toalha flutuante. Seus olhos sinistros e dentes afiados revelam sua natureza traiçoeira. Gaspar
+                    possui a habilidade de realizar o vampirismo, sugando a energia vital de seus oponentes. Ele adora
+                    pregar peças e causar medo nas pessoas que ousam visitar seus ambientes assombrados. Gaspar é
+                    conhecido por suas brincadeiras assustadoras e por sua habilidade
+                    de se camuflar nas sombras. Ele é astuto e gosta de surpreender suas vítimas, usando suas
+                    habilidades fantasmagóricas para aterrorizá-las. Treinar um Gaspar requer coragem e habilidades
+                    estratégicas, pois ele é um Pokémon imprevisível e travesso.</p>
+            </li>
+            <li class="cartao">
+                <div class="informacoes">
+                    <a href=""><span>Gasfear</span>
+                        <span>#085</span></a>
+                </div>
+                <img src="./imgdex/85 - Gasfear (fantasma).png" alt="" onclick="pkm35('audio35')">
+                <ul class="tipos">
+                    <li class="tipo fantasma">Fantasma</li>
+                </ul>
+                <p class="descricao">Gasfear é a evolução assustadora de Gaspar. Com sua aparência sombria e sinistra,
+                    ele causa medo intenso em qualquer um que se atreva a enfrentá-lo. Seu corpo é envolto por uma névoa
+                    negra e seus olhos brilham com uma aura ameaçadora. Gasfear possui habilidades aprimoradas no
+                    controle de energias espirituais, sendo capaz de lançar ataques assombrosos e perturbar a mente de
+                    seus oponentes. Sua
+                    presença é suficiente para gelar o sangue de qualquer um e suas travessuras ganham um aspecto ainda
+                    mais terrível. Treinar um Gasfear requer coragem e habilidades estratégicas, pois ele é um Pokémon
+                    imprevisível e temido por muitos.</p>
+            </li>
+            <li class="cartao">
+                <div class="informacoes">
+                    <a href=""><span>Espectraria</span>
+                        <span>#086</span></a>
+                </div>
+                <img src="./imgdex/86 - Espectraria (psiquico).png" alt="" onclick="pkm36('audio36')">
+                <ul class="tipos">
+                    <li class="tipo psiquico">Psíquico</li>
+                </ul>
+                <p class="descricao">Espectraria é um Pokémon misterioso de cor roxa com listras pretas. Sua origem é
+                    enigmática e sua presença remonta a milhares de anos na América do Sul. Dotado de habilidades
+                    psíquicas poderosas, Espectraria tem a capacidade de compreender e se comunicar em mais de 40
+                    idiomas, incluindo línguas antigas e dialetos esquecidos pelo tempo. Sua sabedoria é vasta e muitos
+                    buscam seus conhecimentos para
+                    decifrar enigmas e desvendar segredos perdidos no tempo. Espectraria emana uma aura misteriosa e
+                    exerce uma influência intrigante sobre aqueles que o encontram. Treinar um Espectraria é uma jornada
+                    fascinante rumo à compreensão dos mistérios do passado e à exploração dos segredos ocultos. Sua
+                    presença traz uma atmosfera de intriga e sabedoria ancestral.</p>
+            </li>
+            <li class="cartao">
+                <div class="informacoes">
+                    <a href=""><span>Igniberos</span>
+                        <span>#087</span></a>
+                </div>
+                <img src="./imgdex/87 - Igniberos (fogo, dragão).png" alt="" onclick="pkm37('audio37')">
+                <ul class="tipos">
+                    <li class="tipo fogo">Fogo</li>
+                    <li class="tipo dragao">Dragão</li>
+                </ul>
+                <p class="descricao">Igniberos é um imponente Pokémon dragão com sete cabeças, cada uma possuindo uma
+                    personalidade única. Essas cabeças representam diferentes aspectos de sua natureza, tornando-o um
+                    Pokémon imprevisível e instável. Igniberos está sempre com a "cabeça quente", pronto para liberar
+                    poderosos ataques de fogo que consomem seus oponentes. Sua presença é monstruosa e impõe respeito
+                    diante de outros Pokémon. Treinar Igniberos requer habilidade e paciência para lidar com suas
+                    múltiplas personalidades e controlar seu poder destrutivo. Como treinador, é necessário estabelecer
+                    uma conexão forte e compreender cada uma das cabeças de Igniberos para aproveitar todo o seu
+                    potencial e dominar seu poder feroz.</p>
+            </li>
+            <li class="cartao">
+                <div class="informacoes">
+                    <a href=""><span>Mana</span>
+                        <span>#088</span></a>
+                </div>
+                <img src="./imgdex/88 - Mana (água).png" alt="" onclick="pkm38('audio38')">
+                <ul class="tipos">
+                    <li class="tipo agua">Água</li>
+                </ul>
+                <p class="descricao">Mana é um Pokémon filhote de peixe-boi do tipo água. É conhecido por sua alegria
+                    contagiante e por
+                    sua habilidade de nadar em águas profundas por longos períodos sem precisar respirar. É um
+                    companheiro leal e afetuoso para aqueles que o tratam com carinho.</p>
+            </li>
+            <li class="cartao">
+                <div class="informacoes">
+                    <a href=""><span>Manati</span>
+                        <span>#089</span></a>
+                </div>
+                <img src="./imgdex/89 - Manati (água).png" alt="" onclick="pkm39('audio39')">
+                <ul class="tipos">
+                    <li class="tipo agua">Água</li>
+                </ul>
+                <p class="descricao">Manati é a evolução de Mana, e nessa fase jovem ele se torna mais maduro, porém
+                    mantém sua personalidade brincalhona e bem-humorada. Ele adora nadar com maestria e passa a maior
+                    parte do
+                    tempo debaixo d'água. Sua evolução fortalece seus poderes aquáticos, tornando-o um Pokémon ágil e
+                    habilidoso no ambiente aquático. Manati continua sendo do tipo água e é um companheiro divertido e
+                    encantador para se ter ao lado.</p>
+            </li>
+            <li class="cartao">
+                <div class="informacoes">
+                    <a href=""><span>Manation</span>
+                        <span>#090</span></a>
+                </div>
+                <img src="./imgdex/90 -  Manation (água).png" alt="" onclick="pkm40('audio40')">
+                <ul class="tipos">
+                    <li class="tipo agua">Água</li>
+                </ul>
+                <p class="descricao">Manation é a poderosa evolução de Manati, um peixe-boi totalmente amadurecido. Com
+                    um tamanho impressionante e um peso com cerca de 500 kg, Manation se destaca pela sua força e
+                    imponência. Ele é capaz de nadar com habilidade surpreendente, mesmo com seu tamanho gigantesco.
+                    Quando libera
+                    sua pressão e realiza impulsos poderosos, é capaz de gerar maremotos e causar estrondos
+                    significativos debaixo d'água. Manation é um Pokémon do tipo água, e sua presença imponente faz dele
+                    uma força a ser reconhecida nos ambientes aquáticos</p>
+            </li>
+            <li class="cartao">
+                <div class="informacoes">
+                    <a href=""><span>Caramello</span>
+                        <span>#091</span></a>
+                </div>
+                <img src="./imgdex/91 - Caramello (normal).png" alt="" onclick="pkm41('audio41')">
+                <ul class="tipos">
+                    <li class="tipo normal">Normal</li>
+                </ul>
+                <p class="descricao">É um adorável Pokémon cachorro com uma pelagem na cor caramelo. Ele possui um
+                    temperamento doce e amigável, conquistando o coração de todos ao seu redor. Caramello é do tipo
+                    normal, o que significa que ele não tem vantagens ou fraquezas
+                    específicas em relação a outros tipos de Pokémon. Sua natureza brincalhona e leal o torna um
+                    companheiro ideal para treinadores que buscam um Pokémon afetuoso e carinhoso. Além disso, Caramello
+                    adora receber carinhos e agrados, o que o torna ainda mais cativante para treinadores iniciantes.
+                </p>
+            </li>
+            <li class="cartao">
+                <div class="informacoes">
+                    <a href=""><span>Caramellado</span>#092</a>
+                </div>
+                <img src="./imgdex/92 - Caramellado (normal).png" alt="" onclick="pkm42('audio42')">
+                <ul class="tipos">
+                    <li class="tipo normal">Normal</li>
+                </ul>
+                <p class="descricao">Caramellado é a evolução de Caramello, e é conhecido por sua extrema lealdade aos
+                    seus treinadores. Ele desenvolve uma incrível capacidade de espera, podendo ficar no mesmo lugar por
+                    anos aguardando seu treinador retornar. Sua devoção e fidelidade são incomparáveis, e ele está
+                    disposto a enfrentar qualquer
+                    desafio para proteger seu treinador e seus companheiros. Além disso, Caramellado mantém sua
+                    aparência encantadora de um cão caramelo, o que o torna ainda mais adorável aos olhos de todos. Como
+                    um Pokémon do tipo normal, ele possui uma ampla variedade de habilidades e é versátil em batalhas.
+                    Com Caramellado ao seu lado, um treinador pode contar com um parceiro leal e dedicado para todas as
+                    suas aventuras.</p>
+            </li>
+            <li class="cartao">
+                <div class="informacoes">
+                    <a href=""><span>Caspor</span>
+                        <span>#093</span></a>
+                </div>
+                <img src="./imgdex/93 - Caspor (lutador).png" alt="" onclick="pkm43('audio43')">
+                <ul class="tipos">
+                    <li class="tipo lutador">Lutador</li>
+                </ul>
+                <p class="descricao">Um pequeno Pokémon castor que possui um estilo de luta único: a capoeira. Sua
+                    agilidade e movimentos graciosos são impressionantes, tornando-o um adversário formidável em
+                    batalhas. No entanto, Caspor pode ser um pouco desengonçado e tímido
+                    quando se trata de exibir suas habilidades, preferindo se esconder e observar em vez de chamar a
+                    atenção para si mesmo. Apesar disso, quando está totalmente comprometido com uma batalha, Caspor se
+                    torna um lutador habilidoso e implacável.</p>
+            </li>
+            <li class="cartao">
+                <div class="informacoes">
+                    <a href=""><span>Caspoeira</span>
+                        <span>#094</span></a>
+                </div>
+                <img src="./imgdex/94 - Caspoeira (lutador).png" alt="" onclick="pkm44('audio44')">
+                <ul class="tipos">
+                    <li class="tipo lutador">Lutador</li>
+                </ul>
+                <p class="descricao">Caspoeira é a evolução de Caspor e se torna o combatente perfeito da arte da
+                    capoeira. Com sua agilidade aprimorada e a execução perfeita dos movimentos, ele se torna um lutador
+                    formidável. Caspoeira é extremamente rápido e é capaz de realizar sequências de golpes incríveis,
+                    combinando acrobacias e chutes poderosos. Sua destreza e coordenação o tornam um adversário temível
+                    em batalhas, sendo capaz de esquivar facilmente dos ataques inimigos enquanto desfere golpes
+                    precisos. Como um Pokémon do tipo lutador, Caspoeira domina uma variedade de técnicas de combate e
+                    pode aprender golpes especiais inspirados na capoeira. Sua evolução representa a evolução natural de
+                    suas habilidades e o transforma em um verdadeiro mestre da arte marcial.</p>
+            </li>
+            <li class="cartao">
+                <div class="informacoes">
+                    <a href=""><span>Swamplord</span>
+                        <span>#095</span></a>
+                </div>
+                <img src="./imgdex/95 - Swamplord (terra, veneno).png" alt="" onclick="pkm45('audio45')">
+                <ul class="tipos">
+                    <li class="tipo terra">Terra</li>
+                    <li class="tipo veneno">Veneno</li>
+                </ul>
+                <p class="descricao">Swamplord é um Pokémon temível que habita os pântanos. Com sua imponente presença e
+                    um urro assustador, ele impõe respeito em seu território. Swamplord é conhecido por gostar de se
+                    banhar na lama e aproveitar o tempo em seu habitat natural. Sua natureza territorial faz com que ele
+                    reaja com raiva e força bruta a qualquer um que perturbe sua paz. Como um Pokémon do tipo Terra e
+                    Veneno, Swamplord possui uma combinação de habilidades ofensivas
+                    e defensivas. Ele pode utilizar ataques relacionados à terra, como terremotos e movimentos de
+                    escavação, bem como lançar veneno contra seus oponentes. Sua resistência e força física tornam-no um
+                    adversário formidável em batalhas. No entanto, é importante lembrar de respeitar sua natureza
+                    territorial e evitar provocá-lo, a menos que esteja preparado para enfrentar sua fúria.</p>
+            </li>
+            <li class="cartao">
+                <div class="informacoes">
+                    <a href=""><span>Pira</span>
+                        <span>#096</span></a>
+                </div>
+                <img src="./imgdex/96 - Pira (água).png" alt="" onclick="pkm46('audio46')">
+                <ul class="tipos">
+                    <li class="tipo agua">Água</li>
+                </ul>
+                <p class="descricao">Pira é um Pokémon do tipo Água que se assemelha a uma piranha. Conhecido por sua
+                    natureza voraz e agressiva, Pira é um nadador ágil e implacável. Ele se destaca por sua mordida
+                    poderosa e dentes
+                    afiados, que podem rasgar facilmente a presa. Pira é geralmente encontrado em rios e lagos, onde
+                    forma grupos e ataca em conjunto para garantir sua alimentação. Devido à sua natureza predatória,
+                    Pira pode ser um Pokémon desafiador de se lidar</p>
+            </li>
+            <li class="cartao">
+                <div class="informacoes">
+                    <a href=""><span>Pira-Pira</span>
+                        <span>#097</span></a>
+                </div>
+                <img src="./imgdex/97 - Pira-Pira (água).png" alt="" onclick="pkm47('audio47')">
+                <ul class="tipos">
+                    <li class="tipo agua">Água</li>
+                </ul>
+                <p class="descricao">Pira-Pira é a evolução de Pira, e sua principal característica é sua habilidade de
+                    se mover em grupo. Esses Pokémon piranhas têm a capacidade de se coordenar de forma incrível, agindo
+                    em perfeita sincronia durante a caça e a defesa de seu território.
+                    Pira-Pira é conhecido por formar grandes cardumes que se deslocam em conjunto, tornando-se uma força
+                    poderosa e intimidadora. Seus movimentos ágeis e estratégicos permitem que eles superem até mesmo
+                    adversários mais fortes individualmente. Além disso, Pira-Pira mantém sua natureza voraz e
+                    predatória, usando sua força em grupo para obter comida e afugentar ameaças.</p>
+            </li>
+            <li class="cartao">
+                <div class="informacoes">
+                    <a href=""><span>Dragonvin</span>
+                        <span>#098</span></a>
+                </div>
+                <img src="./imgdex/98 - Dragonvinha (dragão, planta).png" alt="" onclick="pkm48('audio48')">
+                <ul class="tipos">
+                    <li class="tipo dragao">Dragão</li>
+                    <li class="tipo planta">Planta</li>
+                </ul>
+                <p class="descricao">Ele habita as florestas e tem a incrível habilidade de reflorestar áreas desmatadas
+                    de forma natural. Com seu poderoso sopro, Dragonvinha é capaz de lançar sementes que germinam
+                    rapidamente, dando origem a vinhas e arbustos que cobrem o solo e restauram o ecossistema. Além
+                    disso, suas garras afiadas permitem que ele manipule as vinhas, erguendo-as e moldando-as de acordo
+                    com sua vontade. Dragonvinha é um guardião da natureza, dedicado a proteger e preservar os
+                    ambientes florestais. Seu corpo verde vibrante se camufla perfeitamente entre as folhagens,
+                    permitindo que ele se mova furtivamente e surpreenda seus oponentes. Com sua combinação única de
+                    tipos Dragão e Planta, Dragonvinha possui uma variedade de ataques poderosos que podem causar dano
+                    tanto físico quanto elemental.</p>
+            </li>
+            <li class="cartao">
+                <div class="informacoes">
+                    <a href=""><span>Dragonsipó</span>
+                        <span>#099</span></a>
+                </div>
+                <img src="./imgdex/99 - Dragonsipó (dragão, planta).png" alt="" onclick="pkm49('audio49')">
+                <ul class="tipos">
+                    <li class="tipo dragao">Dragão</li>
+                    <li class="tipo planta">Planta</li>
+                </ul>
+                <p class="descricao">Dragonsipo, a evolução poderosa de Dragonvin, possui habilidades ainda mais
+                    impressionantes quando se trata de reflorestar áreas desmatadas. Com sua forma imponente e
+                    majestosa, Dragonsipo é capaz de evocar vinhas gigantes que se estendem por grandes extensões de
+                    terra, rapidamente recuperando o verde exuberante das florestas perdidas. Sua energia vital é tão
+                    poderosa que é capaz de estimular o crescimento de árvores antigas e imponentes em questão de
+                    minutos. Além de suas habilidades de reflorestamento, Dragonsipo é um formidável lutador. Suas
+                    garras afiadas e sua cauda robusta são armas poderosas que ele usa para se defender e derrotar
+                    qualquer ameaça que ouse prejudicar seu habitat. Como um Pokémon do tipo Dragão e Planta, Dragonsipo
+                    possui uma
+                    combinação única de força física e ataques elementais, o que o torna um adversário temível em
+                    batalhas. No entanto, ele também mantém seu compromisso com a preservação da natureza, agindo como
+                    um guardião dos ecossistemas florestais.</p>
+            </li>
+            <li class="cartao">
+                <div class="informacoes">
+                    <a href=""><span>Dragondoso</span>
+                        <span>#100</span></a>
+                </div>
+                <img src="./imgdex/100 - Dragondoso (dragão, planta).png" alt="" onclick="pkm50('audio50')">
+                <ul class="tipos">
+                    <li class="tipo dragao">Dragão</li>
+                    <li class="tipo planta">Planta</li>
+                </ul>
+                <p>Dragondoso, a evolução final de Dragonvin e Dragonsipo, é uma verdadeira maravilha da natureza. Com
+                    seu tamanho colossal e poderes incomparáveis, Dragondoso desempenha um papel crucial na recuperação
+                    e preservação de ecossistemas inteiros. Com apenas um bater de suas poderosas asas, ele é capaz de
+                    levantar florestas exuberantes e árvores frondosas, trazendo consigo uma mega biodiversidade de
+                    plantas e animais. Sua presença é um sinal de renovação e renascimento, uma força capaz de
+                    transformar paisagens desoladas em verdadeiros paraísos naturais.
+                    Além de suas impressionantes habilidades de reflorestamento, Dragondoso é uma força a ser temida em
+                    batalhas. Seus ataques poderosos combinam a ferocidade de um dragão com a vitalidade de uma planta,
+                    criando um estilo de luta único e avassalador. Suas escamas resistentes e sua força imponente
+                    tornam-no quase invulnerável a ataques, e suas garras afiadas e hálito de fogo podem derrubar
+                    qualquer oponente que se atreva a desafiá-lo.
+                    No entanto, apesar de sua imponência e poder, Dragondoso é um guardião gentil e compassivo da
+                    natureza. Ele protege os biomas que ajudou a criar, defendendo-os de qualquer ameaça que possa
+                    surgir. Sua presença inspira reverência e respeito, e sua sabedoria ancestral é transmitida aos
+                    treinadores que têm a honra de serem escolhidos como seus parceiros.
+                    Como um Pokémon do tipo Dragão e Planta, Dragondoso é verdadeiramente único e especial. Aqueles que
+                    o encontram e formam laços com ele se tornam parte de uma jornada extraordinária de preservação e
+                    regeneração da natureza. Juntos, eles podem transformar o mundo, garantindo um futuro sustentável e
+                    harmonioso para todas as criaturas que compartilham este planeta.</p>
+            </li>
+        </ul>
+        <div class="botoes-lista">
+            <a href="../Pokedex1/Pokedex.html">1</a>
+            <a href="" class="botao2">2</a>
+            <a href="../Pokedex3/Pokedex3.html">3</a>
+            <a href="../Pokedex4/Pokedex4.html">4</a>
+        </div>
+    </main>
+    <footer>
+        <div id="#footer_container">
+            <a href="" class="PCK"><img src="./imgsite/PKC.png" alt="" width="350px"></a>
+            <div class="redes">
+                <a href="https://discord.gg/Epf5BEchVs" target="_blank" class="disc"><img src="./imgsite/Discord.png" alt="" width="80px"></a>
+                <a href="https://www.youtube.com/channel/UClyhc1OdKzCtCQ4vbuH-LQw" target="_blank" class="yout"><img src="./imgsite/Youtube.png" alt="" width="80px"></a>
+                <a href="https://www.instagram.com/pokemonxs_official/" target="_blank" class="ig"><img src="./imgsite/Instagram.png" alt="" width="65px"></a>
+            </div>
+            <ul class="avisos">
+                <li>
+                    <a href="../pdfs/Aviso de Privacidade.pdf"> Aviso de privacidade </a>
+                </li>
+                <li>
+                    <a href="../pdfs/Termos de uso.pdf"> Termos de uso </a>
+                </li>
+                <li>
+                    <a href="" target="_blank"> Serviço ao consumidor </a>
+                </li>
+                <li>
+                    <a href="" target="_blank"> Guia aos pais </a>
+                </li>
+            </ul>
+            <span class="copy">©️️2023 Pokémon. ©️️2023–2023 Skyrus / Creatures Inc. / GAME SKYRUS inc. TM, ® e os nomes
+                dos personagens são marcas da Skyrus</span>
+        </div>
+    </footer>
+</body>
+</html>
+<script>
+    function pkm1 (audio1) {
+        const audio = new Audio(`./audios/${audio1}.mp3`);
+        audio.play();
+    }
+    function pkm2 (audio2) {
+        const audio = new Audio(`./audios/${audio2}.mp3`);
+        audio.play();
+    }
+    function pkm3 (audio3) {
+        const audio = new Audio(`./audios/${audio3}.mp3`);
+        audio.play();
+    }
+    function pkm4 (audio4) {
+        const audio = new Audio(`./audios/${audio4}.mp3`);
+        audio.play();
+    }
+    function pkm5 (audio5) {
+        const audio = new Audio(`./audios/${audio5}.mp3`);
+        audio.play();
+    }
+    function pkm6 (audio6) {
+        const audio = new Audio(`./audios/${audio6}.mp3`);
+        audio.play();
+    }
+    function pkm7 (audio7) {
+        const audio = new Audio(`./audios/${audio7}.mp3`);
+        audio.play();
+    }
+    function pkm8 (audio8) {
+        const audio = new Audio(`./audios/${audio8}.mp3`);
+        audio.play();
+    }
+    function pkm9 (audio9) {
+        const audio = new Audio(`./audios/${audio9}.mp3`);
+        audio.play();
+    }
+    function pkm10 (audio10) {
+        const audio = new Audio(`./audios/${audio10}.mp3`);
+        audio.play();
+    }
+    function pkm11 (audio11) {
+        const audio = new Audio(`./audios/${audio11}.mp3`);
+        audio.play();
+    }
+    function pkm12 (audio12) {
+        const audio = new Audio(`./audios/${audio12}.mp3`);
+        audio.play();
+    }
+    function pkm13 (audio13) {
+        const audio = new Audio(`./audios/${audio13}.mp3`);
+        audio.play();
+    }
+    function pkm14 (audio14) {
+        const audio = new Audio(`./audios/${audio14}.mp3`);
+        audio.play();
+    }
+    function pkm15 (audio15) {
+        const audio = new Audio(`./audios/${audio15}.mp3`);
+        audio.play();
+    }
+    function pkm16 (audio16) {
+        const audio = new Audio(`./audios/${audio16}.mp3`);
+        audio.play();
+    }
+    function pkm17 (audio17) {
+        const audio = new Audio(`./audios/${audio17}.mp3`);
+        audio.play();
+    }
+    function pkm18 (audio18) {
+        const audio = new Audio(`./audios/${audio18}.mp3`);
+        audio.play();
+    }
+    function pkm19 (audio19) {
+        const audio = new Audio(`./audios/${audio19}.mp3`);
+        audio.play();
+    }
+    function pkm20 (audio20) {
+        const audio = new Audio(`./audios/${audio20}.mp3`);
+        audio.play();
+    }
+    function pkm21 (audio21) {
+        const audio = new Audio(`./audios/${audio21}.mp3`);
+        audio.play();
+    }
+    function pkm22 (audio22) {
+        const audio = new Audio(`./audios/${audio22}.mp3`);
+        audio.play();
+    }
+    function pkm23 (audio23) {
+        const audio = new Audio(`./audios/${audio23}.mp3`);
+        audio.play();
+    }
+    function pkm24 (audio24) {
+        const audio = new Audio(`./audios/${audio24}.mp3`);
+        audio.play();
+    }
+    function pkm25 (audio25) {
+        const audio = new Audio(`./audios/${audio25}.mp3`);
+        audio.play();
+    }
+    function pkm26 (audio26) {
+        const audio = new Audio(`./audios/${audio26}.mp3`);
+        audio.play();
+    }
+    function pkm27 (audio27) {
+        const audio = new Audio(`./audios/${audio27}.mp3`);
+        audio.play();
+    }
+    function pkm28 (audio28) {
+        const audio = new Audio(`./audios/${audio28}.mp3`);
+        audio.play();
+    }
+    function pkm29 (audio29) {
+        const audio = new Audio(`./audios/${audio29}.mp3`);
+        audio.play();
+    }
+    function pkm30 (audio30) {
+        const audio = new Audio(`./audios/${audio30}.mp3`);
+        audio.play();
+    }
+    function pkm31 (audio31) {
+        const audio = new Audio(`./audios/${audio31}.mp3`);
+        audio.play();
+    }
+    function pkm32 (audio32) {
+        const audio = new Audio(`./audios/${audio32}.mp3`);
+        audio.play();
+    }
+    function pkm33 (audio33) {
+        const audio = new Audio(`./audios/${audio33}.mp3`);
+        audio.play();
+    }
+    function pkm34 (audio34) {
+        const audio = new Audio(`./audios/${audio34}.mp3`);
+        audio.play();
+    }
+    function pkm35 (audio35) {
+        const audio = new Audio(`./audios/${audio35}.mp3`);
+        audio.play();
+    }
+    function pkm36 (audio36) {
+        const audio = new Audio(`./audios/${audio36}.mp3`);
+        audio.play();
+    }
+    function pkm37 (audio37) {
+        const audio = new Audio(`./audios/${audio37}.mp3`);
+        audio.play();
+    }
+    function pkm38 (audio38) {
+        const audio = new Audio(`./audios/${audio38}.mp3`);
+        audio.play();
+    }
+    function pkm39 (audio39) {
+        const audio = new Audio(`./audios/${audio39}.mp3`);
+        audio.play();
+    }
+    function pkm40 (audio40) {
+        const audio = new Audio(`./audios/${audio40}.mp3`);
+        audio.play();
+    }
+    function pkm41 (audio41) {
+        const audio = new Audio(`./audios/${audio41}.mp3`);
+        audio.play();
+    }
+    function pkm42 (audio42) {
+        const audio = new Audio(`./audios/${audio42}.mp3`);
+        audio.play();
+    }
+    function pkm43 (audio43) {
+        const audio = new Audio(`./audios/${audio43}.mp3`);
+        audio.play();
+    }
+    function pkm44 (audio44) {
+        const audio = new Audio(`./audios/${audio44}.mp3`);
+        audio.play();
+    }
+    function pkm45 (audio45) {
+        const audio = new Audio(`./audios/${audio45}.mp3`);
+        audio.play();
+    }
+    function pkm46 (audio46) {
+        const audio = new Audio(`./audios/${audio46}.mp3`);
+        audio.play();
+    }
+    function pkm47 (audio47) {
+        const audio = new Audio(`./audios/${audio47}.mp3`);
+        audio.play();
+    }
+    function pkm48 (audio48) {
+        const audio = new Audio(`./audios/${audio48}.mp3`);
+        audio.play();
+    }
+    function pkm49 (audio49) {
+        const audio = new Audio(`./audios/${audio49}.mp3`);
+        audio.play();
+    }
+    function pkm50 (audio50) {
+        const audio = new Audio(`./audios/${audio50}.mp3`);
+        audio.play();
+    }
+</script>

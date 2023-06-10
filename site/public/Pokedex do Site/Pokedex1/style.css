@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap%27');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+/* NAVBAR */
+a {
+    color: whitesmoke;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+.logotipo{
+    display: flex;
+    margin-right: 300px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Poppins';
+    background-color: #121212;
+    height: 12vh;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3); 
+}
+
+.nav-lista{
+    list-style: none;
+    display: flex;
+}
+
+.nav-lista li{
+    letter-spacing: 3px;
+    margin-left: 32px;
+}
+/* PAGINA PRINCIPAL */
+body{
+    background-color: #d9d9d9;
+    font-family: 'Poppins','Nunito-Sans';
+    scroll-behavior: smooth;
+}
+
+/* 
+    TEMA ESCURO */ 
+    body.tema-escuro{
+    background-color: #121212;
+    color: whitesmoke;
+}
+
+main{
+    padding: 25px;
+}
+
+main img{
+    width: 100px;
+}
+
+main img:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+ul{
+    list-style: none;
+}
+
+main .pokedex{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+main span{
+    cursor: pointer;
+}
+
+main .cartao{
+    background-color: #d8e3ec;
+    width: 200px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    border-radius: 15px;
+    transition: 0.2s ease-in-out;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3); 
+}
+
+/* main .tema-escuro .cartao{
+    background-color: #a8a8a8;
+} */
+
+main .cartao:hover{
+    background-color: #96d9d6;
+    transform: scale(1.02);
+}
+
+main .cartao .informacoes{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #121212;
+    border-radius: 10px;
+}
+
+main .cartao .informacoes span{
+    padding: 5px;
+    text-transform: uppercase;
+    font-size: 17px;
+}
+
+main .cartao .informacoes a{
+    padding: 5px;
+    text-transform: uppercase;
+    font-size: 17px;
+    color: #121212;
+}
+
+main .cartao .curtida{
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 12px;
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+}
+
+main .cartao .tipos{
+    display: flex;
+    gap: 15px;
+    color: whitesmoke;
+}
+
+main .cartao .tipo {
+    padding: 8px;
+    border-radius: 10px;
+}
+
+.planta{
+    background-color: #7ac74c;
+}
+
+.veneno {
+	background-color: #df67ddfb;
+}
+
+.fogo {
+	background-color: #ee8130;
+}
+
+.agua {
+	background-color: #6390f0;
+}
+
+.inseto {
+	background-color: #a6b91a;
+}
+
+.lutador{
+    background-color: #8b0000;
+}
+
+.normal{
+    background-color: #a4acaf;
+}
+
+.psiquico{
+    background-color: #795ba4;
+}
+
+.voador{
+    background-color: #e6cd86;
+}
+
+.metal{
+    background-color: #c6c6d9;
+}
+
+.sombrio{
+    background-color: #22627b;
+}
+
+.dragao{
+    background-color: #8d60f9;
+}
+
+.fada{
+    background-color: #fdb9e9;
+}
+
+.terra{
+    background-color: #764c1e;
+}
+
+.eletrico{
+    background-color: #f9d959;
+}
+
+.gelo{
+    background-color: #ade0e0;
+}
+
+.pedra{
+    background-color: #4f4f4f;
+}
+
+.fantasma{
+    background-color: #8d79ad;
+}
+
+main p{
+    max-height: 80px;
+    overflow-y: scroll;
+    font-size: 14px;
+    padding-right: 10px;
+}
+
+.botoes-lista{
+    display: flex;
+    justify-content: center;
+}
+
+.botoes-lista a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #16232F;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-right: 10px; 
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3); 
+  }
+
+.botoes-lista a:hover {
+    background-color: #121212;
+}
+  
+.botoes-lista a:last-child {
+    margin-right: 0;
+}
+
+.botoes-lista .botao1{
+    background-color: #22627b;
+}
+
+/* ===== Scrollbar CSS ===== */
+
+*::-webkit-scrollbar {
+	width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+	background: #f1e9e9;
+}
+
+*::-webkit-scrollbar-thumb {
+	background-color: #121212;
+	border-radius: 10px;
+	border: 3px solid #ffffff;
+}
+
+/* RODAPE DA PAGINA */
+footer {
+    width: 100%;
+    background-color: #121212;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 4px 4px 6px 8px rgba(0, 0, 0, 0.4);  
+}
+
+.PCK{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.avisos{
+    margin-top: 20px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.avisos li{
+    margin-left: 32px;
+    font-family: 'Poppins';
+}
+
+.redes{
+    margin-top: 20px;
+    display: flex;
+    justify-content: start;
+}
+.disc{
+    margin: 10px;
+    padding: 10px;
+}
+.yout{
+    margin: 10px;
+    padding: 10px;
+}
+.ig{
+    margin: 10px;
+    padding: 10px;
+}
+.copy{
+    align-content: center;
+    font-family: 'Nunito-Sans';
+    color: whitesmoke;
+    letter-spacing: 1px;
+}

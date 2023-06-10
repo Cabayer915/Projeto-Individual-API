@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap%27');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+    box-sizing: border-box;
+}
+
+/* NAVBAR */
+a {
+    color: whitesmoke;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+.logotipo {
+    display: flex;
+    margin-right: 300px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Poppins';
+    background-color: #121212;
+    height: 12vh;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.nav-lista {
+    list-style: none;
+    display: flex;
+}
+
+.nav-lista li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+}
+
+/* QUIZ */
+
+body{
+    background: brown;
+}
+.app{
+    background: #ffff;
+    width: 90%;
+    max-width: 600px;
+    margin: 40px auto 0;
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 40px;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3); 
+}
+.app h1{
+    font-weight: 25px;
+    color: #121212;
+    font-weight: 600;
+    border-bottom: 1px solid #333;
+    padding-bottom: 30px;
+}
+.quiz{
+    padding: 20px 0;
+}
+.quiz h2{
+    font-size: 18px;
+    color: #121212;
+    font-weight: 600;
+}
+.botaoo{
+    background: #ffff;
+    color: #222;
+    font-weight: 500;
+    width: 100%;
+    border: 1px solid #222;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: left;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.botaoo:hover:not([disabled]){
+    background: #222;
+    color: #ffff;
+}
+.botaoo:disabled{
+    cursor: no-drop;
+}
+#proximo{
+    background-color: #121212;
+    color: whitesmoke;
+    font-weight: 500;
+    width: 150px;
+    border: 0;
+    padding: 10px;
+    margin: 20px auto 0;
+    border-radius: 4px;
+    cursor: pointer;
+    display: none;
+}
+.correto{
+    background: #9aeabc;
+}
+.incorreto{
+    background: #ff9393;
+}
+
+/* ===== Scrollbar CSS ===== */
+
+*::-webkit-scrollbar {
+    width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #f1e9e9;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #121212;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+}

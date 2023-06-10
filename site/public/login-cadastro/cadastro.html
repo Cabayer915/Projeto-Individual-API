@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style1.css">
+  <link rel="icon" type="image/png" href="../img/icon.png">
+  <title>Cadastro</title>
+</head>
+<body background="./backgroundC_resized.png">
+  <header>
+    <nav>
+        <a class="logotipo" href="../index.html"><img src="Logotipo.png" alt="" width="170px"></a>
+        <ul class="nav-lista">
+            <li>
+                <a href="https://discord.gg/Epf5BEchVs"> Discord </a>
+            </li>
+            <li>
+                <a href="#" onclick="aviso()"> Pokédex </a>
+            </li>
+            <li>
+                <a href="../login-cadastro/login.html"> Entrar </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+  <div class="container">
+    <h1>Cadastro</h1>
+    <div>
+      <p>Nome:</p>
+      <input type="text" id="nome_input" name="name" placeholder="Digite seu nome" required>
+      
+      <p>Data de Nascimento:</p>
+      <input type="date" id="dtNasc_input" name="birthdate" required>
+      
+      <p>Gênero:</p>
+      <select id="genero_input" name="gender" required>
+        <option value="masculino">Masculino</option>
+        <option value="feminino">Feminino</option>
+        <option value="outro">Outro</option>
+      </select>
+      
+      <p>Email:</p>
+      <input type="text" id="email_input" name="email" placeholder="Digite seu email" required>
+      
+      <p>Senha:</p>
+      <input type="password" id="senha_input" name="password" placeholder="Digite sua senha" required>
+      
+      <button onclick="cadastrar()">Criar Cadastro</button>
+    </div>
+    
+    <div class="login-link">
+      Já tem uma conta? <a href="./login.html">Faça login</a>
+    </div>
+  </div>
+</body>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</html>
+<script>
+  function aviso(){
+    swal("Você precisa de uma conta para acesso a Pokédex!", "Faça login em sua conta para desfrutar livremente da Pokédex desta incrível nova região!", "error");
+    }
+
+    function cadastrar() {
+
+        //Recupere o valor da nova input pelo nome do id
+        // Agora vá para o método fetch logo abaixo
+        var nomeVar = nome_input.value;
+        var dtNascVar = dtNasc_input.value;
+        var generoVar = genero_input.value;
+        var emailVar = email_input.value;
+        var senhaVar = senha_input.value;
+
+        if (nomeVar == "" || dtNascVar == "" || generoVar == "" || emailVar == "" || senhaVar == "") {
+            swal("ERRO!", "Houve um erro ao realizar seu cadastro!", "error");
+            
+            return false;
+        }
+
+        // Enviando o valor da nova input
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                nomeServer: nomeVar,
+                dtNascServer: dtNascVar,
+                generoServer: generoVar,
+                emailServer: emailVar,
+                senhaServer: senhaVar
+            })
+        }).then(function(resposta) {
+
+            if (resposta.ok) {
+                swal("SUCESSO!", "Cadastro realizado com sucesso!", "success");
+                setTimeout(() => {
+                                window.location.href = "login.html";
+                            }, "3000")
+            } else {
+                swal("ERRO!", "Houve um erro ao realizar seu cadastro!", "error");
+            }
+        })
+    }
+
+</script>

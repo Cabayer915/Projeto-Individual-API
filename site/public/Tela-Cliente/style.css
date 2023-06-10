@@ -1,0 +1,390 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap%27');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+/* NAVBAR */
+a {
+    color: whitesmoke;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+.logotipo {
+    display: flex;
+    margin-right: 300px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Poppins';
+    background-color: #121212;
+    height: 12vh;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.nav-lista {
+    list-style: none;
+    display: flex;
+}
+
+.nav-lista li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+}
+
+/* TELA PRINCIPAL */
+
+body{
+    background-color: #ffff;
+}
+
+/* CARROSSEL */
+
+.container-destaque{
+    background-color: #121212;
+    border-radius: 4px;
+    color: whitesmoke;
+    margin-left: 20px;
+    margin-right: 1015px;
+    font-family: 'Poppins';
+}
+
+.mensagens{
+    display: flex;
+    justify-content: center;
+    margin-top: 20PX;
+}
+
+.container-destaque img{
+    width: 20px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-right: 8px;
+}
+
+.container-slider{
+    display: flex;
+    width: 100%;
+    min-height: 200px;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    background-color: #616161;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.container-images{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+}
+
+.slider{
+    opacity: 0.3;
+    transition: opacity .2s;
+    position: absolute;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.espaco{
+    display: flex;
+    justify-content: center;
+    margin-left: 70px;
+    margin-right: 70px;
+    margin-bottom: 100px;
+}
+
+.on{
+    opacity: 1;
+    transform: scale(1.5);
+}
+
+#prev-button, #next-button{
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#prev-button{
+    position: absolute;
+    margin-right: 1200px;
+}
+
+#next-button{
+    position: absolute;
+    margin-left: 1200px;
+}
+
+#prev-button img, #next-button img{
+    width: 100%;
+    height: 100%;
+}
+
+/* QUIZ */
+
+.quiz h1{
+    margin-top: 20px;
+    color: #f0d800;
+    font-family: 'Poppins';
+    display: flex;
+    justify-content: center;
+    -webkit-text-stroke: 2px #121212;
+}
+
+.quiz .botaoQuiz{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    padding: 20px;
+    margin-left: 40%;
+    background-color: #121212;
+    font-family: 'Poppins';
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3); 
+  }
+
+/* TRAILER */
+
+.trailer{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    color: #f0d800;
+    font-family: 'Poppins';
+    -webkit-text-stroke: 2px #121212;
+}
+
+.sobreTrailer{
+    display: flex;
+    justify-content: center;
+}
+
+.sobreTrailer .video-container{
+    margin-top: 40px;
+}
+
+/* DOWNLOAD */
+
+.container-destaque-download{
+    background-color: #121212;
+    border-radius: 4px;
+    color: whitesmoke;
+    margin-left: 20px;
+    margin-right: 1070px;
+    font-family: 'Poppins';
+}
+
+.mensagens-download{
+    display: flex;
+    justify-content: center;
+    margin-top: 20PX;
+}
+
+.container-destaque-download img{
+    width: 20px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-right: 8px;
+}
+
+.container-slider-download{
+    display: flex;
+    width: 100%;
+    min-height: 450px;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    background-color: #3f3f3f;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.container-images-download{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 350px;
+}
+
+.slider2{
+    position: absolute;
+    opacity: 0;
+    transition: opacity .2s;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.on{
+    opacity: 1;
+}
+
+#prev-button2, #next-button2{
+    width: 90px;
+    height: 90px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#prev-button2{
+    position: absolute;
+    margin-right: 800px;
+}
+
+#next-button2{
+    position: absolute;
+    margin-left: 800px;
+}
+
+#prev-button2 img, #next-button2 img{
+    width: 100%;
+    height: 100%;
+}
+
+.botaoDownload{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    padding: 20px;
+    margin-left: 40%;
+    background-color: #121212;
+    font-family: 'Poppins';
+    font-size: 28px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.iconDownload{
+    margin-right: 10px;
+}
+
+.informacoes-do-jogo{
+    display: flex;
+    justify-content: center;
+    margin-left: 15%;
+    color: white;
+    font-family: 'Poppins';
+    width: 900px;
+    height: 400px;
+    border-radius: 10px;
+    background-color: #181923;
+}
+
+.informacoes-do-jogo h1{
+    display: flex;
+    justify-content: center;
+}
+
+.informacoes-do-jogo h2{
+    display: flex;
+    justify-content: space-between;
+}
+
+.informacoes-do-jogo h2 li{
+    margin-top: 10px;
+    margin-right: 60px;
+    margin-left: 60px;
+    text-decoration: none;
+}
+
+/* ===== Scrollbar CSS ===== */
+
+*::-webkit-scrollbar {
+    width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #f1e9e9;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #121212;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+}
+
+/* RODAPE DA PAGINA */
+footer {
+    width: 100%;
+    background-color: #121212;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 4px 4px 6px 8px rgba(0, 0, 0, 0.4);
+}
+
+.PCK {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.avisos {
+    margin-top: 20px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.avisos li {
+    margin-left: 32px;
+    font-family: 'Poppins';
+}
+
+.redes {
+    margin-top: 20px;
+    display: flex;
+    justify-content: start;
+}
+
+.disc {
+    margin: 10px;
+    padding: 10px;
+}
+
+.yout {
+    margin: 10px;
+    padding: 10px;
+}
+
+.ig {
+    margin: 10px;
+    padding: 10px;
+}
+
+.copy {
+    align-content: center;
+    font-family: 'Nunito-Sans';
+    color: whitesmoke;
+    letter-spacing: 1px;
+}

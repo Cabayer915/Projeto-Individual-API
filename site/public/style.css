@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap%27');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+/* NAVBAR */
+a {
+    color: whitesmoke;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+.logotipo {
+    display: flex;
+    margin-right: 300px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Poppins';
+    background-color: #121212;
+    height: 12vh;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.nav-lista {
+    list-style: none;
+    display: flex;
+}
+
+.nav-lista li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+}
+
+/* ===== Scrollbar CSS ===== */
+
+*::-webkit-scrollbar {
+    width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #f1e9e9;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #121212;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+}
+
+/* PAGINA PRINCIPAL */
+body {
+    background-color: #1a1718;
+    font-family: 'Poppins';
+}
+
+main {
+    margin: 0;
+    padding: 0;
+}
+
+main.kapi {
+    display: flex;
+    justify-content: end;
+}
+
+main img.rayquaza {
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+main h1 {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #121212;
+    font-size: 64px;
+    text-align: center;
+    -webkit-text-stroke: 2px gold;
+}
+
+main h2 {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #121212;
+    font-size: 32px;
+    text-align: center;
+    -webkit-text-stroke: 1px gold;
+}
+
+main .video-container {
+    position: absolute;
+    top: 150vh;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 600px;
+    height: 170px;
+    padding-bottom: 20%;
+    /* Proporção 16:9 (ajuste conforme necessário) */
+}
+
+main .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+main span.trailer{
+    font-family: 'Nunino-Sans';
+    display: flex;
+    justify-content: center;
+}
+
+main .textoBoasvindas span{
+    display: flex;
+    justify-content: center;
+    color: gold;
+    font-size: 64px;
+    -webkit-text-stroke: 2px #121212;
+}
+
+main .textoBoasvindas .p1{
+    float: left;
+    margin-left: 75px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    width: 40%;
+    font-size: 20px;
+    border: 4px solid gold;
+    background-color: #121212;
+    color: whitesmoke;
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+}
+
+main .textoBoasvindas .img1{
+    float: right;
+    width: 350px;
+    padding-right: 40vh;
+}
+
+main .textofazCadastro .p2{
+    float: right;
+    margin-right: 75px;
+    margin-top: 20px;
+    width: 30%;
+    padding-right: 20vh;
+    padding-bottom: 10vh;
+    font-size: 20px;
+    border: 4px solid gold;
+    background-color: #121212;
+    color: whitesmoke;
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+}
+
+main .textofazCadastro .img2{
+    float: left;
+    width: 100px;
+    padding-left: 40vh;
+    padding-top: 10vh;
+}
+
+main .textofazCadastro .img4{
+    float: left;
+    width: 250px;
+    padding-left: 50vh;
+    padding-top: 10vh;
+}
+
+main .textoBoasvindas .img3{
+    float: right;
+    width: 250px;
+    padding-right: 40vh;
+}
+
+main .textoBoasvindas .img5{
+    float: right;
+    width: 250px;
+    padding-right: 40vh;
+    padding-top: 5vh;
+}
+
+/* RODAPE DA PAGINA */
+footer {
+    width: 100%;
+    background-color: #121212;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 4px 4px 6px 8px rgba(0, 0, 0, 0.4);
+}
+
+.PCK {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.avisos {
+    margin-top: 20px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.avisos li {
+    margin-left: 32px;
+    font-family: 'Poppins';
+}
+
+.redes {
+    margin-top: 20px;
+    display: flex;
+    justify-content: start;
+}
+
+.disc {
+    margin: 10px;
+    padding: 10px;
+}
+
+.yout {
+    margin: 10px;
+    padding: 10px;
+}
+
+.ig {
+    margin: 10px;
+    padding: 10px;
+}
+
+.copy {
+    align-content: center;
+    font-family: 'Nunito-Sans';
+    color: whitesmoke;
+    letter-spacing: 1px;
+}
