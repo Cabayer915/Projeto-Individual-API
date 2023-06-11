@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style3.css">
     <link rel="icon" type="image/png" href="../../img/icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <title>Pokédex</title>
 </head>
 
@@ -16,13 +17,13 @@
             <a class="logotipo" href="../../Tela-Cliente/telacliente.html"><img src="../../img/Logotipo.png" alt="" width="170px" id="logotipo"></a>
             <ul class="nav-lista">
                 <li>
-                    <a href=""> Favoritos </a>
+                    <a href=""> Mais Curtidos </a>
                 </li>
                 <li>
                     <a href="../Pokedex do Site/Pokedex1/Pokedex.html"> Pokédex </a>
                 </li>
                 <li>
-                    <a href="../../index.html"> Sair </a>
+                    <a href="../../index.html" onclick="limparLocalStorage()"> Sair </a>
                 </li>
             </ul>
         </nav>
@@ -36,6 +37,7 @@
                 </div>
                 <img src="./imgdex/101 - Mimico (psiquico).png" alt="" onclick="pkm1('audio1')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida101"><i class="fas fa-heart"></i></button>
                     <li class="tipo psiquico">Psíquico</li>
                 </ul>
                 <p class="descricao">Mimico é um Pokémon verdadeiramente fascinante e misterioso. Com sua habilidade
@@ -62,6 +64,7 @@
                 </div>
                 <img src="./imgdex/102 - Lacrosta (água).png" alt="" onclick="pkm2('audio2')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida102"><i class="fas fa-heart"></i></button>
                     <li class="tipo agua">Água</li>
                 </ul>
                 <p class="descricao">Lacrosta é um pequeno Pokémon jacaré de cor verde, com um papo amarelo distintivo.
@@ -77,6 +80,7 @@
                 </div>
                 <img src="./imgdex/103 - Lacrocos (água).png" alt="" onclick="pkm3('audio3')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida103"><i class="fas fa-heart"></i></button>
                     <li class="tipo agua">Água</li>
                 </ul>
                 <p class="descricao">Lacrocos é a evolução de Lacrosta, tornando-se um Pokémon jacaré maior e mais
@@ -93,6 +97,7 @@
                 </div>
                 <img src="./imgdex/104 - Croconite (água).png" alt="" onclick="pkm4('audio4')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida104"><i class="fas fa-heart"></i></button>
                     <li class="tipo agua">Água</li>
                     <li class="tipo sombrio">Sombrio</li>
                 </ul>
@@ -110,6 +115,7 @@
                 </div>
                 <img src="./imgdex/105 - Cori (veneno).png" alt="" onclick="pkm5('audio5')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida105"><i class="fas fa-heart"></i></button>
                     <li class="tipo veneno">Veneno</li>
                 </ul>
                 <p class="descricao">Cori é uma pequena serpente coral do tipo veneno. Apesar de sua picada ser ineficaz
@@ -126,6 +132,7 @@
                 </div>
                 <img src="./imgdex/106 - Corali (dragão, veneno).png" alt="" onclick="pkm6('audio6')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida106"><i class="fas fa-heart"></i></button>
                     <li class="tipo veneno">Veneno</li>
                     <li class="tipo dragao">Dragão</li>
                 </ul>
@@ -144,6 +151,7 @@
                 </div>
                 <img src="./imgdex/107 - Coralion (dragão, veneno).png" alt="" onclick="pkm7('audio7')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida107"><i class="fas fa-heart"></i></button>
                     <li class="tipo veneno">Veneno</li>
                     <li class="tipo dragao">Dragão</li>
                 </ul>
@@ -163,6 +171,7 @@
                 </div>
                 <img src="./imgdex/108 - Chinchigode (fada).png" alt="" onclick="pkm8('audio8')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida108"><i class="fas fa-heart"></i></button>
                     <li class="tipo fada">Fada</li>
                 </ul>
                 <p class="descricao">Chinchigode é um Pokémon chinchila de pelos marrons e uma característica
@@ -178,6 +187,7 @@
                 </div>
                 <img src="./imgdex/109 - Lobito (sombrio).png" alt="" onclick="pkm9('audio9')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida109"><i class="fas fa-heart"></i></button>
                     <li class="tipo sombrio">Sombrio</li>
                 </ul>
                 <p class="descricao">Lobito é um Pokémon que possui a aparência de um lobisomem pequeno. Ele é
@@ -193,6 +203,7 @@
                 </div>
                 <img src="./imgdex/110 - Lobuspedion (sombrio).png" alt="" onclick="pkm10('audio10')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida110"><i class="fas fa-heart"></i></button>
                     <li class="tipo sombrio">Sombrio</li>
                 </ul>
                 <p class="descricao">MIM DÊ,MIM DÊ,MIM DÊ,MIM DÊ,MIM DÊ,MIM DÊ,MIM DÊ,MIM DÊ,MIM DÊ,MIM DÊ,MIM DÊ,MIM
@@ -211,6 +222,7 @@
                 </div>
                 <img src="./imgdex/111 - Camoubush (planta).png" alt="" onclick="pkm11('audio11')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida111"><i class="fas fa-heart"></i></button>
                     <li class="tipo planta">Planta</li>
                 </ul>
                 <p class="descricao">
@@ -229,6 +241,7 @@
                 </div>
                 <img src="./imgdex/113 - Gamber (psiquico).png" alt="" onclick="pkm12('audio12')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida112"><i class="fas fa-heart"></i></button>
                     <li class="tipo psiquico">Psíquico</li>
                 </ul>
                 <p class="descricao">Gamber é um Pokémon gambá de cor roxa com habilidades psíquicas. Ao contrário de
@@ -249,6 +262,7 @@
                 </div>
                 <img src="./imgdex/112 - Gainex (psiquico).png" alt="" onclick="pkm13('audio13')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida113"><i class="fas fa-heart"></i></button>
                     <li class="tipo psiquico">Psíquico</li>
                 </ul>
                 <p class="descricao">Gainex, a evolução de Gamber, possui uma aparência mística e cativante, com seu
@@ -266,6 +280,7 @@
                 </div>
                 <img src="./imgdex/114 - Gambolonux (psiquico, fada).png" alt="" onclick="pkm14('audio14')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida114"><i class="fas fa-heart"></i></button>
                     <li class="tipo psiquico">Psíquico</li>
                     <li class="tipo fada">Fada</li>
                 </ul>
@@ -285,6 +300,7 @@
                 </div>
                 <img src="./imgdex/115 - Loro (voador).png" alt="" onclick="pkm15('audio15')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida115"><i class="fas fa-heart"></i></button>
                     <li class="tipo voador">Voador</li>
                 </ul>
                 <p class="descricao">Loro, um Pokémon inspirado no icônico personagem Louro José, é do tipo voador.
@@ -305,6 +321,7 @@
                 </div>
                 <img src="./imgdex/116 - José (voador).png" alt="" onclick="pkm16('audio16')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida116"><i class="fas fa-heart"></i></button>
                     <li class="tipo voador">Voador</li>
                 </ul>
                 <p class="descricao">José, a evolução de Loro, é um Pokémon do tipo Voador. Com suas asas ampliadas e
@@ -321,6 +338,7 @@
                 </div>
                 <img src="./imgdex/117 - Mimaco (normal).png" alt="" onclick="pkm17('audio17')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida117"><i class="fas fa-heart"></i></button>
                     <li class="tipo normal">Normal</li>
                 </ul>
                 <p class="descricao">Ele possui uma pelagem dourada brilhante e uma juba imponente ao redor de sua
@@ -337,6 +355,7 @@
                 </div>
                 <img src="./imgdex/118 - Mamico (normal).png" alt="" onclick="pkm18('audio18')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida118"><i class="fas fa-heart"></i></button>
                     <li class="tipo normal">Normal</li>
                 </ul>
                 <p class="descricao">Mamico é a evolução de Mimaco e pertence ao tipo Normal. Ele é um Pokémon um pouco
@@ -354,6 +373,7 @@
                 </div>
                 <img src="./imgdex/119 - Mamaco (lutador).png" alt="" onclick="pkm19('audio19')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida119"><i class="fas fa-heart"></i></button>
                     <li class="tipo lutador">Lutador</li>
                 </ul>
                 <p class="descricao">Mamaco é a evolução de Mamico, e sua aparência agora se assemelha a um gorila. Ele
@@ -378,6 +398,7 @@
                 </div>
                 <img src="./imgdex/120 - Pondaor (normal).png" alt="" onclick="pkm20('audio20')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida120"><i class="fas fa-heart"></i></button>
                     <li class="tipo normal">Normal</li>
                 </ul>
                 <p class="descricao">Pondaor é um Pokémon panda que foi introduzido no bioma brasileiro e se adaptou
@@ -416,6 +437,7 @@
                 </div>
                 <img src="./imgdex/121 - Phantasma (fantasma).png" alt="" onclick="pkm21('audio21')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida121"><i class="fas fa-heart"></i></button>
                     <li class="tipo fantasma">Fantasma</li>
                 </ul>
                 <p class="descricao">Phantasma é um Pokémon cão fantasma que possui a habilidade de lembrar alguém
@@ -437,6 +459,7 @@
                 </div>
                 <img src="./imgdex/122 - Aimary (água).png" alt="" onclick="pkm22('audio22')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida122"><i class="fas fa-heart"></i></button>
                     <li class="tipo agua">Água</li>
                 </ul>
                 <p class="descricao">Aimary é um adorável Pokémon cão azul do tipo água. Ele tem uma aparência
@@ -456,6 +479,7 @@
                 </div>
                 <img src="./imgdex/123 - Aimoon (gelo).png" alt="" onclick="pkm23('audio23')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida123"><i class="fas fa-heart"></i></button>
                     <li class="tipo gelo">Gelo</li>
                 </ul>
                 <p class="descricao">Aimoon é a evolução de Aimary e pertence ao tipo gelo. Com sua evolução, Aimary
@@ -475,6 +499,7 @@
                 </div>
                 <img src="./imgdex/124 - Rhymal (metal).png" alt="" onclick="pkm24('audio24')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida124"><i class="fas fa-heart"></i></button>
                     <li class="tipo metal">Metal</li>
                 </ul>
                 <p class="descricao">Rhymal é um Pokémon rinoceronte do tipo Metal conhecido por sua agressividade e
@@ -503,6 +528,7 @@
                 </div>
                 <img src="./imgdex/125 - Rhythorn (metal).png" alt="" onclick="pkm25('audio25')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida125"><i class="fas fa-heart"></i></button>
                     <li class="tipo metal">Metal</li>
                 </ul>
                 <p class="descricao">Rhytorn é a evolução de Rhymal, um Pokémon rinoceronte do tipo Metal. Nesta forma
@@ -529,6 +555,7 @@
                 </div>
                 <img src="./imgdex/126 - Pombion (voador).png" alt="" onclick="pkm26('audio26')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida126"><i class="fas fa-heart"></i></button>
                     <li class="tipo voador">Voador</li>
                 </ul>
                 <p class="descricao">Pombion é um Pokémon pombo muito comum em áreas urbanas. Sua presença é facilmente
@@ -550,6 +577,7 @@
                 </div>
                 <img src="./imgdex/127 - Pombiot (voador).png" alt="" onclick="pkm27('audio27')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida127"><i class="fas fa-heart"></i></button>
                     <li class="tipo voador">Voador</li>
                 </ul>
                 <p class="descricao">Pombiot é a evolução de Pombion, um Pokémon pombo do tipo Voador. Com suas asas
@@ -566,6 +594,7 @@
                 </div>
                 <img src="./imgdex/128 - Pombiotto (voador).png" alt="" onclick="pkm28('audio28')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida128"><i class="fas fa-heart"></i></button>
                     <li class="tipo voador">Voador</li>
                 </ul>
                 <p class="descricao">Pombiotto é a evolução final de Pombiot, sendo um Pokémon do tipo Voador. Ele
@@ -581,6 +610,7 @@
                 </div>
                 <img src="./imgdex/129 - Sayury (água, psiquico).png" alt="" onclick="pkm29('audio29')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida129"><i class="fas fa-heart"></i></button>
                     <li class="tipo agua">Água</li>
                     <li class="tipo psiquico">Psíquico</li>
                 </ul>
@@ -602,6 +632,7 @@
                 </div>
                 <img src="./imgdex/130 - Geoshark (água, pedra).png" alt="" onclick="pkm30('audio30')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida130"><i class="fas fa-heart"></i></button>
                     <li class="tipo agua">Água</li>
                     <li class="tipo pedra">Pedra</li>
                 </ul>
@@ -622,6 +653,7 @@
                 </div>
                 <img src="./imgdex/131 - Litiodactyl (pedra, fantasma).png" alt="" onclick="pkm31('audio31')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida131"><i class="fas fa-heart"></i></button>
                     <li class="tipo pedra">Pedra</li>
                     <li class="tipo dragao">Dragão</li>
                 </ul>
@@ -649,6 +681,7 @@
                 </div>
                 <img src="./imgdex/132 - Piuky (fada, água).png" alt="" onclick="pkm32('audio32')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida132"><i class="fas fa-heart"></i></button>
                     <li class="tipo fada">Fada</li>
                     <li class="tipo agua">Água</li>
                 </ul>
@@ -665,6 +698,7 @@
                 </div>
                 <img src="./imgdex/133 - Piukynox (fada, água).png" alt="" onclick="pkm33('audio33')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida133"><i class="fas fa-heart"></i></button>
                     <li class="tipo fada">Fada</li>
                     <li class="tipo agua">Água</li>
                 </ul>
@@ -682,6 +716,7 @@
                 </div>
                 <img src="./imgdex/134 - Benjamor (eletrico).png" alt="" onclick="pkm34('audio34')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida134"><i class="fas fa-heart"></i></button>
                     <li class="tipo eletrico">Elétrico</li>
                 </ul>
                 <p class="descricao">Após anos um certo benjamim tomou descargas eletricas e assim nasceu o primeiro
@@ -700,6 +735,7 @@
                 </div>
                 <img src="./imgdex/135 - Benjavarios (eletrico).png" alt="" onclick="pkm35('audio35')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida135"><i class="fas fa-heart"></i></button>
                     <li class="tipo eletrico">Elétrico</li>
                 </ul>
                 <p class="descricao">Benjavarios é a poderosa evolução de Benjamor, e representa a união de vários
@@ -719,6 +755,7 @@
                 </div>
                 <img src="./imgdex/136 - Hitmanchete (lutador).png" alt="" onclick="pkm36('audio36')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida136"><i class="fas fa-heart"></i></button>
                     <li class="tipo lutador">Lutador</li>
                 </ul>
                 <p class="descricao">Conhecida por sua incrível habilidade de equilíbrio, precisão e agilidade nos
@@ -738,6 +775,7 @@
                 </div>
                 <img src="./imgdex/137 - Bandeirogo (fogo, voador).png" alt="" onclick="pkm37('audio37')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida137"><i class="fas fa-heart"></i></button>
                     <li class="tipo fogo">Fogo</li>
                     <li class="tipo voador">Voador</li>
                 </ul>
@@ -759,6 +797,7 @@
                 </div>
                 <img src="./imgdex/138 - Arraiatico (fogo, voador).png" alt="" onclick="pkm38('audio38')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida138"><i class="fas fa-heart"></i></button>
                     <li class="tipo fogo">Fogo</li>
                     <li class="tipo voador">Voador</li>
                 </ul>
@@ -783,6 +822,7 @@
                 </div>
                 <img src="./imgdex/139 - Pacaflora (planta).png" alt="" onclick="pkm39('audio39')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida139"><i class="fas fa-heart"></i></button>
                     <li class="tipo planta">Planta</li>
                 </ul>
                 <p class="descricao">Pacaflora é um Pokémon singular do tipo Planta, que combina a aparência de uma paca
@@ -798,6 +838,7 @@
                 </div>
                 <img src="./imgdex/140 - Noctowl de São Paulo (voador).png" alt="" onclick="pkm40('audio40')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida140"><i class="fas fa-heart"></i></button>
                     <li class="tipo voador">Voador</li>
                 </ul>
                 <p class="descricao">Noctowl de São Paulo é uma forma regional exclusiva encontrada na região de São
@@ -821,6 +862,7 @@
                 </div>
                 <img src="./imgdex/141 - Querodart (voador).png" alt="" onclick="pkm41('audio41')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida141"><i class="fas fa-heart"></i></button>
                     <li class="tipo voador">Voador</li>
                 </ul>
                 <p class="descricao">Querodart é um Pokémon do tipo Voador que habita as costas em praias. Ele possui
@@ -836,6 +878,7 @@
                 </div>
                 <img src="./imgdex/142 - Querocaos (voador).png" alt="" onclick="pkm42('audio42')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida142"><i class="fas fa-heart"></i></button>
                     <li class="tipo voador">Voador</li>
                 </ul>
                 <p class="descricao">Mantendo sua natureza voadora, Querocaos se destaca por sua agilidade e habilidades
@@ -851,6 +894,7 @@
                 </div>
                 <img src="./imgdex/143 - Kof Kof (veneno).png" alt="" onclick="pkm43('audio43')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida143"><i class="fas fa-heart"></i></button>
                     <li class="tipo veneno">Veneno</li>
                 </ul>
                 <p class="descricao">Kof Kof é um Pokémon peculiar e preocupante. Ele se assemelha a uma bola de fumaça
@@ -867,6 +911,7 @@
                 </div>
                 <img src="./imgdex/144 - Solarigator (eletrico).png" alt="" onclick="pkm44('audio44')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida144"><i class="fas fa-heart"></i></button>
                     <li class="tipo eletrico">Elétrico</li>
                 </ul>
                 <p class="descricao">Solarigator é um Pokémon imponente e sustentável. Sua aparência é a de um crocodilo
@@ -885,6 +930,7 @@
                 </div>
                 <img src="./imgdex/145 - Sloty (normal).png" alt="" onclick="pkm45('audio45')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida145"><i class="fas fa-heart"></i></button>
                     <li class="tipo normal">Normal</li>
                 </ul>
                 <p class="descricao">Sloty é um Pokémon preguiça adorável e relaxado. Ele é conhecido por sua natureza
@@ -905,6 +951,7 @@
                 </div>
                 <img src="./imgdex/146 - Slothking (normal).png" alt="" onclick="pkm46('audio46')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida146"><i class="fas fa-heart"></i></button>
                     <li class="tipo normal">Normal</li>
                 </ul>
                 <p class="descricao">Slothking é a evolução final de Sloty, a preguiça gigante. Com seu tamanho
@@ -925,6 +972,7 @@
                 </div>
                 <img src="./imgdex/147 - Meowstic (fada, dragão).png" alt="" onclick="pkm47('audio47')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida147"><i class="fas fa-heart"></i></button>
                     <li class="tipo fada">Fada</li>
                     <li class="tipo dragao">Dragão</li>
                 </ul>
@@ -941,6 +989,7 @@
                 </div>
                 <img src="./imgdex/148 - Leviatan (água).png" alt="" onclick="pkm48('audio48')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida148"><i class="fas fa-heart"></i></button>
                     <li class="tipo agua">Água</li>
                     <li class="tipo fada">Fada</li>
                 </ul>
@@ -958,6 +1007,7 @@
                 </div>
                 <img src="./imgdex/149 - Phantasmal (fantasma).png" alt="" onclick="pkm49('audio49')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida149"><i class="fas fa-heart"></i></button>
                     <li class="tipo fantasma">Fantasma</li>
                 </ul>
                 <p class="descricao">Phantasmal é um Pokémon fantasma conhecido por sua natureza maldosa e traiçoeira.
@@ -974,6 +1024,7 @@
                 </div>
                 <img src="./imgdex/150 - Borbosia (voador, inseto).png" alt="" onclick="pkm50('audio50')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida150"><i class="fas fa-heart"></i></button>
                     <li class="tipo voador">Voador</li>
                     <li class="tipo inseto">Inseto</li>
                 </ul>
@@ -1223,4 +1274,28 @@
         const audio = new Audio(`./audios/${audio50}.mp3`);
         audio.play();
     }
+
+    //Curtida
+    document.addEventListener('DOMContentLoaded', function() {
+    var botoesCurtidas = document.querySelectorAll('.botao-curtida');
+
+    botoesCurtidas.forEach(function(botaoCurtida) {
+        var idCurtida = botaoCurtida.getAttribute('data-id');
+        var seCurtido = localStorage.getItem(idCurtida);
+
+        if (seCurtido === 'true') {
+            botaoCurtida.classList.add('curtido');
+        }
+
+        botaoCurtida.addEventListener('click', function() {
+            botaoCurtida.classList.toggle('curtido');
+            var seCurtido = botaoCurtida.classList.contains('curtido');
+            localStorage.setItem(idCurtida, seCurtido);
+        });
+    });
+});
+
+function limparLocalStorage() {
+    localStorage.clear();
+}
 </script>

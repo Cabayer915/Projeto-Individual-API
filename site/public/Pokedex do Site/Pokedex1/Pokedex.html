@@ -8,22 +8,24 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="pokedex1.js">
     <link rel="icon" type="image/png" href="../../img/icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <title>Pokédex</title>
 </head>
 
 <body>
     <header>
         <nav>
-            <a class="logotipo" href="../../Tela-Cliente/telacliente.html"><img src="../../img/Logotipo.png" alt="" width="170px" id="logotipo"></a>
+            <a class="logotipo" href="../../Tela-Cliente/telacliente.html"><img src="../../img/Logotipo.png" alt=""
+                    width="170px" id="logotipo"></a>
             <ul class="nav-lista">
                 <li>
-                    <a href=""> Favoritos </a>
+                    <a href=""> Mais Curtidos </a>
                 </li>
                 <li>
                     <a href="./Pokedex.html"> Pokédex </a>
                 </li>
                 <li>
-                    <a href="../../index.html"> Sair </a>
+                    <a href="../../index.html" onclick="limparLocalStorage()"> Sair </a>
                 </li>
             </ul>
         </nav>
@@ -37,7 +39,7 @@
                 </div>
                 <img src="./imgdex/1 - Pantheon (sombrio).png" onclick="pkm1('audio1')" alt="">
                 <ul class="tipos">
-                    <div class="curtida"><img src="./curtida.png" width="20px"></div>
+                    <button class="botao-curtida" data-id="botaoCurtida1"><i class="fas fa-heart"></i></button>
                     <li class="tipo sombrio">Sombrio</li>
                 </ul>
                 <p class="descricao">Com uma pelagem negra e olhos brilhantes, ele se move silenciosamente nas sombras.
@@ -53,7 +55,7 @@
                 </div>
                 <img src="./imgdex/2 - Pantheleon (sombrio).png" alt="" onclick="pkm2('audio2')">
                 <ul class="tipos">
-                    <div class="curtida"><img src="./curtida.png" width="20px"></div>
+                    <button class="botao-curtida" data-id="botaoCurtida2"><i class="fas fa-heart"></i></button>
                     <li class="tipo sombrio">Sombrio</li>
                 </ul>
                 <p>Pantheleon é a evolução sombria e poderosa do Pantheon. Com um corpo musculoso e pelagem negra, ele é
@@ -68,7 +70,7 @@
                 </div>
                 <img src="./imgdex/3 - Panthelord (sombrio).png" alt="" onclick="pkm3('audio3')">
                 <ul class="tipos">
-                    <div class="curtida"><img src="./curtida.png" width="20px"></div>
+                    <button class="botao-curtida" data-id="botaoCurtida3"><i class="fas fa-heart"></i></button>
                     <li class="tipo sombrio">Sombrio</li>
                 </ul>
                 <p>Panthelord é a forma final e suprema do Pantheon, uma pantera sombria imponente e aterrorizante.
@@ -85,7 +87,7 @@
                 </div>
                 <img src="./imgdex/4 - Erukilava (fogo).png" alt="" onclick="pkm4('audio4')">
                 <ul class="tipos">
-                    <div class="curtida"><img src="./curtida.png" width="20px"></div>
+                    <button class="botao-curtida" data-id="botaoCurtida4"><i class="fas fa-heart"></i></button>
                     <li class="tipo fogo">Fogo</li>
                 </ul>
                 <p>Erukilava é um adorável Pokémon larva do tipo Fogo. Com uma aparência fofa e carismática, ele é
@@ -99,7 +101,7 @@
                 </div>
                 <img src="./imgdex/5 - Mandralava (fogo).png" alt="" onclick="pkm5('audio5')">
                 <ul class="tipos">
-                    <div class="curtida"><img src="./curtida.png" width="20px"></div>
+                    <button class="botao-curtida" data-id="botaoCurtida5"><i class="fas fa-heart"></i></button>
                     <li class="tipo fogo">Fogo</li>
                 </ul>
                 <p>Mandralava é a forma evoluída e imponente do Erukilava. Agora, ele se transformou em uma salamandra
@@ -117,7 +119,7 @@
                 </div>
                 <img src="./imgdex/6 - Cinccilava (fogo, dragão).png" alt="" onclick="pkm6('audio6')">
                 <ul class="tipos">
-                    <div class="curtida"><img src="./curtida.png" width="20px"></div>
+                    <button class="botao-curtida" data-id="botaoCurtida6"><i class="fas fa-heart"></i></button>
                     <li class="tipo fogo">Fogo</li>
                     <li class="tipo dragao">Dragão</li>
                 </ul>
@@ -135,6 +137,7 @@
                 </div>
                 <img src="./imgdex/7 - Bufo (planta).png" alt="" onclick="pkm7('audio7')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida7"><i class="fas fa-heart"></i></button>
                     <li class="tipo planta">Planta</li>
                 </ul>
                 <p>Bufo é um Pokémon do tipo Planta, com pele verde e olhos expressivos. Ele pode absorver energia solar
@@ -149,6 +152,7 @@
                 </div>
                 <img src="./imgdex/8 - Regulari (planta).png" alt="" onclick="pkm8('audio8')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida8"><i class="fas fa-heart"></i></button>
                     <li class="tipo planta">Planta</li>
                 </ul>
                 <p>Com seu tamanho maior e postura imponente, ele se destaca na natureza. Sua pele verde é adornada com
@@ -168,6 +172,7 @@
                 </div>
                 <img src="./imgdex/9 - Buforegularis (planta).png" alt="" onclick="pkm9('audio9')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida9"><i class="fas fa-heart"></i></button>
                     <li class="tipo planta">Planta</li>
                 </ul>
                 <p>Buforegulari é a forma evoluída do Regulari, um sapo poderoso do tipo Planta. Com sua aparência
@@ -184,6 +189,7 @@
                 </div>
                 <img src="./imgdex/10 - Kapi (água).png" alt="" onclick="pkm10('audio10')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida10"><i class="fas fa-heart"></i></button>
                     <li class="tipo agua">Água</li>
                 </ul>
                 <p>Kapi é um Pokémon do tipo Água, uma capivara simpática. Ele é um nadador habilidoso e pode controlar
@@ -198,6 +204,7 @@
                 </div>
                 <img src="./imgdex/11 - Capivara (água).png" alt="" onclick="pkm11('audio11')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida11"><i class="fas fa-heart"></i></button>
                     <li class="tipo agua">Água</li>
                 </ul>
                 <p>Capivara é a forma evoluída do Kapi, um Pokémon gracioso do tipo Água. Com sua pelagem densa e
@@ -213,6 +220,7 @@
                 </div>
                 <img src="./imgdex/12 - Capivarias (água).png" alt="" onclick="pkm12('audio12')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida12"><i class="fas fa-heart"></i></button>
                     <li class="tipo agua">Água</li>
                 </ul>
                 <p>Capivarias é a forma evoluída da Capivara, um Pokémon do tipo Água. Com suas duas cabeças imponentes,
@@ -230,6 +238,7 @@
                 </div>
                 <img src="./imgdex/13 - Goli (pedra).png" alt="" onclick="pkm13('audio13')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida13"><i class="fas fa-heart"></i></button>
                     <li class="tipo pedra">Pedra</li>
                 </ul>
                 <p>Goli é um Pokémon inicial do tipo Pedra, Apesar de meigo é conhecido por sua força e resistência.
@@ -244,6 +253,7 @@
                 </div>
                 <img src="./imgdex/14 - Golemita (pedra).png" alt="" onclick="pkm14('audio14')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida14"><i class="fas fa-heart"></i></button>
                     <li class="tipo pedra">Pedra</li>
                 </ul>
                 <p>Golemita é a forma evoluída do Goli, um Pokémon do tipo Pedra. Com uma armadura de pedra resistente e
@@ -258,6 +268,7 @@
                 </div>
                 <img src="./imgdex/15 - Golem-de-Nióbio (pedra).png" alt="" onclick="pkm15('audio15')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida15"><i class="fas fa-heart"></i></button>
                     <li class="tipo pedra">Pedra</li>
                 </ul>
                 <p>Com sua imponência e robustez, ele se destaca como um dos Pokémon mais poderosos de seu tipo.
@@ -277,6 +288,7 @@
                 </div>
                 <img src="./imgdex/16 - Plantacco (planta).png" alt="" onclick="pkm16('audio16')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida16"><i class="fas fa-heart"></i></button>
                     <li class="tipo planta">Planta</li>
                 </ul>
                 <p>Plantacco é um Pokémon do tipo Planta, com uma aparência única de broto de tabaco. Ele tem a
@@ -292,6 +304,7 @@
                 </div>
                 <img src="./imgdex/17 - Cannabola (planta, psiquico).png" alt="" onclick="pkm17('audio17')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida17"><i class="fas fa-heart"></i></button>
                     <li class="tipo planta">Planta</li>
                     <li class="tipo psiquico">Psíquico</li>
                 </ul>
@@ -309,6 +322,7 @@
                 </div>
                 <img src="./imgdex/18 - Cannabright (planta, psiquico).png" alt="" onclick="pkm18('audio18')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida18"><i class="fas fa-heart"></i></button>
                     <li class="tipo planta">Planta</li>
                     <li class="tipo psiquico">Psíquico</li>
                 </ul>
@@ -331,6 +345,7 @@
                 </div>
                 <img src="./imgdex/19 - Blu (voador).png" alt="" onclick="pkm19('audio19')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida19"><i class="fas fa-heart"></i></button>
                     <li class="tipo voador">Voador</li>
                 </ul>
                 <p>Blu é uma adorável arara azul, um Pokémon do tipo Voador. Com suas belas penas azuis e asas
@@ -348,6 +363,7 @@
                 </div>
                 <img src="./imgdex/20 - Zarara (voador).png" alt="" onclick="pkm20('audio20')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida20"><i class="fas fa-heart"></i></button>
                     <li class="tipo voador">Voador</li>
                 </ul>
                 <p>Zarara é a forma evoluída do Pokémon Blu, uma arara azul do tipo Voador. Com suas penas exuberantes e
@@ -363,6 +379,7 @@
                 </div>
                 <img src="./imgdex/21 - Mordecai (voador).png" alt="" onclick="pkm21('audio21')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida21"><i class="fas fa-heart"></i></button>
                     <li class="tipo voador">Voador</li>
                 </ul>
                 <p>Mordecai é a forma evoluída do Pokémon Zarara, do tipo Voador. Com sua aparência majestosa e
@@ -380,6 +397,7 @@
                 </div>
                 <img src="./imgdex/22 - Turguiti (água).png" alt="" onclick="pkm22('audio22')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida22"><i class="fas fa-heart"></i></button>
                     <li class="tipo agua">Água</li>
                 </ul>
                 <p>Turguiti é uma tartaruga do tipo água com uma personalidade extremamente raivosa. Ele possui uma
@@ -396,6 +414,7 @@
                 </div>
                 <img src="./imgdex/23 - Turtilion (água).png" alt="" onclick="pkm23('audio23')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida23"><i class="fas fa-heart"></i></button>
                     <li class="tipo agua">Água</li>
                 </ul>
                 <p>Turtilion é a evolução do Torguiti, uma tartaruga raivosa do tipo Água. Com uma carapaça resistente e
@@ -412,6 +431,7 @@
                 </div>
                 <img src="./imgdex/24 - Aquatron (água).png" alt="" onclick="pkm24('audio24')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida24"><i class="fas fa-heart"></i></button>
                     <li class="tipo agua">Água</li>
                 </ul>
                 <p>Aquatron é uma mega tartaruga do tipo Água, conhecida por sua aparência imponente e sua natureza
@@ -429,6 +449,7 @@
                 </div>
                 <img src="./imgdex/25 - Tuca (voador).png" alt="" onclick="pkm25('audio25')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida25"><i class="fas fa-heart"></i></button>
                     <li class="tipo voador">Voador</li>
                 </ul>
                 <p>Tuca é um Pokémon tucano do tipo Voador, conhecido por sua beleza e graciosidade no ar. Com suas asas
@@ -444,6 +465,7 @@
                 </div>
                 <img src="./imgdex/26 - Tucanon (voador).png" alt="" onclick="pkm26('audio26')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida26"><i class="fas fa-heart"></i></button>
                     <li class="tipo voador">Voador</li>
                 </ul>
                 <p>Tucanon é a evolução do Tuca e pertence ao tipo Voador. Com sua forma maior e imponente, suas penas
@@ -462,6 +484,7 @@
                 </div>
                 <img src="./imgdex/27 - Titi (normal, veneno).png" alt="" onclick="pkm27('audio27')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida27"><i class="fas fa-heart"></i></button>
                     <li class="tipo normal">Normal</li>
                     <li class="tipo veneno">Veneno</li>
                 </ul>
@@ -480,6 +503,7 @@
                 </div>
                 <img src="./imgdex/28 - Lepto (normal, veneno).png" alt="" onclick="pkm28('audio28')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida28"><i class="fas fa-heart"></i></button>
                     <li class="tipo normal">Normal</li>
                     <li class="tipo veneno">Veneno</li>
                 </ul>
@@ -496,6 +520,7 @@
                 </div>
                 <img src="./imgdex/29 - Oneevil (eletrico).png" alt="" onclick="pkm29('audio29')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida29"><i class="fas fa-heart"></i></button>
                     <li class="tipo eletrico">Elétrico</li>
                 </ul>
                 <p>Oneevil é uma onça imponente do tipo Elétrico. Com sua pelagem amarela e manchas pretas, lembra uma
@@ -512,6 +537,7 @@
                 </div>
                 <img src="./imgdex/30 - Antient (normal).png" alt="" onclick="pkm30('audio30')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida30"><i class="fas fa-heart"></i></button>
                     <li class="tipo normal">Normal</li>
                 </ul>
                 <p>Antient é um filhote de tamanduá do tipo Normal. Com sua aparência adorável e curiosa, ele encanta a
@@ -528,6 +554,7 @@
                 </div>
                 <img src="./imgdex/31 - Antienne (normal).png" alt="" onclick="pkm31('audio31')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida31"><i class="fas fa-heart"></i></button>
                     <li class="tipo normal">Normal</li>
                 </ul>
                 <p>Antienne é a evolução de Antient, um tamanduá do tipo Normal. Com uma aparência imponente e robusta,
@@ -546,6 +573,7 @@
                 </div>
                 <img src="./imgdex/32 - Antiox (normal).png" alt="" onclick="pkm32('audio32')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida32"><i class="fas fa-heart"></i></button>
                     <li class="tipo normal">Normal</li>
                 </ul>
                 <p>Com sua evolução, Antiox se torna uma criatura imponente e majestosa, com pelagem espessa e garras
@@ -562,6 +590,7 @@
                 </div>
                 <img src="./imgdex/33 - Azumi (água).png" alt="" onclick="pkm33('audio33')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida33"><i class="fas fa-heart"></i></button>
                     <li class="tipo agua">Água</li>
                 </ul>
                 <p>Azumi é um pequeno e dócil Pokémon peixe do tipo Água. Com suas escamas brilhantes e olhos
@@ -579,6 +608,7 @@
                 </div>
                 <img src="./imgdex/34 - Azumar (água).png" alt="" onclick="pkm34('audio34')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida34"><i class="fas fa-heart"></i></button>
                     <li class="tipo agua">Água</li>
                 </ul>
                 <p>Azumar é a evolução de Azumi, um peixe do tipo Água. Com sua evolução, Azumar se transforma em uma
@@ -596,6 +626,7 @@
                 </div>
                 <img src="./imgdex/35 - Azumarilion (água).png" alt="" onclick="pkm35('audio35')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida35"><i class="fas fa-heart"></i></button>
                     <li class="tipo agua">Água</li>
                 </ul>
                 <p>Azumarilion é a evolução final de Azumar, um peixe sinistro e temperamental do tipo Água. Com sua
@@ -612,6 +643,7 @@
                 </div>
                 <img src="./imgdex/36 - Bizori (inseto).png" alt="" onclick="pkm36('audio36')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida36"><i class="fas fa-heart"></i></button>
                     <li class="tipo inseto">Inseto</li>
                 </ul>
                 <p>Bizori é um pequeno besouro do tipo Inseto. Ele possui um exoesqueleto resistente e é ágil e
@@ -626,6 +658,7 @@
                 </div>
                 <img src="./imgdex/37 - Bizu (inseto).png" alt="" onclick="pkm37('audio37')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida37"><i class="fas fa-heart"></i></button>
                     <li class="tipo inseto">Inseto</li>
                 </ul>
                 <p>Ele é ágil e possui habilidades de salto impressionantes, mas não possui asas. Bizu é forte nas
@@ -641,6 +674,7 @@
                 </div>
                 <img src="./imgdex/38 - Bizz (inseto).png" alt="" onclick="pkm38('audio38')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida38"><i class="fas fa-heart"></i></button>
                     <li class="tipo inseto">Inseto</li>
                 </ul>
                 <p>Bizz é a evolução de Bizori, um Pokémon do tipo Inseto. Com suas asas recém-desenvolvidas, Bizz se
@@ -658,6 +692,7 @@
                 </div>
                 <img src="./imgdex/39 - Angelwool (fada).png" alt="" onclick="pkm39('audio39')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida39"><i class="fas fa-heart"></i></button>
                     <li class="tipo fada">Fada</li>
                 </ul>
                 <p>Com uma aparência encantadora e fofa. Sua pelagem branca como a neve e sua expressão amigável
@@ -676,6 +711,7 @@
                 </div>
                 <img src="./imgdex/40 - Favelha (fada).png" alt="" onclick="pkm40('audio40')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida40"><i class="fas fa-heart"></i></button>
                     <li class="tipo fada">Fada</li>
                 </ul>
                 <p>Favelha é a evolução de Angelwool, um Pokémon do tipo Fada. Com sua evolução, Favelha adquire uma
@@ -693,6 +729,7 @@
                 </div>
                 <img src="./imgdex/41 - Draco (dragão, sombrio).png" alt="" onclick="pkm41('audio41')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida41"><i class="fas fa-heart"></i></button>
                     <li class="tipo dragao">Dragão</li>
                     <li class="tipo sombrio">Sombrio</li>
                 </ul>
@@ -710,6 +747,7 @@
                 </div>
                 <img src="./imgdex/42 - Draconight (dragão, sombrio).png" alt="" onclick="pkm42('audio42')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida42"><i class="fas fa-heart"></i></button>
                     <li class="tipo dragao">Dragão</li>
                     <li class="tipo sombrio">Sombrio</li>
                 </ul>
@@ -728,6 +766,7 @@
                 </div>
                 <img src="./imgdex/43 - Botozul (água).png" alt="" onclick="pkm43('audio43')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida43"><i class="fas fa-heart"></i></button>
                     <li class="tipo agua">Água</li>
                 </ul>
                 <p>Botozul é um Pokémon boto do tipo Água. Ele possui um corpo esguio, nadadeiras ágeis e uma coloração
@@ -745,6 +784,7 @@
                 </div>
                 <img src="./imgdex/44 - Botoshark (água).png" alt="" onclick="pkm44('audio44')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida44"><i class="fas fa-heart"></i></button>
                     <li class="tipo agua">Água</li>
                 </ul>
                 <p>Botoshark é a evolução de Botozul, um Pokémon que combina as características de um boto e um tubarão.
@@ -762,6 +802,7 @@
                 </div>
                 <img src="./imgdex/45 - Botolodon (água).png" alt="" onclick="pkm45('audio45')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida45"><i class="fas fa-heart"></i></button>
                     <li class="tipo agua">Água</li>
                     <li class="tipo dragao">Dragão</li>
                 </ul>
@@ -780,6 +821,7 @@
                 </div>
                 <img src="./imgdex/46 - Denguelarva (inseto).png" alt="" onclick="pkm46('audio46')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida46"><i class="fas fa-heart"></i></button>
                     <li class="tipo inseto">Inseto</li>
                 </ul>
                 <p>Denguelarva é um Pokémon larva do tipo Inseto, inspirado no mosquito da dengue. Ele possui um corpo
@@ -796,6 +838,7 @@
                 </div>
                 <img src="./imgdex/47 - Chicungunyat (inseto).png" alt="" onclick="pkm47('audio47')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida47"><i class="fas fa-heart"></i></button>
                     <li class="tipo inseto">Inseto</li>
                 </ul>
                 <p>Chicungunyat é a evolução de Denguelarva, representando um estágio avançado na vida de um mosquito da
@@ -812,6 +855,7 @@
                 </div>
                 <img src="./imgdex/48 - Zikatron (inseto, metal).png" alt="" onclick="pkm48('audio48')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida48"><i class="fas fa-heart"></i></button>
                     <li class="tipo inseto">Inseto</li>
                     <li class="tipo metal">Metal</li>
                 </ul>
@@ -831,6 +875,7 @@
                 </div>
                 <img src="./imgdex/49 - Yudi (psiquico).png" alt="" onclick="pkm49('audio49')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida49"><i class="fas fa-heart"></i></button>
                     <li class="tipo psiquico">Psíquico</li>
                 </ul>
                 <p>Conhecido por sua aparência fofa e natureza calma. Ele é do tipo Psíquico e possui habilidades
@@ -847,6 +892,7 @@
                 </div>
                 <img src="./imgdex/50 - Mestre Yudi (lutador, psiquico).png" alt="" onclick="pkm50('audio50')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida50"><i class="fas fa-heart"></i></button>
                     <li class="tipo psiquico">Psíquico</li>
                     <li class="tipo lutador">Lutador</li>
                 </ul>
@@ -872,9 +918,12 @@
         <div id="#footer_container">
             <a href="" class="PCK"><img src="./imgsite/PKC.png" alt="" width="350px"></a>
             <div class="redes">
-                <a href="https://discord.gg/Epf5BEchVs" class="disc" target="_blank"><img src="./imgsite/Discord.png" alt="" width="80px" target="_blank"></a>
-                <a href="https://www.youtube.com/channel/UClyhc1OdKzCtCQ4vbuH-LQw" target="_blank" class="yout"><img src="./imgsite/Youtube.png" alt="" width="80px"></a>
-                <a href="https://www.instagram.com/pokemonxs_official/" class="ig" target="_blank"><img src="./imgsite/Instagram.png" alt="" width="65px" target="_blank"></a>
+                <a href="https://discord.gg/Epf5BEchVs" class="disc" target="_blank"><img src="./imgsite/Discord.png"
+                        alt="" width="80px" target="_blank"></a>
+                <a href="https://www.youtube.com/channel/UClyhc1OdKzCtCQ4vbuH-LQw" target="_blank" class="yout"><img
+                        src="./imgsite/Youtube.png" alt="" width="80px"></a>
+                <a href="https://www.instagram.com/pokemonxs_official/" class="ig" target="_blank"><img
+                        src="./imgsite/Instagram.png" alt="" width="65px" target="_blank"></a>
             </div>
             <ul class="avisos">
                 <li>
@@ -895,206 +944,231 @@
         </div>
     </footer>
 </body>
+
 </html>
 <script>
-    function pkm1 (audio1) {
+    function pkm1(audio1) {
         const audio = new Audio(`./audios/${audio1}.mp3`);
         audio.play();
     }
-    function pkm2 (audio2) {
+    function pkm2(audio2) {
         const audio = new Audio(`./audios/${audio2}.mp3`);
         audio.play();
     }
-    function pkm3 (audio3) {
+    function pkm3(audio3) {
         const audio = new Audio(`./audios/${audio3}.mp3`);
         audio.play();
     }
-    function pkm4 (audio4) {
+    function pkm4(audio4) {
         const audio = new Audio(`./audios/${audio4}.mp3`);
         audio.play();
     }
-    function pkm5 (audio5) {
+    function pkm5(audio5) {
         const audio = new Audio(`./audios/${audio5}.mp3`);
         audio.play();
     }
-    function pkm6 (audio6) {
+    function pkm6(audio6) {
         const audio = new Audio(`./audios/${audio6}.mp3`);
         audio.play();
     }
-    function pkm7 (audio7) {
+    function pkm7(audio7) {
         const audio = new Audio(`./audios/${audio7}.mp3`);
         audio.play();
     }
-    function pkm8 (audio8) {
+    function pkm8(audio8) {
         const audio = new Audio(`./audios/${audio8}.mp3`);
         audio.play();
     }
-    function pkm9 (audio9) {
+    function pkm9(audio9) {
         const audio = new Audio(`./audios/${audio9}.mp3`);
         audio.play();
     }
-    function pkm10 (audio10) {
+    function pkm10(audio10) {
         const audio = new Audio(`./audios/${audio10}.mp3`);
         audio.play();
     }
-    function pkm11 (audio11) {
+    function pkm11(audio11) {
         const audio = new Audio(`./audios/${audio11}.mp3`);
         audio.play();
     }
-    function pkm12 (audio12) {
+    function pkm12(audio12) {
         const audio = new Audio(`./audios/${audio12}.mp3`);
         audio.play();
     }
-    function pkm13 (audio13) {
+    function pkm13(audio13) {
         const audio = new Audio(`./audios/${audio13}.mp3`);
         audio.play();
     }
-    function pkm14 (audio14) {
+    function pkm14(audio14) {
         const audio = new Audio(`./audios/${audio14}.mp3`);
         audio.play();
     }
-    function pkm15 (audio15) {
+    function pkm15(audio15) {
         const audio = new Audio(`./audios/${audio15}.mp3`);
         audio.play();
     }
-    function pkm16 (audio16) {
+    function pkm16(audio16) {
         const audio = new Audio(`./audios/${audio16}.mp3`);
         audio.play();
     }
-    function pkm17 (audio17) {
+    function pkm17(audio17) {
         const audio = new Audio(`./audios/${audio17}.mp3`);
         audio.play();
     }
-    function pkm18 (audio18) {
+    function pkm18(audio18) {
         const audio = new Audio(`./audios/${audio18}.mp3`);
         audio.play();
     }
-    function pkm19 (audio19) {
+    function pkm19(audio19) {
         const audio = new Audio(`./audios/${audio19}.mp3`);
         audio.play();
     }
-    function pkm20 (audio20) {
+    function pkm20(audio20) {
         const audio = new Audio(`./audios/${audio20}.mp3`);
         audio.play();
     }
-    function pkm21 (audio21) {
+    function pkm21(audio21) {
         const audio = new Audio(`./audios/${audio21}.mp3`);
         audio.play();
     }
-    function pkm22 (audio22) {
+    function pkm22(audio22) {
         const audio = new Audio(`./audios/${audio22}.mp3`);
         audio.play();
     }
-    function pkm23 (audio23) {
+    function pkm23(audio23) {
         const audio = new Audio(`./audios/${audio23}.mp3`);
         audio.play();
     }
-    function pkm24 (audio24) {
+    function pkm24(audio24) {
         const audio = new Audio(`./audios/${audio24}.mp3`);
         audio.play();
     }
-    function pkm25 (audio25) {
+    function pkm25(audio25) {
         const audio = new Audio(`./audios/${audio25}.mp3`);
         audio.play();
     }
-    function pkm26 (audio26) {
+    function pkm26(audio26) {
         const audio = new Audio(`./audios/${audio26}.mp3`);
         audio.play();
     }
-    function pkm27 (audio27) {
+    function pkm27(audio27) {
         const audio = new Audio(`./audios/${audio27}.mp3`);
         audio.play();
     }
-    function pkm28 (audio28) {
+    function pkm28(audio28) {
         const audio = new Audio(`./audios/${audio28}.mp3`);
         audio.play();
     }
-    function pkm29 (audio29) {
+    function pkm29(audio29) {
         const audio = new Audio(`./audios/${audio29}.mp3`);
         audio.play();
     }
-    function pkm30 (audio30) {
+    function pkm30(audio30) {
         const audio = new Audio(`./audios/${audio30}.mp3`);
         audio.play();
     }
-    function pkm31 (audio31) {
+    function pkm31(audio31) {
         const audio = new Audio(`./audios/${audio31}.mp3`);
         audio.play();
     }
-    function pkm32 (audio32) {
+    function pkm32(audio32) {
         const audio = new Audio(`./audios/${audio32}.mp3`);
         audio.play();
     }
-    function pkm33 (audio33) {
+    function pkm33(audio33) {
         const audio = new Audio(`./audios/${audio33}.mp3`);
         audio.play();
     }
-    function pkm34 (audio34) {
+    function pkm34(audio34) {
         const audio = new Audio(`./audios/${audio34}.mp3`);
         audio.play();
     }
-    function pkm35 (audio35) {
+    function pkm35(audio35) {
         const audio = new Audio(`./audios/${audio35}.mp3`);
         audio.play();
     }
-    function pkm36 (audio36) {
+    function pkm36(audio36) {
         const audio = new Audio(`./audios/${audio36}.mp3`);
         audio.play();
     }
-    function pkm37 (audio37) {
+    function pkm37(audio37) {
         const audio = new Audio(`./audios/${audio37}.mp3`);
         audio.play();
     }
-    function pkm38 (audio38) {
+    function pkm38(audio38) {
         const audio = new Audio(`./audios/${audio38}.mp3`);
         audio.play();
     }
-    function pkm39 (audio39) {
+    function pkm39(audio39) {
         const audio = new Audio(`./audios/${audio39}.mp3`);
         audio.play();
     }
-    function pkm40 (audio40) {
+    function pkm40(audio40) {
         const audio = new Audio(`./audios/${audio40}.mp3`);
         audio.play();
     }
-    function pkm41 (audio41) {
+    function pkm41(audio41) {
         const audio = new Audio(`./audios/${audio41}.mp3`);
         audio.play();
     }
-    function pkm42 (audio42) {
+    function pkm42(audio42) {
         const audio = new Audio(`./audios/${audio42}.mp3`);
         audio.play();
     }
-    function pkm43 (audio43) {
+    function pkm43(audio43) {
         const audio = new Audio(`./audios/${audio43}.mp3`);
         audio.play();
     }
-    function pkm44 (audio44) {
+    function pkm44(audio44) {
         const audio = new Audio(`./audios/${audio44}.mp3`);
         audio.play();
     }
-    function pkm45 (audio45) {
+    function pkm45(audio45) {
         const audio = new Audio(`./audios/${audio45}.mp3`);
         audio.play();
     }
-    function pkm46 (audio46) {
+    function pkm46(audio46) {
         const audio = new Audio(`./audios/${audio46}.mp3`);
         audio.play();
     }
-    function pkm47 (audio47) {
+    function pkm47(audio47) {
         const audio = new Audio(`./audios/${audio47}.mp3`);
         audio.play();
     }
-    function pkm48 (audio48) {
+    function pkm48(audio48) {
         const audio = new Audio(`./audios/${audio48}.mp3`);
         audio.play();
     }
-    function pkm49 (audio49) {
+    function pkm49(audio49) {
         const audio = new Audio(`./audios/${audio49}.mp3`);
         audio.play();
     }
-    function pkm50 (audio50) {
+    function pkm50(audio50) {
         const audio = new Audio(`./audios/${audio50}.mp3`);
         audio.play();
     }
+
+    //Curtida
+    document.addEventListener('DOMContentLoaded', function() {
+    var botoesCurtidas = document.querySelectorAll('.botao-curtida');
+
+    botoesCurtidas.forEach(function(botaoCurtida) {
+        var idCurtida = botaoCurtida.getAttribute('data-id');
+        var seCurtido = localStorage.getItem(idCurtida);
+
+        if (seCurtido === 'true') {
+            botaoCurtida.classList.add('curtido');
+        }
+
+        botaoCurtida.addEventListener('click', function() {
+            botaoCurtida.classList.toggle('curtido');
+            var seCurtido = botaoCurtida.classList.contains('curtido');
+            localStorage.setItem(idCurtida, seCurtido);
+        });
+    });
+});
+
+function limparLocalStorage() {
+    localStorage.clear();
+}
 </script>

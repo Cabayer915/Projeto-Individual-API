@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style2.css">
     <link rel="icon" type="image/png" href="../../img/icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <title>Pokédex</title>
 </head>
 
@@ -16,13 +17,13 @@
             <a class="logotipo" href="../../Tela-Cliente/telacliente.html"><img src="../../img/Logotipo.png" alt="" width="170px" id="logotipo"></a>
             <ul class="nav-lista">
                 <li>
-                    <a href=""> Favoritos </a>
+                    <a href=""> Mais Curtidos </a>
                 </li>
                 <li>
                     <a href="../Pokedex do Site/Pokedex1/Pokedex.html"> Pokédex </a>
                 </li>
                 <li>
-                    <a href="../../index.html"> Sair </a>
+                    <a href="../../index.html" onclick="limparLocalStorage()"> Sair </a>
                 </li>
             </ul>
         </nav>
@@ -36,6 +37,7 @@
                 </div>
                 <img src="./imgdex/51 - Quatino (normal).png" onclick="pkm1('audio1')" alt="">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida51"><i class="fas fa-heart"></i></button>
                     <li class="tipo normal">Normal</li>
                 </ul>
                 <p class="descricao">Quatino é um Pokémon quati do tipo Normal inspirado. Ele é ágil, curioso e possui
@@ -51,6 +53,7 @@
                 </div>
                 <img src="./imgdex/52 - Quatizap (normal).png" alt="" onclick="pkm2('audio2')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida52"><i class="fas fa-heart"></i></button>
                     <li class="tipo normal">Normal</li>
                 </ul>
                 <p class="descricao">Quatizap é a evolução de Quatino, um Pokémon do tipo Normal. Ele possui uma
@@ -66,6 +69,7 @@
                 </div>
                 <img src="./imgdex/53 - Arirania (água).png" alt="" onclick="pkm3('audio3')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida53"><i class="fas fa-heart"></i></button>
                     <li class="tipo agua">Água</li>
                 </ul>
                 <p class="descricao">Ele possui uma aparência ágil e graciosa, com uma pelagem densa e impermeável.
@@ -82,6 +86,7 @@
                 </div>
                 <img src="./imgdex/54 - Ararenea (água).png" alt="" onclick="pkm4('audio4')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida54"><i class="fas fa-heart"></i></button>
                     <li class="tipo agua">Água</li>
                 </ul>
                 <p class="descricao">Ararenea é a evolução de Arirania, um Pokémon do tipo Água. Ele possui uma
@@ -98,6 +103,7 @@
                 </div>
                 <img src="./imgdex/55 - Bongo Bongo (metal, veneno).png" alt="" onclick="pkm5('audio5')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida55"><i class="fas fa-heart"></i></button>
                     <li class="tipo veneno">Veneno</li>
                     <li class="tipo metal">Metal</li>
                 </ul>
@@ -115,6 +121,7 @@
                 </div>
                 <img src="./imgdex/56 - Girestrike (eletrico).png" alt="" onclick="pkm6('audio6')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida56"><i class="fas fa-heart"></i></button>
                     <li class="tipo eletrico">Elétrico</li>
                 </ul>
                 <p class="descricao">Com sua estrutura de antenas que emitem eletricidade, ele pode gerar poderosos
@@ -131,6 +138,7 @@
                 </div>
                 <img src="./imgdex/57 - Gireletrico (eletrico).png" alt="" onclick="pkm7('audio7')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida57"><i class="fas fa-heart"></i></button>
                     <li class="tipo eletrico">Elétrico</li>
                 </ul>
                 <p class="descricao">Com sua evolução, Gireletrico se torna ainda mais imponente e poderoso. Suas
@@ -150,6 +158,7 @@
                 </div>
                 <img src="./imgdex/58 - Casosaur (voador, lutador).png" alt="" onclick="pkm8('audio8')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida58"><i class="fas fa-heart"></i></button>
                     <li class="tipo voador">Voador</li>
                     <li class="tipo lutador">Lutador</li>
                 </ul>
@@ -171,6 +180,7 @@
                 </div>
                 <img src="./imgdex/59 - Casosaurus (voador, lutador).png" alt="" onclick="pkm9('audio9')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida59"><i class="fas fa-heart"></i></button>
                     <li class="tipo voador">Voador</li>
                     <li class="tipo lutador">Lutador</li>
                 </ul>
@@ -189,6 +199,7 @@
                 </div>
                 <img src="./imgdex/60 - Pikazul (eletrico).png" alt="" onclick="pkm10('audio10')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida60"><i class="fas fa-heart"></i></button>
                     <li class="tipo eletrico">Elétrico</li>
                 </ul>
                 <p class="descricao">Pikazul é uma espécie de Pikachu típica do Brasil, com uma aparência semelhante a
@@ -204,6 +215,7 @@
                 </div>
                 <img src="./imgdex/61 - Caipix (fogo).png" alt="" onclick="pkm11('audio11')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida61"><i class="fas fa-heart"></i></button>
                     <li class="tipo fogo">Fogo</li>
                 </ul>
                 <p class="descricao">Um Pokémon Caipora, conhecida por sua graça e habilidade de realizar danças com
@@ -225,6 +237,7 @@
                 </div>
                 <img src="./imgdex/62 - Campori (fogo).png" alt="" onclick="pkm12('audio12')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida62"><i class="fas fa-heart"></i></button>
                     <li class="tipo fogo">Fogo</li>
                 </ul>
                 <p class="descricao">Campori é a evolução de Caipix e representa uma forma extremamente madura e
@@ -247,6 +260,7 @@
                 </div>
                 <img src="./imgdex/63 - Beta (água).png" alt="" onclick="pkm13('audio13')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida63"><i class="fas fa-heart"></i></button>
                     <li class="tipo agua">Água</li>
                 </ul>
                 <p class="descricao">Ele é conhecido por sua natureza medrosa e ataques considerados inúteis pelos
@@ -264,6 +278,7 @@
                 </div>
                 <img src="./imgdex/64 - Sigma (água).png" alt="" onclick="pkm14('audio14')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida64"><i class="fas fa-heart"></i></button>
                     <li class="tipo agua">Água</li>
                 </ul>
                 <p class="descricao">Sigma é a evolução de Beta, o Pokémon peixe beta. Com seu instinto de sobrevivência
@@ -289,6 +304,7 @@
                 </div>
                 <img src="./imgdex/65 - Pedri (pedra).png" alt="" onclick="pkm15('audio15')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida65"><i class="fas fa-heart"></i></button>
                     <li class="tipo pedra">Pedra</li>
                 </ul>
                 <p class="descricao">Pedri é um Pokémon com aparência de pedra, muitas vezes passando despercebido até
@@ -304,6 +320,7 @@
                 </div>
                 <img src="./imgdex/66 - Pedrini (pedra, lutador).png" alt="" onclick="pkm16('audio16')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida66"><i class="fas fa-heart"></i></button>
                     <li class="tipo pedra">Pedra</li>
                     <li class="tipo lutador">Lutador</li>
                 </ul>
@@ -322,6 +339,7 @@
                 </div>
                 <img src="./imgdex/67 - Pedronco (pedra, lutador).png" alt="" onclick="pkm17('audio17')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida67"><i class="fas fa-heart"></i></button>
                     <li class="tipo pedra">Pedra</li>
                     <li class="tipo lutador">Lutador</li>
                 </ul>
@@ -341,6 +359,7 @@
                 </div>
                 <img src="./imgdex/68 - Antalus (normal).png" alt="" onclick="pkm18('audio18')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida68"><i class="fas fa-heart"></i></button>
                     <li class="tipo normal">Normal</li>
                 </ul>
                 <p class="descricao">Ele é conhecido por sua calma e tranquilidade, movendo-se de maneira lenta e
@@ -356,6 +375,7 @@
                 </div>
                 <img src="./imgdex/69 - Tapyro (fogo).png" alt="" onclick="pkm19('audio19')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida69"><i class="fas fa-heart"></i></button>
                     <li class="tipo fogo">Fogo</li>
                 </ul>
                 <p class="descricao">Tapyro é a evolução de Antalus. Agora maior e mais forte, ele adquire o tipo Fogo,
@@ -373,6 +393,7 @@
                 </div>
                 <img src="./imgdex/70 - Ossorror (fantasma).png" alt="" onclick="pkm20('audio20')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida70"><i class="fas fa-heart"></i></button>
                     <li class="tipo fantasma">Fantasma</li>
                 </ul>
                 <p class="descricao">Ossorror é um Pokémon com uma aparência assustadora, assemelhando-se a uma caveira.
@@ -390,6 +411,7 @@
                 </div>
                 <img src="./imgdex/71 - Aquatinny (água).png" alt="" onclick="pkm21('audio21')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida71"><i class="fas fa-heart"></i></button>
                     <li class="tipo agua">Água</li>
                 </ul>
                 <p class="descricao">Ele tem uma aparência robusta e casco resistente, adaptado para viver tanto na água
@@ -407,6 +429,7 @@
                 </div>
                 <img src="./imgdex/72 - Aquatinna (água).png" alt="" onclick="pkm22('audio22')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida72"><i class="fas fa-heart"></i></button>
                     <li class="tipo agua">Água</li>
                 </ul>
                 <p class="descricao">Aquatinna é a evolução robusta de Aquatinny. Com um casco de queratina praticamente
@@ -424,6 +447,7 @@
                 </div>
                 <img src="./imgdex/73 - Aquatindra (água).png" alt="" onclick="pkm23('audio23')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida73"><i class="fas fa-heart"></i></button>
                     <li class="tipo agua">Água</li>
                 </ul>
                 <p class="descricao">Aquatindra é a evolução final de Aquatinna, essa imponente criatura perde seu casco
@@ -442,6 +466,7 @@
                 </div>
                 <img src="./imgdex/74 - Baconius (normal).png" alt="" onclick="pkm24('audio24')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida74"><i class="fas fa-heart"></i></button>
                     <li class="tipo normal">Normal</li>
                 </ul>
                 <p class="descricao">Ele é um adorável porco com um apetite voraz. Baconius adora comer e está sempre em
@@ -458,6 +483,7 @@
                 </div>
                 <img src="./imgdex/75 - Porkchomp (normal).png" alt="" onclick="pkm25('audio25')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida75"><i class="fas fa-heart"></i></button>
                     <li class="tipo normal">Normal</li>
                 </ul>
                 <p class="descricao">Porkchomp é a evolução de Baconius. Ele se torna muito mais forte e robusto, mas
@@ -475,6 +501,7 @@
                 </div>
                 <img src="./imgdex/76 - Skunkbloom (sombrio, planta).png" alt="" onclick="pkm26('audio26')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida76"><i class="fas fa-heart"></i></button>
                     <li class="tipo sombrio">Sombrio</li>
                     <li class="tipo planta">Planta</li>
                 </ul>
@@ -494,6 +521,7 @@
                 </div>
                 <img src="./imgdex/77 - Bulbix (planta).png" alt="" onclick="pkm27('audio27')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida77"><i class="fas fa-heart"></i></button>
                     <li class="tipo planta">Planta</li>
                 </ul>
                 <p class="descricao">Ele possui uma pelagem densa e espinhos. Sua coloração é predominantemente verde,
@@ -509,6 +537,7 @@
                 </div>
                 <img src="./imgdex/78 - Bulbal (planta).png" alt="" onclick="pkm28('audio28')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida78"><i class="fas fa-heart"></i></button>
                     <li class="tipo planta">Planta</li>
                 </ul>
                 <p class="descricao">Bulbal é a evolução feroz de Bulbix, um Pokémon do tipo Planta. Sua aparência
@@ -527,6 +556,7 @@
                 </div>
                 <img src="./imgdex/79 - Bulbassalto (planta).png" alt="" onclick="pkm29('audio29')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida79"><i class="fas fa-heart"></i></button>
                     <li class="tipo planta">Planta</li>
                 </ul>
                 <p class="descricao">Bulbassalto é a evolução imponente de Bulbal, um Pokémon do tipo Planta. Sua
@@ -547,6 +577,7 @@
                 </div>
                 <img src="./imgdex/80 - Glaciala (gelo).png" alt="" onclick="pkm30('audio30')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida80"><i class="fas fa-heart"></i></button>
                     <li class="tipo gelo">Gelo</li>
                 </ul>
                 <p class="descricao">Glaciala é um Pokémon encantador e amigável, com uma aparência semelhante a um
@@ -566,6 +597,7 @@
                 </div>
                 <img src="./imgdex/81 - Cachogo (fogo).png" alt="" onclick="pkm31('audio31')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida81"><i class="fas fa-heart"></i></button>
                     <li class="tipo fogo">Fogo</li>
                 </ul>
                 <p class="descricao">Cachogo é um Pokémon de aparência adorável, semelhante a um cachorro com uma
@@ -585,6 +617,7 @@
                 </div>
                 <img src="./imgdex/82 - Lofogo (fogo).png" alt="" onclick="pkm32('audio32')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida82"><i class="fas fa-heart"></i></button>
                     <li class="tipo fogo">Fogo</li>
                 </ul>
                 <p class="descricao">Lofogo é a evolução poderosa de Cachogo, assumindo a forma de um majestoso lobo com
@@ -602,6 +635,7 @@
                 </div>
                 <img src="./imgdex/83 - Lolava (fogo).png" alt="" onclick="pkm33('audio33')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida83"><i class="fas fa-heart"></i></button>
                     <li class="tipo fogo">Fogo</li>
                 </ul>
                 <p class="descricao">Lolava é a evolução avassaladora de Lofogo, transformando-se em uma criatura
@@ -622,6 +656,7 @@
                 </div>
                 <img src="./imgdex/84 - Gaspar (fantasma).png" alt="" onclick="pkm34('audio34')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida84"><i class="fas fa-heart"></i></button>
                     <li class="tipo fantasma">Fantasma</li>
                 </ul>
                 <p class="descricao">Gaspar é um Pokémon do tipo Fantasma com uma aparência peculiar, assemelhando-se a
@@ -640,6 +675,7 @@
                 </div>
                 <img src="./imgdex/85 - Gasfear (fantasma).png" alt="" onclick="pkm35('audio35')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida85"><i class="fas fa-heart"></i></button>
                     <li class="tipo fantasma">Fantasma</li>
                 </ul>
                 <p class="descricao">Gasfear é a evolução assustadora de Gaspar. Com sua aparência sombria e sinistra,
@@ -658,6 +694,7 @@
                 </div>
                 <img src="./imgdex/86 - Espectraria (psiquico).png" alt="" onclick="pkm36('audio36')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida86"><i class="fas fa-heart"></i></button>
                     <li class="tipo psiquico">Psíquico</li>
                 </ul>
                 <p class="descricao">Espectraria é um Pokémon misterioso de cor roxa com listras pretas. Sua origem é
@@ -677,6 +714,7 @@
                 </div>
                 <img src="./imgdex/87 - Igniberos (fogo, dragão).png" alt="" onclick="pkm37('audio37')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida87"><i class="fas fa-heart"></i></button>
                     <li class="tipo fogo">Fogo</li>
                     <li class="tipo dragao">Dragão</li>
                 </ul>
@@ -696,6 +734,7 @@
                 </div>
                 <img src="./imgdex/88 - Mana (água).png" alt="" onclick="pkm38('audio38')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida88"><i class="fas fa-heart"></i></button>
                     <li class="tipo agua">Água</li>
                 </ul>
                 <p class="descricao">Mana é um Pokémon filhote de peixe-boi do tipo água. É conhecido por sua alegria
@@ -710,6 +749,7 @@
                 </div>
                 <img src="./imgdex/89 - Manati (água).png" alt="" onclick="pkm39('audio39')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida89"><i class="fas fa-heart"></i></button>
                     <li class="tipo agua">Água</li>
                 </ul>
                 <p class="descricao">Manati é a evolução de Mana, e nessa fase jovem ele se torna mais maduro, porém
@@ -726,6 +766,7 @@
                 </div>
                 <img src="./imgdex/90 -  Manation (água).png" alt="" onclick="pkm40('audio40')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida90"><i class="fas fa-heart"></i></button>
                     <li class="tipo agua">Água</li>
                 </ul>
                 <p class="descricao">Manation é a poderosa evolução de Manati, um peixe-boi totalmente amadurecido. Com
@@ -743,6 +784,7 @@
                 </div>
                 <img src="./imgdex/91 - Caramello (normal).png" alt="" onclick="pkm41('audio41')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida91"><i class="fas fa-heart"></i></button>
                     <li class="tipo normal">Normal</li>
                 </ul>
                 <p class="descricao">É um adorável Pokémon cachorro com uma pelagem na cor caramelo. Ele possui um
@@ -759,6 +801,7 @@
                 </div>
                 <img src="./imgdex/92 - Caramellado (normal).png" alt="" onclick="pkm42('audio42')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida92"><i class="fas fa-heart"></i></button>
                     <li class="tipo normal">Normal</li>
                 </ul>
                 <p class="descricao">Caramellado é a evolução de Caramello, e é conhecido por sua extrema lealdade aos
@@ -778,6 +821,7 @@
                 </div>
                 <img src="./imgdex/93 - Caspor (lutador).png" alt="" onclick="pkm43('audio43')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida93"><i class="fas fa-heart"></i></button>
                     <li class="tipo lutador">Lutador</li>
                 </ul>
                 <p class="descricao">Um pequeno Pokémon castor que possui um estilo de luta único: a capoeira. Sua
@@ -794,6 +838,7 @@
                 </div>
                 <img src="./imgdex/94 - Caspoeira (lutador).png" alt="" onclick="pkm44('audio44')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida94"><i class="fas fa-heart"></i></button>
                     <li class="tipo lutador">Lutador</li>
                 </ul>
                 <p class="descricao">Caspoeira é a evolução de Caspor e se torna o combatente perfeito da arte da
@@ -812,6 +857,7 @@
                 </div>
                 <img src="./imgdex/95 - Swamplord (terra, veneno).png" alt="" onclick="pkm45('audio45')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida95"><i class="fas fa-heart"></i></button>
                     <li class="tipo terra">Terra</li>
                     <li class="tipo veneno">Veneno</li>
                 </ul>
@@ -832,6 +878,7 @@
                 </div>
                 <img src="./imgdex/96 - Pira (água).png" alt="" onclick="pkm46('audio46')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida96"><i class="fas fa-heart"></i></button>
                     <li class="tipo agua">Água</li>
                 </ul>
                 <p class="descricao">Pira é um Pokémon do tipo Água que se assemelha a uma piranha. Conhecido por sua
@@ -848,6 +895,7 @@
                 </div>
                 <img src="./imgdex/97 - Pira-Pira (água).png" alt="" onclick="pkm47('audio47')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida97"><i class="fas fa-heart"></i></button>
                     <li class="tipo agua">Água</li>
                 </ul>
                 <p class="descricao">Pira-Pira é a evolução de Pira, e sua principal característica é sua habilidade de
@@ -865,6 +913,7 @@
                 </div>
                 <img src="./imgdex/98 - Dragonvinha (dragão, planta).png" alt="" onclick="pkm48('audio48')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida98"><i class="fas fa-heart"></i></button>
                     <li class="tipo dragao">Dragão</li>
                     <li class="tipo planta">Planta</li>
                 </ul>
@@ -885,6 +934,7 @@
                 </div>
                 <img src="./imgdex/99 - Dragonsipó (dragão, planta).png" alt="" onclick="pkm49('audio49')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida99"><i class="fas fa-heart"></i></button>
                     <li class="tipo dragao">Dragão</li>
                     <li class="tipo planta">Planta</li>
                 </ul>
@@ -908,6 +958,7 @@
                 </div>
                 <img src="./imgdex/100 - Dragondoso (dragão, planta).png" alt="" onclick="pkm50('audio50')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida100"><i class="fas fa-heart"></i></button>
                     <li class="tipo dragao">Dragão</li>
                     <li class="tipo planta">Planta</li>
                 </ul>
@@ -1168,4 +1219,28 @@
         const audio = new Audio(`./audios/${audio50}.mp3`);
         audio.play();
     }
+
+        //Curtida
+        document.addEventListener('DOMContentLoaded', function() {
+    var botoesCurtidas = document.querySelectorAll('.botao-curtida');
+
+    botoesCurtidas.forEach(function(botaoCurtida) {
+        var idCurtida = botaoCurtida.getAttribute('data-id');
+        var seCurtido = localStorage.getItem(idCurtida);
+
+        if (seCurtido === 'true') {
+            botaoCurtida.classList.add('curtido');
+        }
+
+        botaoCurtida.addEventListener('click', function() {
+            botaoCurtida.classList.toggle('curtido');
+            var seCurtido = botaoCurtida.classList.contains('curtido');
+            localStorage.setItem(idCurtida, seCurtido);
+        });
+    });
+});
+
+function limparLocalStorage() {
+    localStorage.clear();
+}
 </script>

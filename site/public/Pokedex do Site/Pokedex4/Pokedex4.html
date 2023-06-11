@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style4.css">
     <link rel="icon" type="image/png" href="../../img/icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <title>Pokédex</title>
 </head>
 
@@ -16,13 +17,13 @@
             <a class="logotipo" href="../../Tela-Cliente/telacliente.html"><img src="../../img/Logotipo.png" alt="" width="170px" id="logotipo"></a>
             <ul class="nav-lista">
                 <li>
-                    <a href=""> Favoritos </a>
+                    <a href=""> Mais Curtidos </a>
                 </li>
                 <li>
                     <a href="../Pokedex do Site/Pokedex1/Pokedex.html"> Pokédex </a>
                 </li>
                 <li>
-                    <a href="../../index.html"> Sair </a>
+                    <a href="../../index.html" onclick="limparLocalStorage()"> Sair </a>
                 </li>
             </ul>
         </nav>
@@ -36,6 +37,7 @@
                 </div>
                 <img src="./imgdex/151 - Metano (metal).png" alt="" onclick="pkm1('audio1')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida151"><i class="fas fa-heart"></i></button>
                     <li class="tipo metal">Metal</li>
                 </ul>
                 <p class="descricao">Sua estrutura metálica brilhante e seus complexos mecanismos internos o tornam uma
@@ -51,6 +53,7 @@
                 </div>
                 <img src="./imgdex/152 - Metanon (metal).png" alt="" onclick="pkm2('audio2')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida152"><i class="fas fa-heart"></i></button>
                     <li class="tipo metal">Metal</li>
                 </ul>
                 <p>Com várias engrenagens interligadas, Metanon é capaz de operar em perfeita harmonia com até oito
@@ -69,6 +72,7 @@
                 </div>
                 <img src="./imgdex/153 - Metalord (metal).png" alt="" onclick="pkm3('audio3')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida153"><i class="fas fa-heart"></i></button>
                     <li class="tipo metal">Metal</li>
                 </ul>
                 <p>
@@ -89,6 +93,7 @@
                 </div>
                 <img src="./imgdex/154 - Seabird (voador, água).png" alt="" onclick="pkm4('audio4')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida154"><i class="fas fa-heart"></i></button>
                     <li class="tipo agua">Água</li>
                     <li class="tipo voador">Voador</li>
                 </ul>
@@ -110,6 +115,7 @@
                 </div>
                 <img src="./imgdex/155 - Metallica (metal).png" alt="" onclick="pkm5('audio5')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida155"><i class="fas fa-heart"></i></button>
                     <li class="tipo metal">Metal</li>
                 </ul>
                 <p>Metallica é conhecido por sua habilidade musical extraordinária. Ele é capaz de produzir sons
@@ -129,6 +135,7 @@
                 </div>
                 <img src="./imgdex/156 - CompuGPTech (eletrico).png" alt="" onclick="pkm6('audio6')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida156"><i class="fas fa-heart"></i></button>
                     <li class="tipo eletrico">Elétrico</li>
                 </ul>
                 <p>CompuGPTech é um Pokémon único e revolucionário, sendo o primeiro Pokémon virtualizado. Sua
@@ -154,6 +161,7 @@
                 </div>
                 <img src="./imgdex/157 - Pastudo (lutador).png" alt="" onclick="pkm7('audio7')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida157"><i class="fas fa-heart"></i></button>
                     <li class="tipo lutador">Lutador</li>
                 </ul>
                 <p>Pastudo é um Pokémon lutador notório por sua natureza maldosa e postura hostil. Ele é conhecido por
@@ -178,6 +186,7 @@
                 </div>
                 <img src="./imgdex/158 - Araucagélido (gelo).png" alt="" onclick="pkm8('audio8')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida158"><i class="fas fa-heart"></i></button>
                     <li class="tipo gelo">Gelo</li>
                 </ul>
                 <p>Araucagélido é um Pokémon raro e majestoso, inspirado na beleza das araucárias, árvores resistentes
@@ -201,6 +210,7 @@
                 </div>
                 <img src="./imgdex/159 - Tatucs (terra).png" alt="" onclick="pkm9('audio9')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida159"><i class="fas fa-heart"></i></button>
                     <li class="tipo terra">Terra</li>
                 </ul>
                 <p>Ele é conhecido por seu corpo redondo e coberto por uma carapaça resistente, que o protege de ataques
@@ -219,6 +229,7 @@
                 </div>
                 <img src="./imgdex/160 - Tatum (terra).png" alt="" onclick="pkm10('audio10')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida160"><i class="fas fa-heart"></i></button>
                     <li class="tipo terra">Terra</li>
                 </ul>
                 <p>atum é a evolução de Tatucs, um Pokémon robusto e imponente. Sua forma evoluída possui um tamanho
@@ -238,6 +249,7 @@
                 </div>
                 <img src="./imgdex/161 - Crustaconcha (água).png" alt="" onclick="pkm11('audio11')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida161"><i class="fas fa-heart"></i></button>
                     <li class="tipo agua">Água</li>
                 </ul>
                 <p>Crustaconcha é um Pokémon adorável e peculiar que se assemelha a um caranguejo pequeno. Ele é
@@ -263,6 +275,7 @@
                 </div>
                 <img src="./imgdex/162 - Crustaking (água).png" alt="" onclick="pkm12('audio12')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida162"><i class="fas fa-heart"></i></button>
                     <li class="tipo agua">Água</li>
                 </ul>
                 <p>Crustaking é a evolução poderosa e imponente de Crustaconcha. Sua forma evoluída apresenta um tamanho
@@ -279,6 +292,7 @@
                 </div>
                 <img src="./imgdex/163 - Crustalion (água).png" alt="" onclick="pkm13('audio13')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida163"><i class="fas fa-heart"></i></button>
                     <li class="tipo agua">Água</li>
                 </ul>
                 <p>Crustalion é a evolução final e imponente de Crustaking. Sua forma evoluída apresenta um tamanho
@@ -300,6 +314,7 @@
                 </div>
                 <img src="./imgdex/164 - Ariadinarak (inseto).png" alt="" onclick="pkm14('audio14')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida164"><i class="fas fa-heart"></i></button>
                     <li class="tipo inseto">Inseto</li>
                 </ul>
                 <p>Arianarak é um Pokémon pequeno e ágil, se assemelhando a uma tarântula. Ela possui um corpo coberto
@@ -324,6 +339,7 @@
                 </div>
                 <img src="./imgdex/165 - Ariana Del Rey (inseto).png" alt="" onclick="pkm15('audio15')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida165"><i class="fas fa-heart"></i></button>
                     <li class="tipo inseto">Inseto</li>
                 </ul>
                 <p>Ariana Del Rey é a evolução imponente e majestosa de Arianarak. Sua forma evoluída é muito maior,
@@ -344,6 +360,7 @@
                 </div>
                 <img src="./imgdex/166 - Cobroca (pedra).png" alt="" onclick="pkm16('audio16')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida166"><i class="fas fa-heart"></i></button>
                     <li class="tipo pedra">Pedra</li>
                 </ul>
                 <p> Cobroca é um Pokémon serpente peculiar, com características únicas que o tornam valioso no mundo da
@@ -371,6 +388,7 @@
                 </div>
                 <img src="./imgdex/167 - Brocomonstro (pedra).png" alt="" onclick="pkm17('audio17')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida167"><i class="fas fa-heart"></i></button>
                     <li class="tipo pedra">Pedra</li>
                 </ul>
                 <p>Brocomonstro é a evolução imponente e assustadora de Cobroca. Sua forma evoluída adquire uma
@@ -398,6 +416,7 @@
                 </div>
                 <img src="./imgdex/168 - Moojitsu (normal, lutador).png" alt="" onclick="pkm18('audio18')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida168"><i class="fas fa-heart"></i></button>
                     <li class="tipo normal">Normal</li>
                     <li class="tipo lutador">Lutador</li>
                 </ul>
@@ -420,6 +439,7 @@
                 </div>
                 <img src="./imgdex/169 - Mooaythai (normal, lutador).png" alt="" onclick="pkm19('audio19')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida169"><i class="fas fa-heart"></i></button>
                     <li class="tipo normal">Normal</li>
                     <li class="tipo lutador">Lutador</li>
                 </ul>
@@ -436,6 +456,7 @@
                 </div>
                 <img src="./imgdex/170 - Aquaraptor (água).png" alt="" onclick="pkm20('audio20')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida170"><i class="fas fa-heart"></i></button>
                     <li class="tipo agua">Água</li>
                 </ul>
                 <p>Aquaraptor é um monstruoso Pokémon do tipo Água que se assemelha a um imponente mosassauro. Com um
@@ -458,6 +479,7 @@
                 </div>
                 <img src="./imgdex/171 - Furton (lutador).png" alt="" onclick="pkm21('audio21')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida171"><i class="fas fa-heart"></i></button>
                     <li class="tipo lutador">Lutador</li>
                 </ul>
                 <p>Furton é um Pokémon maléfico que trabalha para facções criminosas não reconhecidas. Sua aparência é
@@ -487,6 +509,7 @@
                 </div>
                 <img src="./imgdex/172 - Guaramite (planta).png" alt="" onclick="pkm22('audio22')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida172"><i class="fas fa-heart"></i></button>
                     <li class="tipo planta">Planta</li>
                 </ul>
                 <p>Guaramite é um pequeno Pokémon de pelagem branca e aparência adorável. Ele é conhecido por seu
@@ -511,6 +534,7 @@
                 </div>
                 <img src="./imgdex/173 - Guaradião (planta).png" alt="" onclick="pkm23('audio23')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida173"><i class="fas fa-heart"></i></button>
                     <li class="tipo planta">Planta</li>
                 </ul>
                 <p>Guaradião é a evolução poderosa e protetora de Guaramite. Nessa forma evoluída, ele se torna um
@@ -538,6 +562,7 @@
                 </div>
                 <img src="./imgdex/174 - Gaille (lutador).png" alt="" onclick="pkm24('audio24')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida174"><i class="fas fa-heart"></i></button>
                     <li class="tipo lutador">Lutador</li>
                 </ul>
                 <p>Gaille é um Pokémon galo conhecido por sua popularidade nas rinhas de galo. Sua aparência é
@@ -558,6 +583,7 @@
                 </div>
                 <img src="./imgdex/175 - Gallos (lutador).png" alt="" onclick="pkm25('audio25')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida175"><i class="fas fa-heart"></i></button>
                     <li class="tipo lutador">Lutador</li>
                 </ul>
                 <p>Gallos é a evolução poderosa e imponente de Gaille. Nessa forma evoluída, ele se torna um Pokémon
@@ -581,6 +607,7 @@
                 </div>
                 <img src="./imgdex/176 - Rocktorr (pedra).png" alt="" onclick="pkm26('audio26')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida176"><i class="fas fa-heart"></i></button>
                     <li class="tipo pedra">Pedra</li>
                 </ul>
                 <p>Rocktorr é um dinossauro roxo de aparência robusta e intimidante. Ele possui um corpo sólido e
@@ -605,6 +632,7 @@
                 </div>
                 <img src="./imgdex/177 - Electrobola (eletrico).png" alt="" onclick="pkm27('audio27')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida177"><i class="fas fa-heart"></i></button>
                     <li class="tipo eletrico">Elétrico</li>
                 </ul>
                 <p>Ele é composto por um material especial condutor de eletricidade, o que lhe confere poderes elétricos
@@ -630,6 +658,7 @@
                 </div>
                 <img src="./imgdex/178 - Voltobola (eletrico).png" alt="" onclick="pkm28('audio28')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida178"><i class="fas fa-heart"></i></button>
                     <li class="tipo eletrico">Elétrico</li>
                 </ul>
                 <p> Voltobola, famoso por sua participação como bola oficial na Copa do Mundo de 2014, é um Pokémon
@@ -655,6 +684,7 @@
                 </div>
                 <img src="./imgdex/179 - Colotinho (normal).png" alt="" onclick="pkm29('audio29')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida179"><i class="fas fa-heart"></i></button>
                     <li class="tipo normal">Normal</li>
                 </ul>
                 <p>Colotinho é um adorável e curioso Pokémon em forma de garrafa de Corote. Sua aparência é inspirada na
@@ -675,6 +705,7 @@
                 </div>
                 <img src="./imgdex/180 - Tourogo (eletrico, fogo).png" alt="" onclick="pkm30('audio30')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida180"><i class="fas fa-heart"></i></button>
                     <li class="tipo fogo">Fogo</li>
                     <li class="tipo eletrico">Elétrico</li>
                 </ul>
@@ -698,6 +729,7 @@
                 </div>
                 <img src="./imgdex/181 - Flamullyn (fogo).png" alt="" onclick="pkm31('audio31')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida181"><i class="fas fa-heart"></i></button>
                     <li class="tipo fogo">Fogo</li>
                 </ul>
                 <p>Flamullyn é um Pokémon extremamente raro e misterioso. Sua aparência num corpo equino envolto em
@@ -719,6 +751,7 @@
                 </div>
                 <img src="./imgdex/182 - Mozilla (fogo).png" alt="" onclick="pkm32('audio32')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida182"><i class="fas fa-heart"></i></button>
                     <li class="tipo fogo">Fogo</li>
                 </ul>
                 <p>Mozilla é uma adorável raposa Pokémon de pequeno porte. Sua pelagem é composta por tons vibrantes de
@@ -739,6 +772,7 @@
                 </div>
                 <img src="./imgdex/183 - Firefox (fogo).png" alt="" onclick="pkm33('audio33')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida183"><i class="fas fa-heart"></i></button>
                     <li class="tipo fogo">Fogo</li>
                 </ul>
                 <p>Firefox é a evolução majestosa e imponente de Mozilla. Com suas nove caudas esvoaçantes e sua postura
@@ -761,6 +795,7 @@
                 </div>
                 <img src="./imgdex/184 - Loirinea (fantasma).png" alt="" onclick="pkm34('audio34')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida184"><i class="fas fa-heart"></i></button>
                     <li class="tipo fantasma">Fantasma</li>
                 </ul>
                 <p>Loirinea é um Pokémon fantasma misterioso que possui uma aparência assustadora, baseada na lenda
@@ -783,6 +818,7 @@
                 </div>
                 <img src="./imgdex/185 - Godzalla (dragão).png" alt="" onclick="pkm35('audio35')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida185"><i class="fas fa-heart"></i></button>
                     <li class="tipo dragao">Dragão</li>
                 </ul>
                 <p>Godzalla é um Pokémon imponente e colossal. Com sua forma gigantesca e aspecto poderoso, ele
@@ -804,6 +840,7 @@
                 </div>
                 <img src="./imgdex/186 - Nymphiara (água).png" alt="" onclick="pkm36('audio36')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida186"><i class="fas fa-heart"></i></button>
                     <li class="tipo agua">Água</li>
                 </ul>
                 <p>Nymphiara é um Pokémon lendário, cuja origem está envolta em mistério e encantamento. Ela é inspirada
@@ -834,6 +871,7 @@
                 </div>
                 <img src="./imgdex/187 - Botorosa (agua).png" alt="" onclick="pkm37('audio37')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida187"><i class="fas fa-heart"></i></button>
                     <li class="tipo agua">Água</li>
                 </ul>
                 <p>Botorosa, o Pokémon lendário do tipo Água, é uma criatura misteriosa e enigmática. Sua aparência é a
@@ -862,6 +900,7 @@
                 </div>
                 <img src="./imgdex/188 - Cerberontres (fogo).png" alt="" onclick="pkm38('audio38')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida188"><i class="fas fa-heart"></i></button>
                     <li class="tipo fogo">Fogo</li>
                 </ul>
                 <p>Cerberontres é um dos lendários "Cães do Destino", uma linhagem ancestral de Pokémon lendários sendo
@@ -887,6 +926,7 @@
                 </div>
                 <img src="./imgdex/189 - Espiritauls (fantasma).png" alt="" onclick="pkm39('audio39')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida189"><i class="fas fa-heart"></i></button>
                     <li class="tipo fantasma">Fantasma</li>
                 </ul>
                 <p>Espiritauls é um dos lendários "Cães do Destino", sendo o representante da linhagem mística de
@@ -917,6 +957,7 @@
                 </div>
                 <img src="./imgdex/190 - Polimacho (lutador).png" alt="" onclick="pkm40('audio40')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida190"><i class="fas fa-heart"></i></button>
                     <li class="tipo lutador">Lutador</li>
                 </ul>
                 <p>Polimacho é um trio de Pokémon conhecidos como "Os Policiais da Justiça". São três combatentes
@@ -952,6 +993,7 @@
                 </div>
                 <img src="./imgdex/191 - Nebulost (metal).png" alt="" onclick="pkm41('audio41')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida191"><i class="fas fa-heart"></i></button>
                     <li class="tipo metal">Metal</li>
                 </ul>
                 <p>Niquelost é um dos lendários "Cães do Destino", uma antiga linhagem de Pokémon. Sendo o representante
@@ -985,6 +1027,7 @@
                 </div>
                 <img src="./imgdex/192 - Necrofox (sombrio).png" alt="" onclick="pkm42('audio42')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida192"><i class="fas fa-heart"></i></button>
                     <li class="tipo sombrio">Sombrio</li>
                 </ul>
                 <p>Necrofox é um lendário dos "Cães do Destino", uma linhagem ancestral de Pokémon responsável pela
@@ -1016,6 +1059,7 @@
                 </div>
                 <img src="./imgdex/193 - Verdecaos (planta).png" alt="" onclick="pkm43('audio43')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida193"><i class="fas fa-heart"></i></button>
                     <li class="tipo planta">Planta</li>
                 </ul>
                 <p>Verdecaos é um lendário dos "Cães do Destino", uma ancestral linhagem de Pokémon sendo ele
@@ -1045,6 +1089,7 @@
                 </div>
                 <img src="./imgdex/194 - Harpycuno (voador).png" alt="" onclick="pkm44('audio44')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida194"><i class="fas fa-heart"></i></button>
                     <li class="tipo voador">Voador</li>
                 </ul>
                 <p>Harpycuno é um lendário Pokémon inspirado nas poderosas harpias, mestres dos céus. Com suas asas
@@ -1074,6 +1119,7 @@
                 </div>
                 <img src="./imgdex/195 - Mantitalos (agua).png" alt="" onclick="pkm45('audio45')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida195"><i class="fas fa-heart"></i></button>
                     <li class="tipo agua">Água</li>
                 </ul>
                 <p>Mantialos é um lendário Pokémon aquático, por não haver um Pokémon representante da água dentre os
@@ -1108,6 +1154,7 @@
                 </div>
                 <img src="./imgdex/196 - Kurupasso (planta).png" alt="" onclick="pkm46('audio46')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida196"><i class="fas fa-heart"></i></button>
                     <li class="tipo planta">Planta</li>
                 </ul>
                 <p>Kurupasso é um Pokémon do tipo Planta inspirado no lendário Curupira. Ele possui a habilidade de
@@ -1138,6 +1185,7 @@
                 </div>
                 <img src="./imgdex/197 - Tornasci (terra, lutador).png" alt="" onclick="pkm47('audio47')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida197"><i class="fas fa-heart"></i></button>
                     <li class="tipo terra">Terra</li>
                 </ul>
                 <p>Tornasci é um lendário do tipo Terra, inspirado no folclore do Saci. Diferente do Saci tradicional,
@@ -1161,6 +1209,7 @@
                 </div>
                 <img src="./imgdex/198 - Nyxtwo (psiquico).png" alt="" onclick="pkm48('audio48')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida198"><i class="fas fa-heart"></i></button>
                     <li class="tipo psiquico">Psíquico</li>
                 </ul>
                 <p>Nyxtwo é um lendário do tipo Psíquico, originário da região da Guiana, na América do Sul. Ele é uma
@@ -1187,6 +1236,7 @@
                 </div>
                 <img src="./imgdex/199 - Zephy (voador).png" alt="" onclick="pkm49('audio49')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida199"><i class="fas fa-heart"></i></button>
                     <li class="tipo voador">Voador</li>
                 </ul>
                 <p>Zephy, o lendário "Guardião dos Céus", é uma poderosa criatura do tipo Voador. Ele é o dominador
@@ -1222,6 +1272,7 @@
                 </div>
                 <img src="./imgdex/200 - Solarius (desconhecido).png" alt="" onclick="pkm50('audio50')">
                 <ul class="tipos">
+                    <button class="botao-curtida" data-id="botaoCurtida200"><i class="fas fa-heart"></i></button>
                     <li class="tipo desconhecido">Desconhecido</li>
                 </ul>
                 <p>Solaris, o Pokémon Deus Supremo do Sol, é uma entidade cósmica de poder incomensurável e mistério
@@ -1505,4 +1556,28 @@
         const audio = new Audio(`./audios/${audio50}.mp3`);
         audio.play();
     }
+
+    //Curtida
+    document.addEventListener('DOMContentLoaded', function() {
+    var botoesCurtidas = document.querySelectorAll('.botao-curtida');
+
+    botoesCurtidas.forEach(function(botaoCurtida) {
+        var idCurtida = botaoCurtida.getAttribute('data-id');
+        var seCurtido = localStorage.getItem(idCurtida);
+
+        if (seCurtido === 'true') {
+            botaoCurtida.classList.add('curtido');
+        }
+
+        botaoCurtida.addEventListener('click', function() {
+            botaoCurtida.classList.toggle('curtido');
+            var seCurtido = botaoCurtida.classList.contains('curtido');
+            localStorage.setItem(idCurtida, seCurtido);
+        });
+    });
+});
+
+function limparLocalStorage() {
+    localStorage.clear();
+}
 </script>

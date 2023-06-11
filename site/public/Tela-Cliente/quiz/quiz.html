@@ -22,7 +22,7 @@
                     <a href="../../Pokedex do Site/Pokedex.html"> Pokédex </a>
                 </li>
                 <li>
-                    <a href="../../index.html"> Sair </a>
+                    <a href="../../index.html" onclick="limparLocalStorage()"> Sair </a>
                 </li>
             </ul>
         </nav>
@@ -311,4 +311,9 @@
     });
 
     comecarQuiz();
+
+    function limparLocalStorage() {
+    localStorage.clear();
+}
+
 </script>

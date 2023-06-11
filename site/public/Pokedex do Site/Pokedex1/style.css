@@ -253,6 +253,18 @@ main p{
     background-color: #22627b;
 }
 
+.botao-curtida {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: gray;
+}
+
+.botao-curtida.curtido {
+    color: red;
+}
+
 /* ===== Scrollbar CSS ===== */
 
 *::-webkit-scrollbar {
