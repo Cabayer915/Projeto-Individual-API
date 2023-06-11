@@ -81,7 +81,20 @@ body {
     border-radius: 4px;
   }
   
-  input[type="submit"] {
+  /* input[type="submit"] {
+    width: 90%;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: gold;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 28px;
+  } */
+  
+  .botaoCadastro{
+    margin-left: 18px;
     width: 90%;
     margin-top: 20px;
     padding: 10px;
@@ -92,7 +105,7 @@ body {
     cursor: pointer;
     font-size: 28px;
   }
-  
+
   .login-link {
     text-align: center;
     margin-top: 10px;

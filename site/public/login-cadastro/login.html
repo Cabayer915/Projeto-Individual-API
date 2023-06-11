@@ -30,7 +30,7 @@
       <p>Senha:</p>
       <input type="password" id="senha_input" name="password" placeholder="Digite sua senha" required>
       
-      <button onclick="entrar()">Entrar</button>
+      <button class="botaoEntrar" onclick="entrar()">Entrar</button>
     
     <div class="signup-link">
       Não tem uma conta? <a href="./cadastro.html" style="color: cyan;">Crie um cadastro</a>
@@ -63,7 +63,7 @@ function entrar() {
             emailServer: emailVar,
             senhaServer: senhaVar
         })
-    }).then(function (resposta) {
+    }).then(function(resposta) {
 
             if (resposta.ok) {
                 console.log(resposta)
@@ -77,7 +77,7 @@ function entrar() {
                     sessionStorage.ID_USUARIO = json.id;
 
                     setTimeout(function () {
-                        window.location.href = "../index.html";
+                        window.location.href = "../Tela-Cliente/telacliente.html";
                     }, 1000);
             });
         }

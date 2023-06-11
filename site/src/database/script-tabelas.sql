@@ -35,7 +35,8 @@ titulo varchar(50),
 analise varchar(25),
 comentario varchar(400),
 fk_usuarios int,
-foreign key (fk_usuarios) references usuarios(idUsuario)
+FOREIGN KEY (fk_usuarios) REFERENCES usuarios(idUsuario),
+    CONSTRAINT unico_comentario_por_usuario UNIQUE (fk_usuarios)
 );
 
 drop table Usuarios;
@@ -264,7 +265,10 @@ INSERT INTO Pokemons VALUES
 (null, 'Solaris', 'Desconhecido');
 
 insert into Comentarios values
-(null, 'AMEI', 'Positiva', 'Amei muito o jogo', 1);
+(null, 'AMEI', 'Positiva', 'Amei muito o jogo', 1),
+(null, 'AMEI', 'Positiva', 'Amei muito o jogoooo', 2);
+
+truncate table Comentarios;
 
 select * from Usuarios;
 select * from Pokemons;

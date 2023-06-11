@@ -31,7 +31,7 @@
     <div class="carrossel">
       <div class="container-destaque">
         <div class="mensagens">
-          <img src="../../logotipo/icon.png" alt="">
+          <img src="../img/icon.png" alt="">
           <p>Pokémons em Destaque</p>
         </div>
       </div>
@@ -39,7 +39,8 @@
         <button id="prev-button"><img src="./slider/left.png" alt=""></button>
         <div class="container-images">
           <div class="espaco">
-            <img src="../Pokedex do Site/Pokedex1/imgdex/42 - Draconight (dragão, sombrio).png" alt="" class="slider on">
+            <img src="../Pokedex do Site/Pokedex1/imgdex/42 - Draconight (dragão, sombrio).png" alt=""
+              class="slider on">
           </div>
           <div class="espaco">
             <img src="../Pokedex do Site/Pokedex1/imgdex/148 - Leviatan (água).png" alt="" class="slider">
@@ -76,19 +77,19 @@
     <div class="imagens-download">
       <div class="container-destaque-download">
         <div class="mensagens-download">
-          <img src="../../logotipo/icon.png" alt="">
+          <img src="../img/icon.png" alt="">
           <p>Imagens do Jogo</p>
         </div>
       </div>
       <div class="container-slider-download">
         <button id="prev-button2"><img src="./slider/left.png" alt=""></button>
         <div class="container-images-download">
-          <img src="../Tela Cliente/imagens-carrossel-download/imagem1.png" alt="" class="slider2 on">
-          <img src="../Tela Cliente/imagens-carrossel-download/imagem2.png" alt="" class="slider2">
-          <img src="../Tela Cliente/imagens-carrossel-download/imagem3.png" alt="" class="slider2">
-          <img src="../Tela Cliente/imagens-carrossel-download/imagem4.png" alt="" class="slider2">
-          <img src="../Tela Cliente/imagens-carrossel-download/imagem5.png" alt="" class="slider2">
-          <img src="../Tela Cliente/imagens-carrossel-download/imagem6.png" alt="" class="slider2">
+          <img src="../Tela-Cliente/imagens-carrossel-download/imagem1.png" alt="" class="slider2 on">
+          <img src="../Tela-Cliente/imagens-carrossel-download/imagem2.png" alt="" class="slider2">
+          <img src="../Tela-Cliente/imagens-carrossel-download/imagem3.png" alt="" class="slider2">
+          <img src="../Tela-Cliente/imagens-carrossel-download/imagem4.png" alt="" class="slider2">
+          <img src="../Tela-Cliente/imagens-carrossel-download/imagem5.png" alt="" class="slider2">
+          <img src="../Tela-Cliente/imagens-carrossel-download/imagem6.png" alt="" class="slider2">
         </div>
         <button id="next-button2"><img src="./slider/right.png" alt=""></button>
       </div>
@@ -122,16 +123,48 @@
       <h1>Você é capaz de descobrir quais são esses Pokémons?</h1>
       <a href="./quiz/quiz.html" class="botaoQuiz">Teste seu Conhecimento</a>
     </div>
+    <div class="sessao-comentarios">
+      <div class="comentarios">
+        <div class="mensagens">
+          <img src="../img/icon.png" alt="">
+          <p>Comentários</p>
+        </div>
+      </div>
+      <div class="publicar-comentarios">
+        <div class="quebra1">
+          <p>Título: <input type="text" id="input_titulo" required></p>
+          <p>Avalie sua experiência: <select name="analise" id="id_analise"></p>
+          <option value="muito-bom">Muito Bom</option>
+          <option value="bom">Bom</option>
+          <option value="recomendado">Recomendo</option>
+          <option value="neutra">Neutro</option>
+          <option value="nao-recomendado">Não Recomendo</option>
+          <option value="ruim">Ruim</option>
+          <option value="muitoruim">Muito Ruim</option>
+          </select>
+        </div>
+        <div class="quebra2">
+          <p>Digite sua opinião: <input type="text" id="input_comentario" required></p>
+        </div>
+        <div class="classeBotaoPublicar">
+          <button class="botaoPublicar" onclick="funcaoComentar()">Publicar</button>
+        </div>
+      </div>
+      <div class="comentarios-postados">
+          lorem
+      </div>
+    </div>
   </main>
   <footer>
     <div id="#footer_container">
-      <a href="" class="PCK"><img src="../Tela Inicial/PKC.png" alt="" width="350px"></a>
+      <a href="" class="PCK"><img src="../img/PKC.png" alt="" width="350px"></a>
       <div class="redes">
-        <a href="https://discord.gg/Epf5BEchVs" class="disc" target="_blank"><img src="../Tela Inicial/Discord.png" alt=""
+        <a href="https://discord.gg/Epf5BEchVs" class="disc" target="_blank"><img src="../img/Discord.png" alt=""
             width="80px"></a>
-        <a href="https://www.youtube.com/channel/UClyhc1OdKzCtCQ4vbuH-LQw" class="yout" target="_blank"><img src="../Tela Inicial/Youtube.png" alt="" width="80px"></a>
-        <a href="https://www.instagram.com/pokemonxs_official/" target="_blank" class="ig"><img src="../Tela Inicial/Instagram.png"
-            alt="" width="65px"></a>
+        <a href="https://www.youtube.com/channel/UClyhc1OdKzCtCQ4vbuH-LQw" class="yout" target="_blank"><img
+            src="../img/Youtube.png" alt="" width="80px"></a>
+        <a href="https://www.instagram.com/pokemonxs_official/" target="_blank" class="ig"><img
+            src="../img/Instagram.png" alt="" width="65px"></a>
       </div>
       <ul class="avisos">
         <li>
@@ -141,10 +174,10 @@
           <a href="../pdfs/Termos de uso.pdf" target="_blank"> Termos de uso </a>
         </li>
         <li>
-          <a href="" target="_blank"> Serviço ao consumidor </a>
+          <a href="../pdfs/Serviço ao Consumidor.pdf" target="_blank"> Serviço ao consumidor </a>
         </li>
         <li>
-          <a href="" target="_blank"> Guia aos pais </a>
+          <a href="../pdfs/Guia aos Pais.pdf" target="_blank"> Guia aos pais </a>
         </li>
       </ul>
       <span class="copy">©️️2023 Pokémon. ©️️2023–2023 Skyrus / Creatures Inc. / GAME SKYRUS inc. TM, ® e os nomes
@@ -231,4 +264,7 @@
 
   btnNext2.addEventListener('click', proximoSlider)
   btnPrev2.addEventListener('click', anteriorSlider)
+
+  //Função Comentários
+  function funcaoComentar(){}
 </script>
