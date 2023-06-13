@@ -17,7 +17,7 @@
             <a class="logotipo" href="../../Tela-Cliente/telacliente.html"><img src="../../img/Logotipo.png" alt="" width="170px" id="logotipo"></a>
             <ul class="nav-lista">
                 <li>
-                    <a href=""> Mais Curtidos </a>
+                    <a href="../../dashboard/dashboard.html"> Mais Curtidos </a>
                 </li>
                 <li>
                     <a href="../Pokedex do Site/Pokedex1/Pokedex.html"> Pokédex </a>
@@ -1355,6 +1355,7 @@
         </div>
     </footer>
 </body>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script>
     function pkm1 (audio1) {
         const audio = new Audio(`./audios/${audio1}.mp3`);
@@ -1558,26 +1559,86 @@
     }
 
     //Curtida
-    document.addEventListener('DOMContentLoaded', function() {
-    var botoesCurtidas = document.querySelectorAll('.botao-curtida');
+    document.addEventListener('DOMContentLoaded', function () {
+        var botoesCurtidas = document.querySelectorAll('.botao-curtida');
 
-    botoesCurtidas.forEach(function(botaoCurtida) {
-        var idCurtida = botaoCurtida.getAttribute('data-id');
-        var seCurtido = localStorage.getItem(idCurtida);
+        botoesCurtidas.forEach(function (botaoCurtida) {
+            var idCurtida = botaoCurtida.getAttribute('data-id');
+            var numero = idCurtida.match(/\d+/);
+            if (numero) {
+                idCurtida = parseInt(numero[0]);
+            } else {
+                console.log("Nenhum número encontrado no ID:", idCurtida);
+                return; // Se não houver número, pula para a próxima iteração
+            }
 
-        if (seCurtido === 'true') {
-            botaoCurtida.classList.add('curtido');
-        }
+            var seCurtido = localStorage.getItem(idCurtida);
 
-        botaoCurtida.addEventListener('click', function() {
-            botaoCurtida.classList.toggle('curtido');
-            var seCurtido = botaoCurtida.classList.contains('curtido');
-            localStorage.setItem(idCurtida, seCurtido);
+            if (seCurtido === 'true') {
+                botaoCurtida.classList.add('curtido');
+            }
+
+            botaoCurtida.addEventListener('click', function () {
+                botaoCurtida.classList.toggle('curtido');
+                var seCurtido = botaoCurtida.classList.contains('curtido');
+                localStorage.setItem(idCurtida, seCurtido);
+
+                if (seCurtido) {
+                    mostrarMensagemCurtida(idCurtida, 'curtiu');
+                    var idCurtidaVar = idCurtida
+
+                    if (idCurtida == "") {
+                        console.log(false)
+                    }
+                    fetch("/pokemon/curtir", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+                        body: JSON.stringify({
+                            idCurtidaServer: idCurtidaVar
+                        })
+                    }).then(function (resposta) {
+                        if (resposta.ok)
+                            console.log(true)
+                        else
+                            console.log(false)
+                    })
+
+                } else {
+                    mostrarMensagemCurtida(idCurtida, 'descurtiu');
+                    var idCurtidaVar = idCurtida
+
+                    var idCurtidaVar = idCurtida
+
+                    if (idCurtida == "") {
+                        console.log(false)
+                    }
+                    fetch("/pokemon/descurtir", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+                        body: JSON.stringify({
+                            idCurtidaServer: idCurtidaVar
+                        })
+                    }).then(function (resposta) {
+                        if (resposta.ok)
+                            console.log(true)
+                        else
+                            console.log(false)
+                    })
+
+                }
+            });
         });
     });
-});
 
-function limparLocalStorage() {
-    localStorage.clear();
-}
+    function mostrarMensagemCurtida(idCurtida, acao) {
+        swal(`Você ${acao} o Pokémon de numeração ${idCurtida}!`);
+    }
+
+    function limparLocalStorage() {
+        localStorage.clear();
+    }
 </script>

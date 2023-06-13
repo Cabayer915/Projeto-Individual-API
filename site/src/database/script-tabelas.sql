@@ -46,16 +46,12 @@ drop table Comentarios;
 INSERT INTO Usuarios VALUES
 (null, 'Kyan Maloka Pokemaniaco','2000-05-06','Masculino','kyanmaloka@gmail.com','blabluble123');
 
-INSERT INTO Pokemons VALUES
-(null, 'Pantheon', 'Sombrio', 0);
-
 INSERT INTO Curtidas VALUES
 (1,1);
 
 INSERT INTO Pokemons VALUES
-(null, 'Pantheleon', 'Sombrio', 0);
-
-INSERT INTO Pokemons VALUES
+(null, 'Pantheon', 'Sombrio', 0),
+(null, 'Pantheleon', 'Sombrio', 0),
 (null, 'Panthelord', 'Sombrio', 0),
 (null, 'Erukilava', 'Fogo', 0),
 (null, 'Mandralava', 'Fogo', 0),
@@ -262,13 +258,20 @@ insert into Comentarios values
 truncate table Comentarios;
 
 select * from Usuarios;
+select idUsuario from usuarios where email = 'a';
+select idUsuario from usuarios where email = 'a';
+insert into curtidas values ((select idUsuario from usuarios where email = 'a'), 1);
 select * from Pokemons;
 select * from Curtidas;
-select * from Comentarios;
 
+delete from Curtidas where fk_usuarios = (select idUsuario from usuarios where email = 'a') and fk_pokemons = 34;
+truncate table Curtidas;
+select * from Comentarios;
+select nome, qtdCurtidas from Pokemons order by qtdCurtidas desc limit 5;
 update Pokemons
 SET qtdCurtidas = qtdCurtidas + 1
-WHERE idPokemons = 34;
+WHERE idPokemons = 12;
+
 
 update Pokemons
 SET qtdCurtidas = qtdCurtidas - 1

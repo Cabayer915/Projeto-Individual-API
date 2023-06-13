@@ -9,7 +9,9 @@ var PORTA = process.env.AMBIENTE_PROCESSO == "desenvolvimento" ? 3333 : 8080;
 var app = express();
 
 var indexRouter = require("./src/routes/index");
+var dashRouter = require("./src/routes/dash");
 var usuarioRouter = require("./src/routes/usuarios");
+var pokemonRouter = require("./src/routes/pokemon");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -18,7 +20,9 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(cors());
 
 app.use("/", indexRouter);
+app.use("/dashboard", dashRouter);
 app.use("/usuarios", usuarioRouter);
+app.use("/pokemon", pokemonRouter);
 
 app.listen(PORTA, function () {
     console.log(`Servidor do seu site já está rodando! Acesse o caminho a seguir para visualizar: http://localhost:${PORTA} \n

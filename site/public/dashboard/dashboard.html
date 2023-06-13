@@ -9,10 +9,11 @@
     <title>Pokémons Mais Curtidos</title>
 </head>
 
-<body>
+<body onload="dadosDashboard()">
     <header>
         <nav>
-            <a class="logotipo" href="../Tela-Cliente/telacliente.html"><img src="../img/Logotipo.png" alt="" width="170px" id="logotipo"></a>
+            <a class="logotipo" href="../Tela-Cliente/telacliente.html"><img src="../img/Logotipo.png" alt=""
+                    width="170px" id="logotipo"></a>
             <ul class="nav-lista">
                 <li>
                     <a href="../Pokedex do Site/Pokedex1/Pokedex.html"> Pokédex </a>
@@ -23,23 +24,47 @@
             </ul>
         </nav>
     </header>
-    <canvas id="myChart" class="dashboard"></canvas>
-    <div class="chart-legend">Legenda do Gráfico</div>
-</body>
+    <div class="dashboard">
+        <canvas id="myChart"></canvas>
+    </div>
+    <div class="chart-legend" id="div_legenda">Legenda do Gráfico:<br></div>
 
-</html>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script>
-    const ctx = document.getElementById('myChart');
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        function dadosDashboard() {
+            var listaNomePokemon = [];
+            var listaLikesPokemon = [];
+
+            fetch('/dashboard/obterDados', { cache: 'no-store' }).then(function (response) {
+                if (response.ok) {
+                    response.json().then(function (resposta) {
+                        console.log(resposta);
+                        for (var i = 0; i < resposta.length; i++) {
+                            listaLikesPokemon.push(resposta[i].qtdCurtidas);
+                            listaNomePokemon.push(resposta[i].nome);
+                        }
+
+                        criarGrafico(listaNomePokemon, listaLikesPokemon);
+                    });
+                } else {
+                    console.log('Nenhum dado encontrado');
+                }
+            }).catch(function (error) {
+                console.error('Erro na obtenção dos dados para o gráfico: ' + error.message);
+            });
+        }
+
+        function criarGrafico(labels, data) {
+    var ctx = document.getElementById('myChart').getContext('2d');
 
     new Chart(ctx, {
         type: 'bar',
         data: {
-            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+            labels: labels,
             datasets: [{
-                label: 'Sem Curtidas',
-                data: [12, 27, 3, 5, 2, 3],
-                backgroundColor: ['red', 'aquamarine', 'gold', 'green', 'purple', 'orange'],
+                label: 'Curtidas',
+                data: data,
+                backgroundColor: ['red', 'aquamarine', 'gold', 'green', 'purple'],
                 borderWidth: 2,
                 borderColor: 'black'
             }]
@@ -49,10 +74,38 @@
                 y: {
                     beginAtZero: true
                 }
+            },
+            plugins: {
+                legend: {
+                    display: false
+                }
             }
         }
     });
-    function limparLocalStorage() {
-    localStorage.clear();
+
+    var chartLegend = document.querySelector('.chart-legend');
+    for (var i = 0; i < labels.length; i++) {
+        var legendItem = document.createElement('div');
+        legendItem.classList.add('legend-item');
+
+        var legendColor = document.createElement('span');
+        legendColor.classList.add('legend-color');
+        legendColor.style.backgroundColor = ['red', 'aquamarine', 'gold', 'green', 'purple'][i];
+
+        var legendText = document.createElement('span');
+        legendText.classList.add('legend-text');
+        legendText.textContent = (i + 1) + 'º Mais curtido é o ' + labels[i];
+
+        legendItem.appendChild(legendColor);
+        legendItem.appendChild(legendText);
+        chartLegend.appendChild(legendItem);
+    }
+}
+    
+function limparLocalStorage() {
+localStorage.clear();
 }
 </script>
+</body>
+
+</html>
