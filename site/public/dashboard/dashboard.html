@@ -84,6 +84,7 @@
     });
 
     var chartLegend = document.querySelector('.chart-legend');
+    var cont = 0;
     for (var i = 0; i < labels.length; i++) {
         var legendItem = document.createElement('div');
         legendItem.classList.add('legend-item');
@@ -94,7 +95,15 @@
 
         var legendText = document.createElement('span');
         legendText.classList.add('legend-text');
-        legendText.textContent = (i + 1) + 'º Mais curtido é o ' + labels[i];
+
+        if (data[i] == data[i - 1]) {
+            legendText.textContent = (i);
+            cont++;
+        } else {
+            legendText.textContent = (i + 1 - cont);
+        }
+
+        legendText.textContent += 'º Mais curtido é o ' + labels[i];
 
         legendItem.appendChild(legendColor);
         legendItem.appendChild(legendText);

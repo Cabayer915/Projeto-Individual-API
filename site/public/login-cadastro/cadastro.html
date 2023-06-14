@@ -48,7 +48,7 @@
       <p>Senha:</p>
       <input type="password" id="senha_input" name="password" placeholder="Digite sua senha" required>
       
-      <button class="botaoCadastro" onclick="cadastrar()">hCriar Cadastro</button>
+      <button class="botaoCadastro" onclick="cadastrar()">Criar Cadastro</button>
     </div>
     
     <div class="login-link">
@@ -75,7 +75,12 @@
 
         if (nomeVar == "" || dtNascVar == "" || generoVar == "" || emailVar == "" || senhaVar == "") {
             swal("ERRO!", "Houve um erro ao realizar seu cadastro!", "error");
-            
+            return false; 
+        } else if (emailVar.search("@") == -1) {
+            swal ("ERRO!",'No campo Email é necessário ter um @', "error");
+            return false;
+        } else if (senhaVar.length < 6) {
+            swal ("ERRO!",'A sua senha deve ser maior que 5 dígitos!', "error");
             return false;
         }
 
